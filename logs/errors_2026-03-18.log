@@ -1,0 +1,5 @@
+[2026-03-18 08:07:12] [ERROR] [User: 4] [IP: ::1] ERROR: Update Cart Total Error | Context: Unknown column 'total_amount' in 'field list'
+[2026-03-18 08:07:14] [ERROR] [User: 4] [IP: ::1] ERROR: Update Cart Total Error | Context: Unknown column 'total_amount' in 'field list'
+[2026-03-18 08:07:15] [ERROR] [User: 4] [IP: ::1] ERROR: Update Cart Total Error | Context: Unknown column 'total_amount' in 'field list'
+[2026-03-18 08:07:17] [ERROR] [User: 4] [IP: ::1] ERROR: Update Cart Total Error | Context: Unknown column 'total_amount' in 'field list'
+[2026-03-18 08:07:18] [ERROR] [User: 4] [IP: ::1] ERROR: Update Cart Total Error | Context: Unknown column 'total_amount' in 'field list'

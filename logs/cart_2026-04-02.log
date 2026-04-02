@@ -1,0 +1,3 @@
+[2026-04-02 10:11:46] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 1 cart items for user 1
+[2026-04-02 10:11:46] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2393, ProductID: 10, Name: 'Xương gặm sạch răng cho chó', Price: 178497, UnitPrice: 178497, Qty: 1
+[2026-04-02 10:11:46] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 178497

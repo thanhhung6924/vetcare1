@@ -1,0 +1,41 @@
+[2026-03-19 12:22:26] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Found 0 cart items for user 0
+[2026-03-19 12:22:26] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Total calculated: 0
+[2026-03-19 12:26:22] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Found 0 cart items for user 0
+[2026-03-19 12:26:22] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Total calculated: 0
+[2026-03-19 12:29:15] [INFO] [User: 3] [IP: ::1] CART_DEBUG: Found 0 cart items for user 3
+[2026-03-19 12:29:15] [INFO] [User: 3] [IP: ::1] CART_DEBUG: Total calculated: 0
+[2026-03-19 12:36:07] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Found 3 cart items for user 4
+[2026-03-19 12:36:07] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2382, ProductID: 2, Name: 'Pate mèo cá ngừ', Price: 207812, UnitPrice: 207812, Qty: 1
+[2026-03-19 12:36:07] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2381, ProductID: 1, Name: 'Hạt mèo Whiskas 1kg', Price: 295927, UnitPrice: 295927, Qty: 1
+[2026-03-19 12:36:07] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Item 2 - ItemID: 2380, ProductID: 3, Name: 'Cát vệ sinh mèo 10L', Price: 205093, UnitPrice: 205093, Qty: 1
+[2026-03-19 12:36:07] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Total calculated: 708832
+[2026-03-19 12:40:50] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Found 1 cart items for user 4
+[2026-03-19 12:40:50] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2382, ProductID: 2, Name: 'Pate mèo cá ngừ', Price: 207812, UnitPrice: 207812, Qty: 1
+[2026-03-19 12:40:50] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Total calculated: 207812
+[2026-03-19 12:40:53] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Found 1 cart items for user 4
+[2026-03-19 12:40:53] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2382, ProductID: 2, Name: 'Pate mèo cá ngừ', Price: 207812, UnitPrice: 207812, Qty: 2
+[2026-03-19 12:40:53] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Total calculated: 415624
+[2026-03-19 12:40:58] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Found 0 cart items for user 4
+[2026-03-19 12:40:58] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Total calculated: 0
+[2026-03-19 12:41:12] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Found 1 cart items for user 4
+[2026-03-19 12:41:12] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2384, ProductID: 2, Name: 'Pate mèo cá ngừ', Price: 207812, UnitPrice: 207812, Qty: 2
+[2026-03-19 12:41:12] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Total calculated: 415624
+[2026-03-19 13:13:08] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Found 1 cart items for user 4
+[2026-03-19 13:13:08] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2384, ProductID: 2, Name: 'Pate mèo cá ngừ', Price: 207812, UnitPrice: 207812, Qty: 2
+[2026-03-19 13:13:08] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Total calculated: 415624
+[2026-03-19 13:15:16] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Found 2 cart items for user 4
+[2026-03-19 13:15:16] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2385, ProductID: 6, Name: 'Sữa tắm cho mèo', Price: 182753, UnitPrice: 182753, Qty: 1
+[2026-03-19 13:15:16] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2384, ProductID: 2, Name: 'Pate mèo cá ngừ', Price: 207812, UnitPrice: 207812, Qty: 2
+[2026-03-19 13:15:16] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Total calculated: 598377
+[2026-03-19 13:18:45] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Found 3 cart items for user 4
+[2026-03-19 13:18:45] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2387, ProductID: 13, Name: 'Sữa tắm cho chó', Price: 78160, UnitPrice: 78160, Qty: 1
+[2026-03-19 13:18:45] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2386, ProductID: 2, Name: 'Pate mèo cá ngừ', Price: 207812, UnitPrice: 207812, Qty: 1
+[2026-03-19 13:18:45] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Item 2 - ItemID: 2385, ProductID: 6, Name: 'Sữa tắm cho mèo', Price: 182753, UnitPrice: 182753, Qty: 1
+[2026-03-19 13:18:45] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Total calculated: 468725
+[2026-03-19 13:25:19] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Found 1 cart items for user 4
+[2026-03-19 13:25:19] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2387, ProductID: 13, Name: 'Sữa tắm cho chó', Price: 78160, UnitPrice: 78160, Qty: 1
+[2026-03-19 13:25:19] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Total calculated: 78160
+[2026-03-19 13:25:45] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Found 2 cart items for user 4
+[2026-03-19 13:25:45] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2388, ProductID: 2, Name: 'Pate mèo cá ngừ', Price: 207812, UnitPrice: 207812, Qty: 1
+[2026-03-19 13:25:45] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2387, ProductID: 13, Name: 'Sữa tắm cho chó', Price: 78160, UnitPrice: 78160, Qty: 1
+[2026-03-19 13:25:45] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Total calculated: 285972

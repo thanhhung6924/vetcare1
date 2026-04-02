@@ -1,0 +1,42 @@
+[2026-03-18 07:52:52] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 5) | {"action":"ADD_TO_CART","product_id":2,"product_name":null,"quantity":5}
+[2026-03-18 09:11:02] [CART] [User: 4] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 20 | Quantity: 1
+[2026-03-18 09:11:02] [CART] [User: 4] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 20 | Quantity: 1 | Details: Name: Bát ăn inox cho chó mèo, Price: 234612, Stock: 126
+[2026-03-18 09:11:02] [CART] [User: 4] [IP: ::1] CART_ACTION: CART_CREATED | Product: 20 | Quantity: 1 | Details: New Cart ID: 1002
+[2026-03-18 09:11:02] [CART] [User: 4] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 20 | Quantity: 1 | Details: Original: 234612, Discount: , Final: 234612
+[2026-03-18 09:11:02] [CART] [User: 4] [IP: ::1] CART_ACTION: ITEM_ADDED | Product: 20 | Quantity: 1 | Details: Cart ID: 1002, Unit Price: 234612
+[2026-03-18 09:11:02] [CART] [User: 4] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 20 | Quantity: 1 | Details: Cart ID: 1002, Cart Count: 1
+[2026-03-18 09:30:37] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":2,"product_name":null,"quantity":1}
+[2026-03-18 09:30:37] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":2,"product_name":null,"quantity":1}
+[2026-03-18 09:39:00] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":2,"product_name":null,"quantity":1}
+[2026-03-18 09:39:00] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":2,"product_name":null,"quantity":1}
+[2026-03-18 09:49:44] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":2,"product_name":null,"quantity":1}
+[2026-03-18 09:49:44] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":2,"product_name":null,"quantity":1}
+[2026-03-18 09:50:56] [CART] [User: 4] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 4 | Quantity: 1
+[2026-03-18 09:50:56] [CART] [User: 4] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 4 | Quantity: 1 | Details: Name: Vitamin tổng hợp cho mèo, Price: 46459, Stock: 167
+[2026-03-18 09:50:56] [CART] [User: 4] [IP: ::1] CART_ACTION: CART_CREATED | Product: 4 | Quantity: 1 | Details: New Cart ID: 1008
+[2026-03-18 09:50:56] [CART] [User: 4] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 4 | Quantity: 1 | Details: Original: 46459, Discount: , Final: 46459
+[2026-03-18 09:50:56] [CART] [User: 4] [IP: ::1] CART_ACTION: ITEM_ADDED | Product: 4 | Quantity: 1 | Details: Cart ID: 1008, Unit Price: 46459
+[2026-03-18 09:50:56] [CART] [User: 4] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 4 | Quantity: 1 | Details: Cart ID: 1008, Cart Count: 1
+[2026-03-18 10:07:29] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":4,"product_name":null,"quantity":1}
+[2026-03-18 10:07:29] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":4,"product_name":null,"quantity":1}
+[2026-03-18 12:24:01] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":4,"product_name":null,"quantity":1}
+[2026-03-18 12:24:01] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":4,"product_name":null,"quantity":1}
+[2026-03-18 12:24:04] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":1,"product_name":null,"quantity":1}
+[2026-03-18 12:24:04] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":1,"product_name":null,"quantity":1}
+[2026-03-18 12:24:50] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":16,"product_name":null,"quantity":1}
+[2026-03-18 12:25:23] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":14,"product_name":null,"quantity":1}
+[2026-03-18 12:25:50] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":12,"product_name":null,"quantity":1}
+[2026-03-18 12:26:13] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":13,"product_name":null,"quantity":1}
+[2026-03-18 12:26:28] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":2,"product_name":null,"quantity":1}
+[2026-03-18 12:26:28] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":2,"product_name":null,"quantity":1}
+[2026-03-18 12:27:40] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":11,"product_name":null,"quantity":1}
+[2026-03-18 12:28:18] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":20,"product_name":null,"quantity":1}
+[2026-03-18 12:41:03] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":20,"product_name":null,"quantity":1}
+[2026-03-18 12:41:29] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":18,"product_name":null,"quantity":1}
+[2026-03-18 12:41:30] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":19,"product_name":null,"quantity":1}
+[2026-03-18 12:41:32] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":17,"product_name":null,"quantity":1}
+[2026-03-18 12:41:33] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":16,"product_name":null,"quantity":1}
+[2026-03-18 12:41:51] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":4,"product_name":null,"quantity":1}
+[2026-03-18 12:41:51] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":4,"product_name":null,"quantity":1}
+[2026-03-18 12:41:53] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":3,"product_name":null,"quantity":1}
+[2026-03-18 12:41:53] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":3,"product_name":null,"quantity":1}

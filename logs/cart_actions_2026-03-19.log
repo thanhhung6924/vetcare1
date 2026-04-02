@@ -1,0 +1,29 @@
+[2026-03-19 12:22:32] [CART] [User: Hưng Dương Phước Lê (ID: 0)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":1,"product_name":null,"quantity":1}
+[2026-03-19 12:22:32] [CART] [User: Hưng Dương Phước Lê (ID: 0)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":1,"product_name":null,"quantity":1}
+[2026-03-19 12:22:46] [CART] [User: 0] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 1 | Quantity: 5
+[2026-03-19 12:22:46] [CART] [User: 0] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 1 | Quantity: 5 | Details: Name: Hạt mèo Whiskas 1kg, Price: 295927, Stock: 98
+[2026-03-19 12:22:46] [CART] [User: 0] [IP: ::1] CART_ACTION: CART_FOUND | Product: 1 | Quantity: 5 | Details: Existing Cart ID: 1011
+[2026-03-19 12:22:46] [CART] [User: 0] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 1 | Quantity: 5 | Details: Original: 295927, Discount: , Final: 295927
+[2026-03-19 12:22:46] [CART] [User: 0] [IP: ::1] CART_ACTION: ITEM_UPDATED | Product: 1 | Quantity: 6 | Details: Item ID: 2383
+[2026-03-19 12:22:46] [CART] [User: 0] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 1 | Quantity: 5 | Details: Cart ID: 1011, Cart Count: 1
+[2026-03-19 12:36:03] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":2,"product_name":null,"quantity":1}
+[2026-03-19 12:36:03] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":2,"product_name":null,"quantity":1}
+[2026-03-19 12:41:03] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":2,"product_name":null,"quantity":1}
+[2026-03-19 12:41:03] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":2,"product_name":null,"quantity":1}
+[2026-03-19 12:41:08] [CART] [User: 4] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 2 | Quantity: 1
+[2026-03-19 12:41:08] [CART] [User: 4] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 2 | Quantity: 1 | Details: Name: Pate mèo cá ngừ, Price: 207812, Stock: 225
+[2026-03-19 12:41:08] [CART] [User: 4] [IP: ::1] CART_ACTION: CART_FOUND | Product: 2 | Quantity: 1 | Details: Existing Cart ID: 1010
+[2026-03-19 12:41:08] [CART] [User: 4] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 2 | Quantity: 1 | Details: Original: 207812, Discount: , Final: 207812
+[2026-03-19 12:41:08] [CART] [User: 4] [IP: ::1] CART_ACTION: ITEM_UPDATED | Product: 2 | Quantity: 2 | Details: Item ID: 2384
+[2026-03-19 12:41:08] [CART] [User: 4] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 2 | Quantity: 1 | Details: Cart ID: 1010, Cart Count: 1
+[2026-03-19 13:15:13] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":6,"product_name":null,"quantity":1}
+[2026-03-19 13:17:28] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":2,"product_name":null,"quantity":1}
+[2026-03-19 13:17:28] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":2,"product_name":null,"quantity":1}
+[2026-03-19 13:18:37] [CART] [User: 4] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 13 | Quantity: 1
+[2026-03-19 13:18:37] [CART] [User: 4] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 13 | Quantity: 1 | Details: Name: Sữa tắm cho chó, Price: 78160, Stock: 53
+[2026-03-19 13:18:37] [CART] [User: 4] [IP: ::1] CART_ACTION: CART_FOUND | Product: 13 | Quantity: 1 | Details: Existing Cart ID: 1010
+[2026-03-19 13:18:37] [CART] [User: 4] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 13 | Quantity: 1 | Details: Original: 78160, Discount: , Final: 78160
+[2026-03-19 13:18:37] [CART] [User: 4] [IP: ::1] CART_ACTION: ITEM_ADDED | Product: 13 | Quantity: 1 | Details: Cart ID: 1010, Unit Price: 78160
+[2026-03-19 13:18:37] [CART] [User: 4] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 13 | Quantity: 1 | Details: Cart ID: 1010, Cart Count: 3
+[2026-03-19 13:25:42] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":2,"product_name":null,"quantity":1}
+[2026-03-19 13:25:42] [CART] [User: Nguyễn Văn A (ID: 4)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":2,"product_name":null,"quantity":1}

@@ -1,0 +1,9 @@
+[2026-03-01 11:18:55] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Found 1 cart items for user 0
+[2026-03-01 11:18:55] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 0, ProductID: 3, Name: 'Vitamin C 1000mg', Price: 50000, UnitPrice: 50000, Qty: 1
+[2026-03-01 11:18:55] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Total calculated: 50000
+[2026-03-01 11:18:59] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Found 1 cart items for user 0
+[2026-03-01 11:18:59] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 0, ProductID: 3, Name: 'Vitamin C 1000mg', Price: 50000, UnitPrice: 50000, Qty: 1
+[2026-03-01 11:18:59] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Total calculated: 50000
+[2026-03-01 11:23:56] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Found 1 cart items for user 0
+[2026-03-01 11:23:56] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 0, ProductID: 3, Name: 'Vitamin C 1000mg', Price: 50000, UnitPrice: 50000, Qty: 1
+[2026-03-01 11:23:56] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Total calculated: 50000

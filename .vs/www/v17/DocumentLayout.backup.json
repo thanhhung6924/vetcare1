@@ -1,0 +1,676 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\laragon\\www\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\order-details.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:order-details.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\checkout.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:checkout.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\order-payment.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:order-payment.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\includes\\config\\sepay_config.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:includes\\config\\sepay_config.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\database\\sepay_integration.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:database\\sepay_integration.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\admin\\includes\\headeradmin.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:admin\\includes\\headeradmin.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\admin\\assets\\js\\notifications.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:admin\\assets\\js\\notifications.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\admin\\includes\\sidebaradmin.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:admin\\includes\\sidebaradmin.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\admin\\includes\\sidebar.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:admin\\includes\\sidebar.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\admin\\blog\\posts.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:admin\\blog\\posts.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\assets\\js\\logout.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\js\\logout.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\assets\\css\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\css\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\index.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\assets\\js\\cart-new.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\js\\cart-new.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\assets\\css\\shop.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\css\\shop.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\includes\\footer.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:includes\\footer.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\includes\\header.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:includes\\header.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\includes\\header-base.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:includes\\header-base.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\includes\\logout_modal.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:includes\\logout_modal.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\admin\\settings.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:admin\\settings.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\order-success.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:order-success.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\admin\\appointments.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:admin\\appointments.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\contact.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:contact.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\admin\\logs\\email_backup_2025-07-13.log||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:admin\\logs\\email_backup_2025-07-13.log||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\admin\\email-settings.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:admin\\email-settings.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\admin\\config.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:admin\\config.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\admin\\appointment-view.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:admin\\appointment-view.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\about.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:about.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\includes\\floating_chat.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:includes\\floating_chat.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\appointments.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:appointments.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\admin\\doctor-schedule-view.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:admin\\doctor-schedule-view.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\NOTE\\MEDISYNC_EMAIL_SYSTEM_COMPLETE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:NOTE\\MEDISYNC_EMAIL_SYSTEM_COMPLETE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\NOTE\\MEDISYNC_EMAIL_SYSTEM_APPLIED.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:NOTE\\MEDISYNC_EMAIL_SYSTEM_APPLIED.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\NOTE\\MEDISYNC_EMAIL_SYSTEM_APPLIED - Copy.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:NOTE\\MEDISYNC_EMAIL_SYSTEM_APPLIED - Copy.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\includes\\email_system_simple.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:includes\\email_system_simple.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\includes\\email_system_real.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:includes\\email_system_real.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\includes\\email_system.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:includes\\email_system.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\includes\\config.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:includes\\config.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\cart.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:cart.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\book-appointment.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:book-appointment.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\laragon\\www\\database\\sepay_integration.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:database\\sepay_integration.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "order-details.php",
+              "DocumentMoniker": "C:\\laragon\\www\\order-details.php",
+              "RelativeDocumentMoniker": "order-details.php",
+              "ToolTip": "C:\\laragon\\www\\order-details.php",
+              "RelativeToolTip": "order-details.php",
+              "ViewState": "AgIAABQEAAAAAAAAAAAAABQEAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-18T10:14:33.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "checkout.php",
+              "DocumentMoniker": "C:\\laragon\\www\\checkout.php",
+              "RelativeDocumentMoniker": "checkout.php",
+              "ToolTip": "C:\\laragon\\www\\checkout.php",
+              "RelativeToolTip": "checkout.php",
+              "ViewState": "AgIAAH4DAAAAAAAAAAArwIkDAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-18T09:30:12.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "sepay_integration.sql ",
+              "DocumentMoniker": "C:\\laragon\\www\\database\\sepay_integration.sql",
+              "RelativeDocumentMoniker": "database\\sepay_integration.sql",
+              "ToolTip": "sepay_integration.sql ",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-03-18T09:13:51.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "order-payment.php",
+              "DocumentMoniker": "C:\\laragon\\www\\order-payment.php",
+              "RelativeDocumentMoniker": "order-payment.php",
+              "ToolTip": "C:\\laragon\\www\\order-payment.php",
+              "RelativeToolTip": "order-payment.php",
+              "ViewState": "AgIAAFoBAAAAAAAAAAAkwG4BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-18T09:13:05.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "sepay_config.php",
+              "DocumentMoniker": "C:\\laragon\\www\\includes\\config\\sepay_config.php",
+              "RelativeDocumentMoniker": "includes\\config\\sepay_config.php",
+              "ToolTip": "C:\\laragon\\www\\includes\\config\\sepay_config.php",
+              "RelativeToolTip": "includes\\config\\sepay_config.php",
+              "ViewState": "AgIAAAAAAAAAAAAAAAArwAsAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-18T09:12:06.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "notifications.js",
+              "DocumentMoniker": "C:\\laragon\\www\\admin\\assets\\js\\notifications.js",
+              "RelativeDocumentMoniker": "admin\\assets\\js\\notifications.js",
+              "ToolTip": "C:\\laragon\\www\\admin\\assets\\js\\notifications.js",
+              "RelativeToolTip": "admin\\assets\\js\\notifications.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-03-18T09:08:43.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "headeradmin.php",
+              "DocumentMoniker": "C:\\laragon\\www\\admin\\includes\\headeradmin.php",
+              "RelativeDocumentMoniker": "admin\\includes\\headeradmin.php",
+              "ToolTip": "C:\\laragon\\www\\admin\\includes\\headeradmin.php",
+              "RelativeToolTip": "admin\\includes\\headeradmin.php",
+              "ViewState": "AgIAAAEAAAAAAAAAAAArwAwAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-18T08:37:50.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "sidebaradmin.php",
+              "DocumentMoniker": "C:\\laragon\\www\\admin\\includes\\sidebaradmin.php",
+              "RelativeDocumentMoniker": "admin\\includes\\sidebaradmin.php",
+              "ToolTip": "C:\\laragon\\www\\admin\\includes\\sidebaradmin.php",
+              "RelativeToolTip": "admin\\includes\\sidebaradmin.php",
+              "ViewState": "AgIAADEAAAAAAAAAAAArwDwAAAB2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-18T08:30:44.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "sidebar.php",
+              "DocumentMoniker": "C:\\laragon\\www\\admin\\includes\\sidebar.php",
+              "RelativeDocumentMoniker": "admin\\includes\\sidebar.php",
+              "ToolTip": "C:\\laragon\\www\\admin\\includes\\sidebar.php",
+              "RelativeToolTip": "admin\\includes\\sidebar.php",
+              "ViewState": "AgIAAMAAAAAAAAAAAAArwMkAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-18T08:24:28.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "posts.php",
+              "DocumentMoniker": "C:\\laragon\\www\\admin\\blog\\posts.php",
+              "RelativeDocumentMoniker": "admin\\blog\\posts.php",
+              "ToolTip": "C:\\laragon\\www\\admin\\blog\\posts.php",
+              "RelativeToolTip": "admin\\blog\\posts.php",
+              "ViewState": "AgIAAPEAAAAAAAAAAAArwPwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-18T08:24:25.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "cart-new.js",
+              "DocumentMoniker": "C:\\laragon\\www\\assets\\js\\cart-new.js",
+              "RelativeDocumentMoniker": "assets\\js\\cart-new.js",
+              "ToolTip": "C:\\laragon\\www\\assets\\js\\cart-new.js",
+              "RelativeToolTip": "assets\\js\\cart-new.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-03-17T09:13:22.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "shop.css",
+              "DocumentMoniker": "C:\\laragon\\www\\assets\\css\\shop.css",
+              "RelativeDocumentMoniker": "assets\\css\\shop.css",
+              "ToolTip": "C:\\laragon\\www\\assets\\css\\shop.css",
+              "RelativeToolTip": "assets\\css\\shop.css",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAswG4AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-17T08:48:40.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "logout_modal.php",
+              "DocumentMoniker": "C:\\laragon\\www\\includes\\logout_modal.php",
+              "RelativeDocumentMoniker": "includes\\logout_modal.php",
+              "ToolTip": "C:\\laragon\\www\\includes\\logout_modal.php",
+              "RelativeToolTip": "includes\\logout_modal.php",
+              "ViewState": "AgIAADkAAAAAAAAAAAAmwE4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-15T14:18:13.655Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "logout.js",
+              "DocumentMoniker": "C:\\laragon\\www\\assets\\js\\logout.js",
+              "RelativeDocumentMoniker": "assets\\js\\logout.js",
+              "ToolTip": "C:\\laragon\\www\\assets\\js\\logout.js",
+              "RelativeToolTip": "assets\\js\\logout.js",
+              "ViewState": "AgIAACMAAAAAAAAAAAAkwC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-03-15T14:03:29.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "order-success.php",
+              "DocumentMoniker": "C:\\laragon\\www\\order-success.php",
+              "RelativeDocumentMoniker": "order-success.php",
+              "ToolTip": "C:\\laragon\\www\\order-success.php",
+              "RelativeToolTip": "order-success.php",
+              "ViewState": "AgIAAKwBAAAAAAAAAAAnwLkBAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-15T13:19:51.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "appointments.php",
+              "DocumentMoniker": "C:\\laragon\\www\\admin\\appointments.php",
+              "RelativeDocumentMoniker": "admin\\appointments.php",
+              "ToolTip": "C:\\laragon\\www\\admin\\appointments.php",
+              "RelativeToolTip": "admin\\appointments.php",
+              "ViewState": "AgIAANkBAAAAAAAAAAAMwOIBAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-11T12:56:46.344Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "config.php",
+              "DocumentMoniker": "C:\\laragon\\www\\admin\\config.php",
+              "RelativeDocumentMoniker": "admin\\config.php",
+              "ToolTip": "C:\\laragon\\www\\admin\\config.php",
+              "RelativeToolTip": "admin\\config.php",
+              "ViewState": "AgIAAJUAAAAAAAAAAAAMwJ4AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-11T11:58:54.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "floating_chat.php",
+              "DocumentMoniker": "C:\\laragon\\www\\includes\\floating_chat.php",
+              "RelativeDocumentMoniker": "includes\\floating_chat.php",
+              "ToolTip": "C:\\laragon\\www\\includes\\floating_chat.php",
+              "RelativeToolTip": "includes\\floating_chat.php",
+              "ViewState": "AgIAADIAAAAAAAAAAAAMwBgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-11T11:20:18.211Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "index.css",
+              "DocumentMoniker": "C:\\laragon\\www\\assets\\css\\index.css",
+              "RelativeDocumentMoniker": "assets\\css\\index.css",
+              "ToolTip": "C:\\laragon\\www\\assets\\css\\index.css",
+              "RelativeToolTip": "assets\\css\\index.css",
+              "ViewState": "AgIAAAkEAAAAAAAAAAAWwBMEAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-11T11:18:41.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "settings.php",
+              "DocumentMoniker": "C:\\laragon\\www\\admin\\settings.php",
+              "RelativeDocumentMoniker": "admin\\settings.php",
+              "ToolTip": "C:\\laragon\\www\\admin\\settings.php",
+              "RelativeToolTip": "admin\\settings.php",
+              "ViewState": "AgIAAJgBAAAAAAAAAAAnwJ8BAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-10T05:38:01.939Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "appointments.php",
+              "DocumentMoniker": "C:\\laragon\\www\\appointments.php",
+              "RelativeDocumentMoniker": "appointments.php",
+              "ToolTip": "C:\\laragon\\www\\appointments.php",
+              "RelativeToolTip": "appointments.php",
+              "ViewState": "AgIAAIgCAAAAAAAAAAAMwIUCAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-10T05:37:26.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "email_backup_2025-07-13.log",
+              "DocumentMoniker": "C:\\laragon\\www\\admin\\logs\\email_backup_2025-07-13.log",
+              "RelativeDocumentMoniker": "admin\\logs\\email_backup_2025-07-13.log",
+              "ToolTip": "C:\\laragon\\www\\admin\\logs\\email_backup_2025-07-13.log",
+              "RelativeToolTip": "admin\\logs\\email_backup_2025-07-13.log",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAMwAwAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-10T05:36:35.214Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "email-settings.php",
+              "DocumentMoniker": "C:\\laragon\\www\\admin\\email-settings.php",
+              "RelativeDocumentMoniker": "admin\\email-settings.php",
+              "ToolTip": "C:\\laragon\\www\\admin\\email-settings.php",
+              "RelativeToolTip": "admin\\email-settings.php",
+              "ViewState": "AgIAAFUBAAAAAAAAAAAMwF4BAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-10T05:35:38.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "doctor-schedule-view.php",
+              "DocumentMoniker": "C:\\laragon\\www\\admin\\doctor-schedule-view.php",
+              "RelativeDocumentMoniker": "admin\\doctor-schedule-view.php",
+              "ToolTip": "C:\\laragon\\www\\admin\\doctor-schedule-view.php",
+              "RelativeToolTip": "admin\\doctor-schedule-view.php",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAswGgAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-10T05:35:30.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "appointment-view.php",
+              "DocumentMoniker": "C:\\laragon\\www\\admin\\appointment-view.php",
+              "RelativeDocumentMoniker": "admin\\appointment-view.php",
+              "ToolTip": "C:\\laragon\\www\\admin\\appointment-view.php",
+              "RelativeToolTip": "admin\\appointment-view.php",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAMwJkAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-10T05:34:39.558Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "MEDISYNC_EMAIL_SYSTEM_COMPLETE.md",
+              "DocumentMoniker": "C:\\laragon\\www\\NOTE\\MEDISYNC_EMAIL_SYSTEM_COMPLETE.md",
+              "RelativeDocumentMoniker": "NOTE\\MEDISYNC_EMAIL_SYSTEM_COMPLETE.md",
+              "ToolTip": "C:\\laragon\\www\\NOTE\\MEDISYNC_EMAIL_SYSTEM_COMPLETE.md",
+              "RelativeToolTip": "NOTE\\MEDISYNC_EMAIL_SYSTEM_COMPLETE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-03-10T05:34:10.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "MEDISYNC_EMAIL_SYSTEM_APPLIED.md",
+              "DocumentMoniker": "C:\\laragon\\www\\NOTE\\MEDISYNC_EMAIL_SYSTEM_APPLIED.md",
+              "RelativeDocumentMoniker": "NOTE\\MEDISYNC_EMAIL_SYSTEM_APPLIED.md",
+              "ToolTip": "C:\\laragon\\www\\NOTE\\MEDISYNC_EMAIL_SYSTEM_APPLIED.md",
+              "RelativeToolTip": "NOTE\\MEDISYNC_EMAIL_SYSTEM_APPLIED.md",
+              "ViewState": "AgIAACUAAAAAAAAAAAAQwC4AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-03-10T05:33:41.155Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "MEDISYNC_EMAIL_SYSTEM_APPLIED - Copy.md",
+              "DocumentMoniker": "C:\\laragon\\www\\NOTE\\MEDISYNC_EMAIL_SYSTEM_APPLIED - Copy.md",
+              "RelativeDocumentMoniker": "NOTE\\MEDISYNC_EMAIL_SYSTEM_APPLIED - Copy.md",
+              "ToolTip": "C:\\laragon\\www\\NOTE\\MEDISYNC_EMAIL_SYSTEM_APPLIED - Copy.md",
+              "RelativeToolTip": "NOTE\\MEDISYNC_EMAIL_SYSTEM_APPLIED - Copy.md",
+              "ViewState": "AgIAACUAAAAAAAAAAAAQwC4AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-03-10T05:33:08.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "index.php",
+              "DocumentMoniker": "C:\\laragon\\www\\index.php",
+              "RelativeDocumentMoniker": "index.php",
+              "ToolTip": "C:\\laragon\\www\\index.php",
+              "RelativeToolTip": "index.php",
+              "ViewState": "AgIAABQAAAAAAAAAAAAWwB4AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-10T05:32:27.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "header.php",
+              "DocumentMoniker": "C:\\laragon\\www\\includes\\header.php",
+              "RelativeDocumentMoniker": "includes\\header.php",
+              "ToolTip": "C:\\laragon\\www\\includes\\header.php",
+              "RelativeToolTip": "includes\\header.php",
+              "ViewState": "AgIAAC8EAAAAAAAAAAAWwEAEAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-10T05:31:17.249Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "header-base.php",
+              "DocumentMoniker": "C:\\laragon\\www\\includes\\header-base.php",
+              "RelativeDocumentMoniker": "includes\\header-base.php",
+              "ToolTip": "C:\\laragon\\www\\includes\\header-base.php",
+              "RelativeToolTip": "includes\\header-base.php",
+              "ViewState": "AgIAADUFAAAAAAAAAAAWwDEFAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-10T05:30:59.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "footer.php",
+              "DocumentMoniker": "C:\\laragon\\www\\includes\\footer.php",
+              "RelativeDocumentMoniker": "includes\\footer.php",
+              "ToolTip": "C:\\laragon\\www\\includes\\footer.php",
+              "RelativeToolTip": "includes\\footer.php",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAWwGYAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-10T05:30:44.106Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "email_system_simple.php",
+              "DocumentMoniker": "C:\\laragon\\www\\includes\\email_system_simple.php",
+              "RelativeDocumentMoniker": "includes\\email_system_simple.php",
+              "ToolTip": "C:\\laragon\\www\\includes\\email_system_simple.php",
+              "RelativeToolTip": "includes\\email_system_simple.php",
+              "ViewState": "AgIAAGEBAAAAAAAAAAAewGsBAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-10T05:29:25.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "email_system_real.php",
+              "DocumentMoniker": "C:\\laragon\\www\\includes\\email_system_real.php",
+              "RelativeDocumentMoniker": "includes\\email_system_real.php",
+              "ToolTip": "C:\\laragon\\www\\includes\\email_system_real.php",
+              "RelativeToolTip": "includes\\email_system_real.php",
+              "ViewState": "AgIAADoBAAAAAAAAAAAewEQBAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-10T05:27:04.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "email_system.php",
+              "DocumentMoniker": "C:\\laragon\\www\\includes\\email_system.php",
+              "RelativeDocumentMoniker": "includes\\email_system.php",
+              "ToolTip": "C:\\laragon\\www\\includes\\email_system.php",
+              "RelativeToolTip": "includes\\email_system.php",
+              "ViewState": "AgIAAPsAAAAAAAAAAAAewAUBAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-10T05:24:50.786Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "config.php",
+              "DocumentMoniker": "C:\\laragon\\www\\includes\\config.php",
+              "RelativeDocumentMoniker": "includes\\config.php",
+              "ToolTip": "C:\\laragon\\www\\includes\\config.php",
+              "RelativeToolTip": "includes\\config.php",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-10T05:24:29.61Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "contact.php",
+              "DocumentMoniker": "C:\\laragon\\www\\contact.php",
+              "RelativeDocumentMoniker": "contact.php",
+              "ToolTip": "C:\\laragon\\www\\contact.php",
+              "RelativeToolTip": "contact.php",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAMwDcAAABhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-10T05:23:17.624Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "cart.php",
+              "DocumentMoniker": "C:\\laragon\\www\\cart.php",
+              "RelativeDocumentMoniker": "cart.php",
+              "ToolTip": "C:\\laragon\\www\\cart.php",
+              "RelativeToolTip": "cart.php",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAewGMAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-10T05:22:42.579Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "book-appointment.php",
+              "DocumentMoniker": "C:\\laragon\\www\\book-appointment.php",
+              "RelativeDocumentMoniker": "book-appointment.php",
+              "ToolTip": "C:\\laragon\\www\\book-appointment.php",
+              "RelativeToolTip": "book-appointment.php",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAewHoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-10T05:21:20.908Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "about.php",
+              "DocumentMoniker": "C:\\laragon\\www\\about.php",
+              "RelativeDocumentMoniker": "about.php",
+              "ToolTip": "C:\\laragon\\www\\about.php",
+              "RelativeToolTip": "about.php",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAMwAoAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-10T05:19:19.885Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

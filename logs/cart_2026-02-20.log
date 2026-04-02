@@ -1,0 +1,15 @@
+[2026-02-20 10:42:08] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Found 0 cart items for user 0
+[2026-02-20 10:42:08] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Total calculated: 0
+[2026-02-20 10:56:09] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Found 2 cart items for user 0
+[2026-02-20 10:56:09] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 0, ProductID: 3, Name: 'Vitamin C 1000mg', Price: 50000, UnitPrice: 650000, Qty: 1
+[2026-02-20 10:56:09] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 0, ProductID: 4, Name: 'Máy đo huyết áp điện tử', Price: 650000, UnitPrice: 650000, Qty: 1
+[2026-02-20 10:56:09] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Total calculated: 1300000
+[2026-02-20 11:02:10] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Found 0 cart items for user 0
+[2026-02-20 11:02:10] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Total calculated: 0
+[2026-02-20 11:35:51] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Found 3 cart items for user 0
+[2026-02-20 11:35:51] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 0, ProductID: 2, Name: 'Amoxicillin 500mg', Price: 28000, UnitPrice: 28000, Qty: 1
+[2026-02-20 11:35:51] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 0, ProductID: 3, Name: 'Vitamin C 1000mg', Price: 50000, UnitPrice: 28000, Qty: 1
+[2026-02-20 11:35:51] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Item 2 - ItemID: 0, ProductID: 4, Name: 'Máy đo huyết áp điện tử', Price: 650000, UnitPrice: 28000, Qty: 1
+[2026-02-20 11:35:51] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Total calculated: 84000
+[2026-02-20 11:35:58] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Found 0 cart items for user 0
+[2026-02-20 11:35:58] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Total calculated: 0
