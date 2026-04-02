@@ -45,16 +45,16 @@ $data = $response ? json_decode($response, true) : null;
         <div class="container-fluid">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h2>📊 Hệ Thống Gợi Ý Thông Minh (FP-Growth)</h2>
-                <!-- <div class="btn-group">
-                    <a href="http://localhost:8000/reload-trend" class="btn btn-outline-warning btn-sm" target="hidden_frame">Làm mới Trend </a>
-                    <a href="http://localhost:8000/reload-core" class="btn btn-outline-success btn-sm" target="hidden_frame">Làm mới Core </a>
-                </div> -->
+                <div class="btn-group">
+                    <a href="http://localhost:8000/reload-trend" class="btn btn-outline-warning btn-sm" target="hidden_frame">Làm mới Trend ⚡</a>
+                    <a href="http://localhost:8000/reload-core" class="btn btn-outline-success btn-sm" target="hidden_frame">Làm mới Core 💎</a>
+                </div>
                 <iframe name="hidden_frame" style="display:none;"></iframe>
             </div>
 
             <?php if (!$data): ?>
                 <div class="alert alert-danger shadow-sm">
-                    <i class="fas fa-exclamation-triangle"></i> Không thể kết nối với API FastAPI. Vui lòng kiểm tra server Python (Uvicorn).
+                    <i class="fas fa-exclamation-triangle"></i> ❌ Không thể kết nối với API FastAPI. Vui lòng kiểm tra server Python (Uvicorn).
                 </div>
             <?php else: ?>
 
@@ -100,9 +100,9 @@ $data = $response ? json_decode($response, true) : null;
                                 <table class="table table-hover align-middle mb-0">
                                     <thead class="table-light">
                                         <tr>
-                                            <th style="width: 35%">Nếu khách mua (Antecedents)</th>
+                                            <th style="width: 35%">Nếu khách mua </th>
                                             <th style="width: 10%" class="text-center"></th>
-                                            <th style="width: 35%">Gợi ý thêm </th>
+                                            <th style="width: 35%">Gợi ý thêm</th>
                                             <th class="text-center">Chỉ số tin cậy</th>
                                         </tr>
                                     </thead>
@@ -125,17 +125,46 @@ $data = $response ? json_decode($response, true) : null;
                                                             <span class="badge bg-secondary mb-1"><?= htmlspecialchars($c) ?></span>
                                                         <?php endforeach; ?>
                                                     </td>
-                                                    <td>
+                                                    <td><?php
+
+                                                        $conf = $rule['Độ tin cậy - Confidence'] ?? 0;
+
+                                                        // ép kiểu số
+                                                        $conf = floatval($conf);
+
+                                                        // nếu backend trả dạng 0-1 thì nhân 100
+                                                        if ($conf <= 1) {
+                                                            $percent = $conf * 100;
+                                                        } else {
+                                                            $percent = $conf;
+                                                        }
+
+                                                        // chặn lỗi
+                                                        $percent = max(0, min($percent, 100));
+                                                        ?>
+
+
                                                         <div class="d-flex flex-column gap-1">
-                                                            <div class="progress" style="height: 20px;">
-                                                                <div class="progress-bar bg-success" role="progressbar"
-                                                                    style="width: <?= $rule['Độ tin cậy - Confidence'] ?>;">
-                                                                    Conf: <?= $rule['Độ tin cậy - Confidence'] ?>
+
+                                                            <div class="d-flex align-items-center gap-2">
+
+                                                                <div class="progress flex-grow-1" style="height: 14px;">
+                                                                    <div class="progress-bar bg-success"
+                                                                        style="width: <?= $percent ?>%;">
+                                                                    </div>
                                                                 </div>
+
+                                                                <span class="fw-bold text-success" style="min-width: 55px;">
+                                                                    <?= round($percent, 1) ?>%
+                                                                </span>
+
                                                             </div>
-                                                            <small class="text-muted text-center">
-                                                                Support: <b><?= $rule['Độ hỗ trợ - Support'] ?></b> | Lift: <b><?= $rule['Độ nâng - Lift'] ?></b>
+
+                                                            <small class="text-dark text-center">
+                                                                Support: <b><?= $rule['Độ hỗ trợ - Support'] ?? 0 ?></b> |
+                                                                Lift: <b><?= $rule['Độ nâng - Lift'] ?? 0 ?></b>
                                                             </small>
+
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -153,7 +182,6 @@ $data = $response ? json_decode($response, true) : null;
     </main>
 
     <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
-
 </body>
 
 </html>
