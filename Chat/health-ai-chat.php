@@ -15,22 +15,23 @@ $user_role = $_SESSION['role_name'] ?? 'patient';
 
 $role_display = [
     'admin' => 'Quản trị viên',
-    'patient' => 'Bệnh nhân', 
+    'patient' => 'Khách hàng',
     'doctor' => 'Bác sĩ'
 ];
 ?>
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🩺 AI Health Chat - Tư vấn sức khỏe thông minh | MediSync</title>
-    
+
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    
+
     <!-- Custom Styles -->
     <link href="health-ai-chat.css" rel="stylesheet">
 </head>
@@ -50,7 +51,7 @@ $role_display = [
                     <p>Trợ lý sức khỏe thông minh</p>
                 </div>
             </div>
-            
+
             <div class="header-right">
                 <div class="user-info">
                     <div class="user-avatar">
@@ -61,7 +62,7 @@ $role_display = [
                         <p><?= $role_display[$user_role] ?? 'Người dùng' ?></p>
                     </div>
                 </div>
-                
+
                 <div class="header-actions">
                     <button class="action-btn close" onclick="closeChat()" title="Đóng trò chuyện">
                         <i class="fas fa-times"></i>
@@ -156,13 +157,12 @@ $role_display = [
             <div class="input-area">
                 <form id="chat-form">
                     <div class="input-container">
-                        <textarea 
-                            id="userInput" 
-                            class="message-input" 
-                            placeholder="Nhập câu hỏi về sức khỏe của bạn..." 
+                        <textarea
+                            id="userInput"
+                            class="message-input"
+                            placeholder="Nhập câu hỏi về sức khỏe của bạn..."
                             rows="1"
-                            required
-                        ></textarea>
+                            required></textarea>
                         <div class="input-actions">
                             <button type="button" class="attach-btn" title="Đính kèm file">
                                 <i class="fas fa-paperclip"></i>
@@ -170,7 +170,7 @@ $role_display = [
                             <button type="submit" class="send-btn" id="sendBtn">
                                 <i class="fas fa-paper-plane"></i>
                             </button>
-                                <button type="button" class="reset-btn" id="reset-chat" title="Reset tạm thời">
+                            <button type="button" class="reset-btn" id="reset-chat" title="Reset tạm thời">
                                 <i class="fas fa-undo-alt"></i>
                             </button>
 
@@ -184,4 +184,5 @@ $role_display = [
     <!-- <script src="/KMS-HealthCare/assets/js/chat.js"></script> -->
     <script src="../assets/js/chat.js"></script>
 </body>
-</html> 
+
+</html>

@@ -24,7 +24,7 @@ $connection = @fsockopen($ai_host, $ai_port, $errCode, $errStr, 1);
 if (is_resource($connection)) {
     fclose($connection);
 } else {
-    $api_folder = "C:\\laragon\\www\\api"; 
+    $api_folder = "C:\\laragon\\www\\api";
     pclose(popen('start /B cmd /C "cd /d ' . $api_folder . ' && uvicorn api:app --port 8000"', 'r'));
     sleep(2);
 }
@@ -35,7 +35,7 @@ $last_update = file_exists($trend_log_file) ? file_get_contents($trend_log_file)
 if ($last_update !== $today) {
     $ch = curl_init("http://127.0.0.1:8000/reload-trend");
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_TIMEOUT, 1); 
+    curl_setopt($ch, CURLOPT_TIMEOUT, 1);
     curl_exec($ch);
     curl_close($ch);
     file_put_contents($trend_log_file, $today);
@@ -166,7 +166,7 @@ if ($last_update !== $today) {
                                     </div>
                                     <div class="user-role">
                                         <?php
-                                        $role_names = ["Admin" => 'Quản trị viên', "Patient" => 'Bệnh nhân', "Doctor" => 'Bác sĩ'];
+                                        $role_names = ["Admin" => 'Quản trị viên', "Patient" => 'Khách hàng', "Doctor" => 'Bác sĩ'];
                                         echo $role_names[$_SESSION['role_name']] ?? 'Người dùng';
                                         ?>
                                     </div>
@@ -219,9 +219,8 @@ if ($last_update !== $today) {
                                 <?php endif; ?>
                                 <div class="menu-divider"></div>
                                 <div class="menu-item logout">
-                                    <a href="#" onclick="event.stopPropagation(); showLogoutModal(); return false;">
-                                        <i class="fas fa-sign-out-alt"></i>
-                                        <span>Đăng xuất</span>
+                                    <a href="../logout.php" class="btn  btn-sm">
+                                        <i class="fas fa-sign-out-alt me-2"></i>Đăng xuất
                                     </a>
                                 </div>
                             </div>
@@ -284,7 +283,7 @@ if ($last_update !== $today) {
                             </div>
                             <div class="mobile-user-role">
                                 <?php
-                                $role_names = ["Admin" => 'Quản trị viên', "Patient" => 'Bệnh nhân', "Doctor" => 'Bác sĩ'];
+                                $role_names = ["Admin" => 'Quản trị viên', "Patient" => 'Khách hàng', "Doctor" => 'Bác sĩ'];
                                 echo $role_names[$_SESSION['role_name']] ?? 'Người dùng';
                                 ?>
                             </div>

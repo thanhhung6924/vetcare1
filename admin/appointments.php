@@ -20,12 +20,12 @@ $error = $_GET['error'] ?? '';
 if ($action == 'update_status' && isset($_GET['id']) && isset($_GET['status'])) {
     $appointment_id = (int)$_GET['id'];
     $new_status = $_GET['status'];
-    
+
     $allowed_statuses = ['pending', 'confirmed', 'completed', 'cancelled'];
     if (in_array($new_status, $allowed_statuses)) {
         $stmt = $conn->prepare("UPDATE appointments SET status = ? WHERE appointment_id = ?");
         $stmt->bind_param("si", $new_status, $appointment_id);
-        
+
         if ($stmt->execute()) {
             header('Location: appointments.php?success=status_updated');
         } else {
@@ -38,10 +38,10 @@ if ($action == 'update_status' && isset($_GET['id']) && isset($_GET['status'])) 
 // Xử lý delete appointment
 if ($action == 'delete' && isset($_GET['id'])) {
     $appointment_id = (int)$_GET['id'];
-    
+
     $stmt = $conn->prepare("DELETE FROM appointments WHERE appointment_id = ?");
     $stmt->bind_param("i", $appointment_id);
-    
+
     if ($stmt->execute()) {
         header('Location: appointments.php?success=deleted');
     } else {
@@ -159,19 +159,28 @@ FROM appointments";
 try {
     $stats_result = $conn->query($stats_sql);
     $stats = $stats_result ? $stats_result->fetch_assoc() : [
-        'total' => 0, 'pending' => 0, 'confirmed' => 0, 
-        'completed' => 0, 'cancelled' => 0, 'today' => 0
+        'total' => 0,
+        'pending' => 0,
+        'confirmed' => 0,
+        'completed' => 0,
+        'cancelled' => 0,
+        'today' => 0
     ];
 } catch (Exception $e) {
     $stats = [
-        'total' => 0, 'pending' => 0, 'confirmed' => 0, 
-        'completed' => 0, 'cancelled' => 0, 'today' => 0
+        'total' => 0,
+        'pending' => 0,
+        'confirmed' => 0,
+        'completed' => 0,
+        'cancelled' => 0,
+        'today' => 0
     ];
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -183,6 +192,7 @@ try {
     <link href="assets/css/sidebar.css" rel="stylesheet">
     <link href="assets/css/header.css" rel="stylesheet">
 </head>
+
 <body>
     <?php include 'includes/headeradmin.php'; ?>
     <?php include 'includes/sidebaradmin.php'; ?>
@@ -206,10 +216,15 @@ try {
             <?php if ($success): ?>
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                     <?php
-                    switch($success) {
-                        case 'status_updated': echo 'Cập nhật trạng thái thành công!'; break;
-                        case 'deleted': echo 'Xóa lịch hẹn thành công!'; break;
-                        default: echo 'Thao tác thành công!';
+                    switch ($success) {
+                        case 'status_updated':
+                            echo 'Cập nhật trạng thái thành công!';
+                            break;
+                        case 'deleted':
+                            echo 'Xóa lịch hẹn thành công!';
+                            break;
+                        default:
+                            echo 'Thao tác thành công!';
                     }
                     ?>
                     <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
@@ -219,10 +234,15 @@ try {
             <?php if ($error): ?>
                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
                     <?php
-                    switch($error) {
-                        case 'update_failed': echo 'Cập nhật trạng thái thất bại!'; break;
-                        case 'delete_failed': echo 'Xóa lịch hẹn thất bại!'; break;
-                        default: echo 'Có lỗi xảy ra!';
+                    switch ($error) {
+                        case 'update_failed':
+                            echo 'Cập nhật trạng thái thất bại!';
+                            break;
+                        case 'delete_failed':
+                            echo 'Xóa lịch hẹn thất bại!';
+                            break;
+                        default:
+                            echo 'Có lỗi xảy ra!';
                     }
                     ?>
                     <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
@@ -305,9 +325,9 @@ try {
                     <form method="GET" class="row g-3">
                         <div class="col-md-3">
                             <label class="form-label">Tìm kiếm</label>
-                            <input type="text" class="form-control" name="search" 
-                                   value="<?= htmlspecialchars($search) ?>" 
-                                   placeholder="Tên bệnh nhân, bác sĩ, dịch vụ...">
+                            <input type="text" class="form-control" name="search"
+                                value="<?= htmlspecialchars($search) ?>"
+                                placeholder="Tên khách hàng, bác sĩ, dịch vụ...">
                         </div>
                         <div class="col-md-2">
                             <label class="form-label">Trạng thái</label>
@@ -352,14 +372,14 @@ try {
                     <div class="row align-items-center">
                         <div class="col">
                             <h6 class="m-0 font-weight-bold text-primary">
-                                Danh sách lịch hẹn 
+                                Danh sách lịch hẹn
                                 <span class="badge bg-primary ms-2"><?= number_format($total_records) ?></span>
                             </h6>
                         </div>
                         <div class="col-auto">
                             <div class="dropdown">
-                                <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" 
-                                        data-bs-toggle="dropdown">
+                                <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown">
                                     <i class="fas fa-download me-2"></i>Xuất dữ liệu
                                 </button>
                                 <ul class="dropdown-menu">
@@ -376,9 +396,9 @@ try {
                             <thead class="table-light">
                                 <tr>
                                     <th width="5%">#</th>
-                                    <th width="15%">Bệnh nhân</th>
+                                    <th width="15%">Khách hàng</th>
                                     <th width="15%">Bác sĩ</th>
-                                    <th width="15%">Phòng khám</th>
+
                                     <th width="15%">Ngày giờ hẹn</th>
                                     <th width="10%">Trạng thái</th>
                                     <th width="10%">Lý do</th>
@@ -404,9 +424,7 @@ try {
                                             <td>
                                                 <h6 class="mb-0"><?= htmlspecialchars($appointment['doctor_name']) ?></h6>
                                             </td>
-                                            <td>
-                                                <h6 class="mb-0"><?= htmlspecialchars($appointment['clinic_name'] ?? 'Chưa chọn') ?></h6>
-                                            </td>
+
                                             <td>
                                                 <div>
                                                     <strong><?= date('d/m/Y', strtotime($appointment['appointment_time'])) ?></strong>
@@ -436,57 +454,59 @@ try {
                                                 <div class="d-flex gap-1">
                                                     <!-- Quick Status Actions -->
                                                     <?php if ($appointment['status'] == 'pending'): ?>
-                                                        <button class="btn btn-success btn-sm" 
-                                                                onclick="updateStatus(<?= $appointment['appointment_id'] ?>, 'confirmed')"
-                                                                data-bs-toggle="tooltip" title="Xác nhận">
+                                                        <button class="btn btn-success btn-sm"
+                                                            onclick="updateStatus(<?= $appointment['appointment_id'] ?>, 'confirmed')"
+                                                            data-bs-toggle="tooltip" title="Xác nhận">
                                                             <i class="fas fa-check"></i>
                                                         </button>
-                                                        <button class="btn btn-danger btn-sm" 
-                                                                onclick="updateStatus(<?= $appointment['appointment_id'] ?>, 'cancelled')"
-                                                                data-bs-toggle="tooltip" title="Hủy bỏ">
+                                                        <button class="btn btn-danger btn-sm"
+                                                            onclick="updateStatus(<?= $appointment['appointment_id'] ?>, 'cancelled')"
+                                                            data-bs-toggle="tooltip" title="Hủy bỏ">
                                                             <i class="fas fa-times"></i>
                                                         </button>
                                                     <?php elseif ($appointment['status'] == 'confirmed'): ?>
-                                                        <button class="btn btn-primary btn-sm" 
-                                                                onclick="updateStatus(<?= $appointment['appointment_id'] ?>, 'completed')"
-                                                                data-bs-toggle="tooltip" title="Hoàn thành">
+                                                        <button class="btn btn-primary btn-sm"
+                                                            onclick="updateStatus(<?= $appointment['appointment_id'] ?>, 'completed')"
+                                                            data-bs-toggle="tooltip" title="Hoàn thành">
                                                             <i class="fas fa-check-double"></i>
                                                         </button>
                                                     <?php endif; ?>
-                                                    
+
                                                     <!-- View Button -->
-                                                    <a href="appointment-view.php?id=<?= $appointment['appointment_id'] ?>" 
-                                                       class="btn btn-info btn-sm"
-                                                       data-bs-toggle="tooltip" title="Xem chi tiết">
+                                                    <a href="appointment-view.php?id=<?= $appointment['appointment_id'] ?>"
+                                                        class="btn btn-info btn-sm"
+                                                        data-bs-toggle="tooltip" title="Xem chi tiết">
                                                         <i class="fas fa-eye"></i>
                                                     </a>
-                                                    
+
                                                     <!-- More Actions Dropdown -->
-                                                    <div class="dropdown">
-                                                        <button class="btn btn-outline-secondary btn-sm dropdown-toggle" 
-                                                                type="button" data-bs-toggle="dropdown"
-                                                                data-bs-toggle="tooltip" title="Thêm thao tác">
+                                                    <!-- <div class="dropdown">
+                                                        <button class="btn btn-outline-secondary btn-sm dropdown-toggle"
+                                                            type="button" data-bs-toggle="dropdown"
+                                                            data-bs-toggle="tooltip" title="Thêm thao tác">
                                                             <i class="fas fa-ellipsis-v"></i>
                                                         </button>
                                                         <ul class="dropdown-menu dropdown-menu-end">
                                                             <li><a class="dropdown-item" href="appointment-edit.php?id=<?= $appointment['appointment_id'] ?>">
-                                                                <i class="fas fa-edit text-primary me-2"></i>Chỉnh sửa
-                                                            </a></li>
-                                                            <li><hr class="dropdown-divider"></li>
-                                                            <?php if ($appointment['status'] != 'cancelled'): ?>
-                                                                <li><a class="dropdown-item text-warning" 
-                                                                       href="?action=update_status&id=<?= $appointment['appointment_id'] ?>&status=cancelled"
-                                                                       onclick="return confirm('Bạn có chắc chắn muốn hủy lịch hẹn này?')">
-                                                                    <i class="fas fa-ban me-2"></i>Hủy lịch hẹn
+                                                                    <i class="fas fa-edit text-primary me-2"></i>Chỉnh sửa
                                                                 </a></li>
+                                                            <li>
+                                                                <hr class="dropdown-divider">
+                                                            </li>
+                                                            <?php if ($appointment['status'] != 'cancelled'): ?>
+                                                                <li><a class="dropdown-item text-warning"
+                                                                        href="?action=update_status&id=<?= $appointment['appointment_id'] ?>&status=cancelled"
+                                                                        onclick="return confirm('Bạn có chắc chắn muốn hủy lịch hẹn này?')">
+                                                                        <i class="fas fa-ban me-2"></i>Hủy lịch hẹn
+                                                                    </a></li>
                                                             <?php endif; ?>
-                                                            <li><a class="dropdown-item text-danger" 
-                                                                   href="?action=delete&id=<?= $appointment['appointment_id'] ?>"
-                                                                   onclick="return confirm('Bạn có chắc chắn muốn xóa lịch hẹn này? Hành động này không thể hoàn tác!')">
-                                                                <i class="fas fa-trash me-2"></i>Xóa vĩnh viễn
-                                                            </a></li>
+                                                            <li><a class="dropdown-item text-danger"
+                                                                    href="?action=delete&id=<?= $appointment['appointment_id'] ?>"
+                                                                    onclick="return confirm('Bạn có chắc chắn muốn xóa lịch hẹn này? Hành động này không thể hoàn tác!')">
+                                                                    <i class="fas fa-trash me-2"></i>Xóa vĩnh viễn
+                                                                </a></li>
                                                         </ul>
-                                                    </div>
+                                                    </div> -->
                                                 </div>
                                             </td>
                                         </tr>
@@ -510,7 +530,7 @@ try {
                         <div class="row align-items-center">
                             <div class="col">
                                 <small class="text-muted">
-                                    Hiển thị <?= min($offset + 1, $total_records) ?> - <?= min($offset + $limit, $total_records) ?> 
+                                    Hiển thị <?= min($offset + 1, $total_records) ?> - <?= min($offset + $limit, $total_records) ?>
                                     trong tổng số <?= number_format($total_records) ?> bản ghi
                                 </small>
                             </div>
@@ -560,68 +580,68 @@ try {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/notifications.js"></script>
     <script src="assets/js/admin.js"></script>
-    
+
     <style>
         .btn-group .btn {
             border-radius: 6px !important;
             margin-right: 2px;
         }
-        
+
         .gap-1 {
             gap: 0.25rem !important;
         }
-        
+
         .dropdown-menu-end {
             --bs-position: end;
         }
-        
+
         .table td {
             vertical-align: middle;
         }
-        
+
         .badge {
             font-size: 0.75em;
             padding: 0.35em 0.65em;
         }
-        
+
         .btn-sm {
             --bs-btn-padding-y: 0.25rem;
             --bs-btn-padding-x: 0.5rem;
             --bs-btn-font-size: 0.875rem;
         }
-        
+
         .dropdown-toggle::after {
             display: none;
         }
-        
+
         .btn:hover {
             transform: translateY(-1px);
             transition: all 0.2s ease;
         }
     </style>
-    
+
     <script>
         // Initialize tooltips
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
             return new bootstrap.Tooltip(tooltipTriggerEl);
         });
-        
+
         // Update appointment status function
         function updateStatus(appointmentId, status) {
             const statusText = {
                 'confirmed': 'xác nhận',
-                'cancelled': 'hủy bỏ', 
+                'cancelled': 'hủy bỏ',
                 'completed': 'hoàn thành'
             };
-            
+
             if (confirm(`Bạn có chắc chắn muốn ${statusText[status]} lịch hẹn này?`)) {
                 // Show loading
                 const btn = event.target.closest('button');
                 const originalHtml = btn.innerHTML;
                 btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
                 btn.disabled = true;
-                
+
                 // Create form and submit
                 const form = document.createElement('form');
                 form.method = 'GET';
@@ -634,7 +654,7 @@ try {
                 form.submit();
             }
         }
-        
+
         // Auto refresh every 30 seconds
         setInterval(function() {
             // Only refresh if no modal is open
@@ -648,4 +668,5 @@ try {
         }, 30000);
     </script>
 </body>
-</html> 
+
+</html>

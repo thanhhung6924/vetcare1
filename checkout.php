@@ -42,7 +42,7 @@ $cart_items = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
 if (empty($cart_items)) {
     header('Location: cart.php');
     exit();
-}   
+}
 $recommendations = [];
 
 if (!empty($cart_items)) {
@@ -59,7 +59,7 @@ if (!empty($cart_items)) {
     curl_setopt($ch, CURLOPT_URL, $api_url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_TIMEOUT, 5);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); 
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
     $res = curl_exec($ch);
     curl_close($ch);
 
@@ -77,14 +77,16 @@ if (!empty($cart_items)) {
                     $is_in_cart = false;
                     foreach ($cart_items as $c_item) {
                         if ($c_item['product_id'] == $p_info['product_id']) {
-                            $is_in_cart = true; break;
+                            $is_in_cart = true;
+                            break;
                         }
                     }
-                    
+
                     $is_already_suggested = false;
                     foreach ($recommendations as $rec) {
                         if ($rec['product_id'] == $p_info['product_id']) {
-                            $is_already_suggested = true; break;
+                            $is_already_suggested = true;
+                            break;
                         }
                     }
 
@@ -94,14 +96,14 @@ if (!empty($cart_items)) {
                             'name'       => $r_ai['name'],
                             'price'      => $p_info['price'],
                             'image_url'  => $p_info['image_url'],
-                            'type'       => $r_ai['type'] ?? 'GỢI Ý TỪ AI', 
+                            'type'       => $r_ai['type'] ?? 'GỢI Ý TỪ AI',
                             'confidence' => $r_ai['confidence']
                         ];
                     }
                 }
-                
+
                 // CHỐT CỨNG 4 MÓN LÀ DỪNG, KHÔNG THỂ LỌT RA MÓN THỨ 5 TRÊN MÀN HÌNH
-                if (count($recommendations) >= 4) break; 
+                if (count($recommendations) >= 4) break;
             }
         }
     }
@@ -172,10 +174,10 @@ $address_result = $stmt->get_result()->fetch_assoc();
 // Tạo địa chỉ đầy đủ nếu có
 $saved_address = '';
 if ($address_result) {
-    $saved_address = $address_result['address_line'] . "\n" . 
-                    $address_result['ward'] . ", " . 
-                    $address_result['district'] . ", " . 
-                    $address_result['city'];
+    $saved_address = $address_result['address_line'] . "\n" .
+        $address_result['ward'] . ", " .
+        $address_result['district'] . ", " .
+        $address_result['city'];
 }
 
 // Log form submission for debugging if needed
@@ -187,17 +189,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
     try {
         $conn->begin_transaction();
-        
+
         $payment_method = $_POST['payment_method'] ?? 'cod';
         $order_note = $_POST['order_note'] ?? '';
-        
+
         // Xử lý địa chỉ giao hàng
         $address_type = $_POST['address_type'] ?? 'new';
-        
+
         if ($address_type === 'saved' && !empty($saved_address)) {
-            $shipping_address = ($user_info['full_name'] ?: $user_info['username']) . "\n" . 
-                            ($user_info['phone'] ?: '') . "\n" . 
-                            $saved_address;
+            $shipping_address = ($user_info['full_name'] ?: $user_info['username']) . "\n" .
+                ($user_info['phone'] ?: '') . "\n" .
+                $saved_address;
         } else {
             $recipient_name = $_POST['recipient_name'] ?? '';
             $recipient_phone = $_POST['recipient_phone'] ?? '';
@@ -205,16 +207,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
             $ward = $_POST['ward_text'] ?? '';
             $district = $_POST['district_text'] ?? '';
             $city = $_POST['city_text'] ?? '';
-            
-            $shipping_address = $recipient_name . "\n" . 
-                            $recipient_phone . "\n" . 
-                            $address_line . "\n" . 
-                            $ward . ", " . $district . ", " . $city;
+
+            $shipping_address = $recipient_name . "\n" .
+                $recipient_phone . "\n" .
+                $address_line . "\n" .
+                $ward . ", " . $district . ", " . $city;
         }
-        
+
         // Lấy order_id của giỏ hàng hiện tại
         $cart_order_id = $cart_items[0]['order_id'];
-        
+
         // Cập nhật đơn hàng từ cart thành pending
         $stmt = $conn->prepare("
             UPDATE orders 
@@ -228,28 +230,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
             WHERE order_id = ? AND user_id = ? AND status = 'cart'
         ");
         $stmt->bind_param("sdssii", $shipping_address, $final_total, $payment_method, $order_note, $cart_order_id, $user_id);
-        
+
         if (!$stmt->execute()) {
             throw new Exception("Không thể cập nhật đơn hàng: " . $stmt->error);
         }
-        
+
         // NOTE: Không trừ tồn kho ở đây, chỉ trừ khi admin xác nhận đơn hàng
         // Tồn kho sẽ được trừ trong admin/orders.php khi status chuyển thành 'completed'
-        
+
         // Chỉ kiểm tra tồn kho để đảm bảo đủ hàng
         foreach ($cart_items as $item) {
             $stmt = $conn->prepare("SELECT stock, name FROM products WHERE product_id = ?");
             $stmt->bind_param("i", $item['product_id']);
             $stmt->execute();
             $product = $stmt->get_result()->fetch_assoc();
-            
+
             if (!$product || $product['stock'] < $item['quantity']) {
                 throw new Exception("Sản phẩm '{$product['name']}' không đủ hàng trong kho");
             }
         }
-        
+
         $conn->commit();
-        
+
         // Lấy thông tin đơn hàng và user để gửi email
         $stmt = $conn->prepare("
             SELECT o.order_id, o.total, o.payment_method, o.shipping_address, 
@@ -262,7 +264,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
         $stmt->bind_param('i', $cart_order_id);
         $stmt->execute();
         $order_info = $stmt->get_result()->fetch_assoc();
-        
+
         // Gửi email xác nhận đơn hàng
         if ($order_info && $order_info['email']) {
             try {
@@ -272,7 +274,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
                 error_log("Failed to send order email: " . $e->getMessage());
             }
         }
-        
+
         // Chuyển hướng dựa vào phương thức thanh toán
         if ($payment_method === 'cod') {
             header("Location: order-success.php?order_id=" . $cart_order_id);
@@ -280,27 +282,56 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
             header("Location: order-payment.php?order_id=" . $cart_order_id);
         }
         exit();
-        
     } catch (Exception $e) {
         $conn->rollback();
         $error_message = "Có lỗi xảy ra khi đặt hàng: " . $e->getMessage();
     }
 }
 ?>
+<?php
+$_SESSION['ai_recommendations'] = []; // reset
 
+if (!empty($cart_items)) {
+
+    $query_params = [];
+    foreach ($cart_items as $item) {
+        $query_params[] = "cart_items=" . rawurlencode(trim($item['name']));
+    }
+
+    $api_url = "http://127.0.0.1:8000/recommend?" . implode('&', $query_params);
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $api_url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+
+    $res = curl_exec($ch);
+    curl_close($ch);
+
+    if ($res) {
+        $api_data = json_decode($res, true);
+
+        if (!empty($api_data['recommendations'])) {
+            // ✅ Lưu luôn kết quả vào session
+            $_SESSION['ai_recommendations'] = $api_data['recommendations'];
+        }
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thanh toán - VetCare</title>
-    
+
     <!-- CSS Libraries -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
     <link href="assets/css/sepay.css" rel="stylesheet">
-    
+
     <style>
         :root {
             --primary-color: #3b82f6;
@@ -394,7 +425,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
             width: 16px;
         }
 
-        .form-control, .form-select {
+        .form-control,
+        .form-select {
             border: 2px solid var(--border-color);
             border-radius: 15px;
             padding: 1rem 1.25rem;
@@ -404,7 +436,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
             box-shadow: var(--shadow-sm);
         }
 
-        .form-control:focus, .form-select:focus {
+        .form-control:focus,
+        .form-select:focus {
             border-color: #667eea;
             box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1), var(--shadow-md);
             background: white;
@@ -479,8 +512,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
         }
 
         @keyframes checkmark {
-            0% { transform: scale(0) rotate(180deg); opacity: 0; }
-            100% { transform: scale(1) rotate(0deg); opacity: 1; }
+            0% {
+                transform: scale(0) rotate(180deg);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1) rotate(0deg);
+                opacity: 1;
+            }
         }
 
         .address-type-option i {
@@ -678,15 +718,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
             body {
                 padding-top: 120px;
             }
-            
+
             .page-title {
                 font-size: 2.5rem;
             }
-            
+
             .checkout-card {
                 padding: 2rem;
             }
-            
+
             .address-grid {
                 grid-template-columns: 1fr;
             }
@@ -715,7 +755,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
         }
 
         @keyframes spin {
-            to { transform: rotate(360deg); }
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         .hidden {
@@ -727,8 +769,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .alert {
@@ -766,7 +815,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
                     <i class="fas fa-exclamation-circle me-2"></i><?php echo $error_message; ?>
                 </div>
             <?php endif; ?>
-            
+
             <?php if ($success_message): ?>
                 <div class="alert alert-success" role="alert">
                     <i class="fas fa-check-circle me-2"></i><?php echo $success_message; ?>
@@ -784,18 +833,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
                                 <i class="fas fa-map-marker-alt"></i>
                                 Thông tin giao hàng
                             </h3>
-                            
+
                             <!-- Address Type Selection -->
                             <div class="address-type-selector">
                                 <?php if (!empty($saved_address)): ?>
-                                <div class="address-type-option selected" data-type="saved">
-                                    <input type="radio" name="address_type" value="saved" checked class="d-none">
-                                    <i class="fas fa-bookmark"></i>
-                                    <h4>Địa chỉ đã lưu</h4>
-                                    <p>Sử dụng địa chỉ trong hồ sơ</p>
-                                </div>
+                                    <div class="address-type-option selected" data-type="saved">
+                                        <input type="radio" name="address_type" value="saved" checked class="d-none">
+                                        <i class="fas fa-bookmark"></i>
+                                        <h4>Địa chỉ đã lưu</h4>
+                                        <p>Sử dụng địa chỉ trong hồ sơ</p>
+                                    </div>
                                 <?php endif; ?>
-                                
+
                                 <div class="address-type-option <?php echo empty($saved_address) ? 'selected' : ''; ?>" data-type="new">
                                     <input type="radio" name="address_type" value="new" <?php echo empty($saved_address) ? 'checked' : ''; ?> class="d-none">
                                     <i class="fas fa-plus-circle"></i>
@@ -806,19 +855,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
 
                             <!-- Saved Address Display -->
                             <?php if (!empty($saved_address)): ?>
-                            <div id="savedAddressDisplay" class="saved-address-display">
-                                <div class="address-info">
-                                    <div class="recipient-info">
-                                        <strong><i class="fas fa-user me-2"></i><?php echo htmlspecialchars($user_info['full_name'] ?: $user_info['username']); ?></strong>
-                                    </div>
-                                    <div class="phone-info">
-                                        <i class="fas fa-phone me-2"></i><?php echo htmlspecialchars($user_info['phone'] ?? 'Chưa có số điện thoại'); ?>
-                                    </div>
-                                    <div class="address-details">
-                                        <i class="fas fa-map-marker-alt me-2"></i><?php echo htmlspecialchars($saved_address); ?>
+                                <div id="savedAddressDisplay" class="saved-address-display">
+                                    <div class="address-info">
+                                        <div class="recipient-info">
+                                            <strong><i class="fas fa-user me-2"></i><?php echo htmlspecialchars($user_info['full_name'] ?: $user_info['username']); ?></strong>
+                                        </div>
+                                        <div class="phone-info">
+                                            <i class="fas fa-phone me-2"></i><?php echo htmlspecialchars($user_info['phone'] ?? 'Chưa có số điện thoại'); ?>
+                                        </div>
+                                        <div class="address-details">
+                                            <i class="fas fa-map-marker-alt me-2"></i><?php echo htmlspecialchars($saved_address); ?>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                             <?php endif; ?>
 
                             <!-- New Address Form -->
@@ -830,7 +879,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
                                                 <i class="fas fa-user"></i>
                                                 Họ tên người nhận *
                                             </label>
-                                            <input type="text" class="form-control" name="recipient_name" 
+                                            <input type="text" class="form-control" name="recipient_name"
                                                 value="<?php echo htmlspecialchars($user_info['full_name'] ?: $user_info['username']); ?>">
                                         </div>
                                     </div>
@@ -840,7 +889,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
                                                 <i class="fas fa-phone"></i>
                                                 Số điện thoại *
                                             </label>
-                                            <input type="tel" class="form-control" name="recipient_phone" 
+                                            <input type="tel" class="form-control" name="recipient_phone"
                                                 value="<?php echo htmlspecialchars($user_info['phone'] ?? ''); ?>">
 
                                         </div>
@@ -852,7 +901,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
                                         <i class="fas fa-home"></i>
                                         Địa chỉ cụ thể *
                                     </label>
-                                    <input type="text" class="form-control" name="address_line" 
+                                    <input type="text" class="form-control" name="address_line"
                                         placeholder="Số nhà, tên đường, khu vực...">
                                 </div>
 
@@ -867,7 +916,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
                                         </select>
                                         <input type="hidden" name="city_text" id="cityText">
                                     </div>
-                                    
+
                                     <div class="form-group">
                                         <label class="form-label">
                                             <i class="fas fa-building"></i>
@@ -878,7 +927,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
                                         </select>
                                         <input type="hidden" name="district_text" id="districtText">
                                     </div>
-                                    
+
                                     <div class="form-group">
                                         <label class="form-label">
                                             <i class="fas fa-map-pin"></i>
@@ -899,7 +948,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
                                 <i class="fas fa-credit-card"></i>
                                 Phương thức thanh toán
                             </h3>
-                            
+
                             <div class="payment-method selected" data-method="cod">
                                 <div class="d-flex align-items-center">
                                     <input type="radio" name="payment_method" value="cod" checked class="form-check-input me-3">
@@ -933,8 +982,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
                                 <i class="fas fa-sticky-note"></i>
                                 Ghi chú đơn hàng
                             </h3>
-                            <textarea name="order_note" class="form-control" rows="3" 
-                                    placeholder="Ghi chú cho người bán (tùy chọn)"></textarea>
+                            <textarea name="order_note" class="form-control" rows="3"
+                                placeholder="Ghi chú cho người bán (tùy chọn)"></textarea>
                         </div>
                     </div>
 
@@ -950,8 +999,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
                             <div class="order-items mb-4">
                                 <?php foreach ($cart_items as $item): ?>
                                     <div class="order-item">
-                                        <img src="<?php echo htmlspecialchars($item['display_image']); ?>" 
-                                            alt="<?php echo htmlspecialchars($item['name']); ?>" 
+                                        <img src="<?php echo htmlspecialchars($item['display_image']); ?>"
+                                            alt="<?php echo htmlspecialchars($item['name']); ?>"
                                             class="item-image">
                                         <div class="item-info">
                                             <div class="item-name"><?php echo htmlspecialchars($item['name']); ?></div>
@@ -964,56 +1013,56 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
                                 <?php endforeach; ?>
                             </div>
                             <?php if (!empty($recommendations)): ?>
-                            <div class="ai-upsell-box mb-4 p-3 rounded" style="background: #f8faff; border: 1px dashed #3b82f6; box-shadow: inset 0 0 10px rgba(59,130,246,0.05);">
-                                <div class="d-flex align-items-center mb-3 pb-2" style="border-bottom: 1px solid #e5e7eb;">
-                                    <i class="fas fa-magic text-primary me-2 fs-5"></i>
-                                    <span class="fw-bold text-primary" style="font-size: 0.95rem;">Mua kèm giá tốt (AI gợi ý)</span>
-                                </div>
-                                
-                                <?php foreach ($recommendations as $rec): ?>
-                                <div class="d-flex align-items-center mb-3 bg-white p-2 rounded shadow-sm position-relative border hover-effect" style="transition: all 0.2s;">
-                                    
-                                    <div class="position-relative me-3" style="width: 55px; height: 55px; flex-shrink: 0;">
-                                        <img src="<?php echo htmlspecialchars($rec['image_url']); ?>" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px; border: 1px solid #f3f4f6; padding: 2px;">
-                                        <span class="badge bg-info position-absolute top-0 start-100 translate-middle text-dark shadow-sm" style="font-size: 0.6rem; font-weight: bold; border: 1px solid #fff; z-index: 2;">
-                                            <?php echo round($rec['confidence']); ?>%
-                                        </span>
+                                <div class="ai-upsell-box mb-4 p-3 rounded" style="background: #f8faff; border: 1px dashed #3b82f6; box-shadow: inset 0 0 10px rgba(59,130,246,0.05);">
+                                    <div class="d-flex align-items-center mb-3 pb-2" style="border-bottom: 1px solid #e5e7eb;">
+                                        <i class="fas fa-magic text-primary me-2 fs-5"></i>
+                                        <span class="fw-bold text-primary" style="font-size: 0.95rem;">Mua kèm giá tốt (AI gợi ý)</span>
                                     </div>
-                                    
-                                    <div style="flex: 1; min-width: 0; padding-right: 10px;">
-                                        <div class="fw-bold text-truncate text-dark" style="font-size: 0.85rem; margin-bottom: 4px;" title="<?php echo htmlspecialchars($rec['name']); ?>">
-                                            <?php echo htmlspecialchars($rec['name']); ?>
+
+                                    <?php foreach ($recommendations as $rec): ?>
+                                        <div class="d-flex align-items-center mb-3 bg-white p-2 rounded shadow-sm position-relative border hover-effect" style="transition: all 0.2s;">
+
+                                            <div class="position-relative me-3" style="width: 55px; height: 55px; flex-shrink: 0;">
+                                                <img src="<?php echo htmlspecialchars($rec['image_url']); ?>" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px; border: 1px solid #f3f4f6; padding: 2px;">
+                                                <span class="badge bg-info position-absolute top-0 start-100 translate-middle text-dark shadow-sm" style="font-size: 0.6rem; font-weight: bold; border: 1px solid #fff; z-index: 2;">
+                                                    <?php echo round($rec['confidence']); ?>%
+                                                </span>
+                                            </div>
+
+                                            <div style="flex: 1; min-width: 0; padding-right: 10px;">
+                                                <div class="fw-bold text-truncate text-dark" style="font-size: 0.85rem; margin-bottom: 4px;" title="<?php echo htmlspecialchars($rec['name']); ?>">
+                                                    <?php echo htmlspecialchars($rec['name']); ?>
+                                                </div>
+
+                                                <span class="badge <?php
+                                                                    $rec_type = $rec['type'] ?? 'GỢI Ý TỪ AI';
+
+                                                                    if (strpos($rec_type, 'HOT') !== false) echo 'bg-danger';
+                                                                    elseif (strpos($rec_type, 'BÁN CHẠY') !== false) echo 'bg-warning text-dark';
+                                                                    else echo 'bg-success';
+                                                                    ?>" style="font-size: 0.6rem; padding: 0.3em 0.5em; margin-bottom: 4px; display: inline-block; letter-spacing: 0.5px;">
+                                                    <?php echo htmlspecialchars($rec_type); ?>
+                                                </span>
+
+                                                <div class="text-danger fw-bold" style="font-size: 0.9rem;">
+                                                    <?php echo number_format($rec['price'], 0, ',', '.'); ?>đ
+                                                </div>
+                                            </div>
+
+                                            <button type="button"
+                                                onclick="addFastToCart(<?php echo $rec['product_id']; ?>)"
+                                                class="btn btn-outline-primary btn-add-ai-<?php echo $rec['product_id']; ?>"
+                                                style="font-size: 0.8rem; font-weight: 600; padding: 0.3rem 0.6rem; border-radius: 8px; border-width: 2px; white-space: nowrap;">
+                                                <i class="fas fa-plus"></i> Thêm
+                                            </button>
                                         </div>
-                                        
-                                        <span class="badge <?php 
-                                            $rec_type = $rec['type'] ?? 'GỢI Ý TỪ AI'; 
-                                            
-                                            if(strpos($rec_type, 'HOT') !== false) echo 'bg-danger'; 
-                                            elseif(strpos($rec_type, 'BÁN CHẠY') !== false) echo 'bg-warning text-dark';
-                                            else echo 'bg-success'; 
-                                        ?>" style="font-size: 0.6rem; padding: 0.3em 0.5em; margin-bottom: 4px; display: inline-block; letter-spacing: 0.5px;">
-                                            <?php echo htmlspecialchars($rec_type); ?>
-                                        </span>
-                                        
-                                        <div class="text-danger fw-bold" style="font-size: 0.9rem;">
-                                            <?php echo number_format($rec['price'], 0, ',', '.'); ?>đ
-                                        </div>
-                                    </div>
-                                    
-                                    <button type="button" 
-                                            onclick="addFastToCart(<?php echo $rec['product_id']; ?>)" 
-                                            class="btn btn-outline-primary btn-add-ai-<?php echo $rec['product_id']; ?>" 
-                                            style="font-size: 0.8rem; font-weight: 600; padding: 0.3rem 0.6rem; border-radius: 8px; border-width: 2px; white-space: nowrap;">
-                                        <i class="fas fa-plus"></i> Thêm
-                                    </button>
+                                    <?php endforeach; ?>
                                 </div>
-                                <?php endforeach; ?>
-                            </div>
                             <?php else: ?>
-                            <div class="ai-upsell-box mb-4 p-4 rounded text-center" style="background: #fff; border: 1px dashed #d1d5db;">
-                                <i class="fas fa-robot mb-2 fa-2x text-warning opacity-75"></i>
-                                <div class="small fw-medium text-muted">Hệ thống AI đang phân tích gợi ý...</div>
-                            </div>
+                                <div class="ai-upsell-box mb-4 p-4 rounded text-center" style="background: #fff; border: 1px dashed #d1d5db;">
+                                    <i class="fas fa-robot mb-2 fa-2x text-warning opacity-75"></i>
+                                    <div class="small fw-medium text-muted">Hệ thống AI đang phân tích gợi ý...</div>
+                                </div>
                             <?php endif; ?>
                             <!-- Order Summary -->
                             <div class="order-summary">
@@ -1035,17 +1084,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
                             <!-- <button type="submit" name="place_order" class="btn-place-order" id="placeOrderBtn">
                                 <i class="fas fa-lock me-2"></i>Đặt hàng ngay
                             </button> -->
-                            
+
                             <!-- Debug Button -->
-                            <button type="submit" name="place_order" value="debug" 
-                            class="btn-place-order btn btn-warning mt-2 w-100" 
-                            style="font-size: 1.2rem; background: linear-gradient(135deg, #1976d2, #1ec0f7);
+                            <button type="submit" name="place_order" value="debug"
+                                class="btn-place-order btn btn-warning mt-2 w-100"
+                                style="font-size: 1.2rem; background: linear-gradient(135deg, #1976d2, #1ec0f7);
                              border: none; color: white; padding: 1.25rem 2rem; border-radius: 20px; 
                              font-weight: 700; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); 
                              transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative;
                              text-align: center;
-                             overflow: hidden;" 
-                             onmouseover="this.style.transform='translateY(-3px) scale(1.02)'; 
+                             overflow: hidden;"
+                                onmouseover="this.style.transform='translateY(-3px) scale(1.02)'; 
                              this.style.boxShadow='0 25px 50px rgba(102, 126, 234, 0.4)'" onmouseout="this.style.transform='translateY(0) scale(1)'; 
                              this.style.boxShadow='0 20px 40px rgba(0, 0, 0, 0.15)'">
                                 <i class="fas fa-shopping-cart me-2"></i>Đặt hàng ngay
@@ -1078,39 +1127,41 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="assets/js/sepay.js"></script>
     <script>
-    function addFastToCart(productId) {
-    // Hiệu ứng đang xử lý
-        const $btn = $('.btn-add-ai-' + productId);
-        const originalText = $btn.html();
-        $btn.html('<i class="fas fa-spinner fa-spin"></i>').prop('disabled', true);
+        function addFastToCart(productId) {
+            // Hiệu ứng đang xử lý
+            const $btn = $('.btn-add-ai-' + productId);
+            const originalText = $btn.html();
+            $btn.html('<i class="fas fa-spinner fa-spin"></i>').prop('disabled', true);
 
-        $.ajax({
-            url: 'api/add-to-checkout.php', // Tên file xử lý ở Bước 3
-            type: 'POST',
-            data: { product_id: productId },
-            success: function(response) {
-                try {
-                    const data = JSON.parse(response);
-                    if (data.success) {
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'Đã thêm vào đơn hàng!',
-                            timer: 800,
-                            showConfirmButton: false
-                        }).then(() => {
-                            window.location.reload(); // Load lại trang để cập nhật danh sách và tổng tiền
-                        });
-                    } else {
-                        alert(data.message);
-                        $btn.html(originalText).prop('disabled', false);
+            $.ajax({
+                url: 'api/add-to-checkout.php', // Tên file xử lý ở Bước 3
+                type: 'POST',
+                data: {
+                    product_id: productId
+                },
+                success: function(response) {
+                    try {
+                        const data = JSON.parse(response);
+                        if (data.success) {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Đã thêm vào đơn hàng!',
+                                timer: 800,
+                                showConfirmButton: false
+                            }).then(() => {
+                                window.location.reload(); // Load lại trang để cập nhật danh sách và tổng tiền
+                            });
+                        } else {
+                            alert(data.message);
+                            $btn.html(originalText).prop('disabled', false);
+                        }
+                    } catch (e) {
+                        console.error("Lỗi parse JSON:", response);
+                        window.location.reload(); // Có lỗi thì cứ reload cho chắc
                     }
-                } catch (e) {
-                    console.error("Lỗi parse JSON:", response);
-                    window.location.reload(); // Có lỗi thì cứ reload cho chắc
                 }
-            }
-        });
-    }
+            });
+        }
     </script>
     <script>
         $(document).ready(function() {
@@ -1128,7 +1179,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
                 $('.address-type-option').removeClass('selected');
                 $(this).addClass('selected');
                 $(this).find('input[type="radio"]').prop('checked', true);
-                
+
                 const addressType = $(this).data('type');
                 if (addressType === 'saved') {
                     $('#savedAddressDisplay').removeClass('hidden');
@@ -1147,7 +1198,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
             // Load provinces from Vietnam API
             function loadProvinces() {
                 $('#citySelect').html('<option value="">Đang tải...</option>');
-                
+
                 $.ajax({
                     url: 'https://provinces.open-api.vn/api/?depth=3',
                     method: 'GET',
@@ -1170,7 +1221,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
             function populateProvinces(provinces) {
                 const $citySelect = $('#citySelect');
                 $citySelect.empty().append('<option value="">-- Chọn Tỉnh/Thành phố --</option>');
-                
+
                 provinces.forEach(province => {
                     $citySelect.append(`<option value="${province.code}">${province.name}</option>`);
                 });
@@ -1179,22 +1230,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
             function populateDistricts(districts) {
                 const $districtSelect = $('#districtSelect');
                 $districtSelect.empty().append('<option value="">-- Chọn Quận/Huyện --</option>');
-                
+
                 districts.forEach(district => {
                     $districtSelect.append(`<option value="${district.code}">${district.name}</option>`);
                 });
-                
+
                 $districtSelect.prop('disabled', false);
             }
 
             function populateWards(wards) {
                 const $wardSelect = $('#wardSelect');
                 $wardSelect.empty().append('<option value="">-- Chọn Phường/Xã --</option>');
-                
+
                 wards.forEach(ward => {
                     $wardSelect.append(`<option value="${ward.code}">${ward.name}</option>`);
                 });
-                
+
                 $wardSelect.prop('disabled', false);
             }
 
@@ -1203,7 +1254,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
                 const provinceCode = $(this).val();
                 const provinceName = $(this).find('option:selected').text();
                 $('#cityText').val(provinceName);
-                
+
                 if (provinceCode) {
                     const province = provincesData.find(p => p.code == provinceCode);
                     if (province) {
@@ -1223,7 +1274,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
                 const districtCode = $(this).val();
                 const districtName = $(this).find('option:selected').text();
                 $('#districtText').val(districtName);
-                
+
                 if (districtCode) {
                     const provinceCode = $('#citySelect').val();
                     const province = provincesData.find(p => p.code == provinceCode);
@@ -1249,7 +1300,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
                 $('.payment-method').removeClass('selected');
                 $(this).addClass('selected');
                 $(this).find('input[type="radio"]').prop('checked', true);
-                
+
                 const method = $(this).data('method');
             });
 
@@ -1267,7 +1318,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
                         });
                         return false;
                     }
-                    
+
                     if (!$('#districtSelect').val()) {
                         e.preventDefault();
                         Swal.fire({
@@ -1277,7 +1328,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
                         });
                         return false;
                     }
-                    
+
                     if (!$('#wardSelect').val()) {
                         e.preventDefault();
                         Swal.fire({
@@ -1288,11 +1339,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
                         return false;
                     }
                 }
-                
+
                 // Show loading
                 const $submitBtn = $('#placeOrderBtn');
                 $submitBtn.html('<i class="fas fa-spinner fa-spin me-2"></i>Đang xử lý...').prop('disabled', true);
-                
+
                 // Allow form to submit normally
                 return true;
             });
@@ -1302,4 +1353,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['place_order'])) {
         });
     </script>
 </body>
-</html> 
+
+</html>

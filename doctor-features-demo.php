@@ -49,6 +49,7 @@ try {
 
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,14 +57,40 @@ try {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
-        .main-card { background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        .feature-card { border: none; border-radius: 15px; transition: all 0.3s; background: #f8f9fa; }
-        .feature-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        .status-badge { font-size: 0.8rem; }
-        .demo-section { border-left: 4px solid #007bff; padding-left: 20px; }
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .main-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-card {
+            border: none;
+            border-radius: 15px;
+            transition: all 0.3s;
+            background: #f8f9fa;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .status-badge {
+            font-size: 0.8rem;
+        }
+
+        .demo-section {
+            border-left: 4px solid #007bff;
+            padding-left: 20px;
+        }
     </style>
 </head>
+
 <body>
     <div class="container py-5">
         <div class="main-card p-5">
@@ -90,7 +117,7 @@ try {
                             <ul class="list-unstyled">
                                 <li><i class="fas fa-check text-success me-2"></i> Tạo file `doctor/appointment-view.php`</li>
                                 <li><i class="fas fa-check text-success me-2"></i> Bảo mật: chỉ xem lịch hẹn của bác sĩ hiện tại</li>
-                                <li><i class="fas fa-check text-success me-2"></i> Hiển thị đầy đủ thông tin bệnh nhân</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Hiển thị đầy đủ thông tin khách hàng</li>
                                 <li><i class="fas fa-check text-success me-2"></i> Cập nhật trạng thái lịch hẹn</li>
                                 <li><i class="fas fa-check text-success me-2"></i> Sửa lỗi role permission AJAX</li>
                             </ul>
@@ -99,46 +126,48 @@ try {
                         <div class="mb-3">
                             <h6>📋 Danh sách lịch hẹn mẫu:</h6>
                             <?php if (!empty($appointments)): ?>
-                            <div class="table-responsive">
-                                <table class="table table-sm">
-                                    <thead>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Bệnh nhân</th>
-                                            <th>Ngày</th>
-                                            <th>Trạng thái</th>
-                                            <th>Demo</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php foreach ($appointments as $apt): ?>
-                                        <tr>
-                                            <td>#<?= $apt['appointment_id'] ?></td>
-                                            <td><?= htmlspecialchars($apt['patient_name']) ?></td>
-                                            <td><?= date('d/m/Y', strtotime($apt['appointment_date'])) ?></td>
-                                            <td>
-                                                <?php
-                                                $status_map = [
-                                                    'pending' => 'warning', 'confirmed' => 'success', 
-                                                    'completed' => 'info', 'cancelled' => 'danger'
-                                                ];
-                                                $badge_class = $status_map[$apt['status']] ?? 'secondary';
-                                                ?>
-                                                <span class="badge bg-<?= $badge_class ?> status-badge"><?= $apt['status'] ?></span>
-                                            </td>
-                                            <td>
-                                                <a href="doctor/appointment-view.php?id=<?= $apt['appointment_id'] ?>" 
-                                                   class="btn btn-outline-primary btn-sm" target="_blank">
-                                                    <i class="fas fa-eye"></i>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <?php endforeach; ?>
-                                    </tbody>
-                                </table>
-                            </div>
+                                <div class="table-responsive">
+                                    <table class="table table-sm">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Khách hàng</th>
+                                                <th>Ngày</th>
+                                                <th>Trạng thái</th>
+                                                <th>Demo</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php foreach ($appointments as $apt): ?>
+                                                <tr>
+                                                    <td>#<?= $apt['appointment_id'] ?></td>
+                                                    <td><?= htmlspecialchars($apt['patient_name']) ?></td>
+                                                    <td><?= date('d/m/Y', strtotime($apt['appointment_date'])) ?></td>
+                                                    <td>
+                                                        <?php
+                                                        $status_map = [
+                                                            'pending' => 'warning',
+                                                            'confirmed' => 'success',
+                                                            'completed' => 'info',
+                                                            'cancelled' => 'danger'
+                                                        ];
+                                                        $badge_class = $status_map[$apt['status']] ?? 'secondary';
+                                                        ?>
+                                                        <span class="badge bg-<?= $badge_class ?> status-badge"><?= $apt['status'] ?></span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="doctor/appointment-view.php?id=<?= $apt['appointment_id'] ?>"
+                                                            class="btn btn-outline-primary btn-sm" target="_blank">
+                                                            <i class="fas fa-eye"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            <?php endforeach; ?>
+                                        </tbody>
+                                    </table>
+                                </div>
                             <?php else: ?>
-                            <div class="alert alert-info">Không có dữ liệu lịch hẹn</div>
+                                <div class="alert alert-info">Không có dữ liệu lịch hẹn</div>
                             <?php endif; ?>
                         </div>
 
@@ -173,18 +202,18 @@ try {
                         <div class="mb-3">
                             <h6>🏥 Danh sách clinic có sẵn:</h6>
                             <?php if (!empty($clinics)): ?>
-                            <div class="row">
-                                <?php foreach ($clinics as $clinic): ?>
-                                <div class="col-12 mb-2">
-                                    <div class="border rounded p-2">
-                                        <strong><?= htmlspecialchars($clinic['name']) ?></strong><br>
-                                        <small class="text-muted"><?= htmlspecialchars($clinic['address']) ?></small>
-                                    </div>
+                                <div class="row">
+                                    <?php foreach ($clinics as $clinic): ?>
+                                        <div class="col-12 mb-2">
+                                            <div class="border rounded p-2">
+                                                <strong><?= htmlspecialchars($clinic['name']) ?></strong><br>
+                                                <small class="text-muted"><?= htmlspecialchars($clinic['address']) ?></small>
+                                            </div>
+                                        </div>
+                                    <?php endforeach; ?>
                                 </div>
-                                <?php endforeach; ?>
-                            </div>
                             <?php else: ?>
-                            <div class="alert alert-warning">Không có dữ liệu clinic</div>
+                                <div class="alert alert-warning">Không có dữ liệu clinic</div>
                             <?php endif; ?>
                         </div>
 
@@ -248,4 +277,5 @@ try {
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html> 
+
+</html>

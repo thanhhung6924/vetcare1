@@ -44,7 +44,7 @@
                         </a>
                         <ul class="collapse nav flex-column ms-3 <?= in_array($current_page, ['users.php', 'user-add.php', 'user-edit.php', 'user-view.php']) ? 'show' : '' ?>" id="userSubmenu">
                             <li class="nav-item"><a class="nav-link" href="/admin/users.php">Tất cả người dùng</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/admin/users.php?role=patient">Bệnh nhân</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/admin/users.php?role=patient">Khách hàng</a></li>
                             <li class="nav-item"><a class="nav-link" href="/admin/users.php?role=doctor">Bác sĩ</a></li>
                         </ul>
                     </li>

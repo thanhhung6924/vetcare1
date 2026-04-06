@@ -33,28 +33,29 @@ $popular_products = getPopularProducts(3);
 
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sản phẩm - VetCare Store</title>
-    
+
     <link rel="stylesheet" href="../assets/css/layout.css">
     <link rel="stylesheet" href="../assets/css/shop.css">
     <link rel="stylesheet" href="../assets/css/products.css">
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@14.6.3/distribute/nouislider.min.css">
-    
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+
     <style>
         /* Cart notification styles */
         .cart-notification {
@@ -65,10 +66,10 @@ $popular_products = getPopularProducts(3);
             min-width: 300px !important;
             max-width: 400px !important;
             background: white !important;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.12) !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12) !important;
             border-radius: 12px !important;
             backdrop-filter: blur(10px) !important;
-            border: 1px solid rgba(255,255,255,0.2) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
             font-weight: 500 !important;
             margin: 0 !important;
             padding: 1rem !important;
@@ -145,7 +146,7 @@ $popular_products = getPopularProducts(3);
             position: relative;
             color: transparent !important;
         }
-        
+
         .add-to-cart.loading::after {
             content: '';
             position: absolute;
@@ -155,20 +156,29 @@ $popular_products = getPopularProducts(3);
             height: 16px;
             margin-top: -8px;
             margin-left: -8px;
-            border: 2px solid rgba(255,255,255,0.3);
+            border: 2px solid rgba(255, 255, 255, 0.3);
             border-radius: 50%;
             border-top-color: #fff;
             animation: spin 0.8s infinite linear;
         }
-        
+
         @keyframes spin {
-            to { transform: rotate(360deg); }
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         /* Cart count animation */
         @keyframes cartBounce {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.2); }
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
         }
 
         .cart-count.updating {
@@ -245,8 +255,8 @@ $popular_products = getPopularProducts(3);
                 border-top: 1px solid #eee !important;
                 display: flex !important;
                 gap: 1rem !important;
-                box-shadow: 0 -2px 10px rgba(0,0,0,0.1) !important;
-                bottom: 30px  !important;
+                box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1) !important;
+                bottom: 30px !important;
             }
 
             .filter-actions button {
@@ -259,7 +269,7 @@ $popular_products = getPopularProducts(3);
                 left: 0 !important;
                 width: 100% !important;
                 height: 100% !important;
-                background: rgba(0,0,0,0.5) !important;
+                background: rgba(0, 0, 0, 0.5) !important;
                 z-index: 1040 !important;
                 opacity: 0 !important;
                 visibility: hidden !important;
@@ -372,10 +382,11 @@ $popular_products = getPopularProducts(3);
         }
     </style>
 </head>
+
 <body>
     <?php include '../includes/header.php'; ?>
-    
-    <?php 
+
+    <?php
     $appointment_modal_path = __DIR__ . '/../includes/appointment-modal.php';
     if (file_exists($appointment_modal_path)) {
         include $appointment_modal_path;
@@ -398,7 +409,7 @@ $popular_products = getPopularProducts(3);
                             <h4 class="widget-title">Bộ lọc</h4>
                             <button class="btn-close d-lg-none" id="closeFilter" aria-label="Close"></button>
                         </div>
-                        
+
                         <div class="filter-content">
                             <div class="filter-content-wrapper">
                                 <div class="filter-section">
@@ -411,12 +422,12 @@ $popular_products = getPopularProducts(3);
                                             </a>
                                         </li>
                                         <?php foreach ($categories as $category): ?>
-                                        <li class="<?php echo $category_id == $category['category_id'] ? 'active' : ''; ?>">
-                                            <a href="javascript:void(0)" class="category-filter" data-category="<?php echo $category['category_id']; ?>">
-                                                <?php echo htmlspecialchars($category['name']); ?>
-                                                <span class="count">(<?php echo getCategoryProductCount($category['category_id']); ?>)</span>
-                                            </a>
-                                        </li>
+                                            <li class="<?php echo $category_id == $category['category_id'] ? 'active' : ''; ?>">
+                                                <a href="javascript:void(0)" class="category-filter" data-category="<?php echo $category['category_id']; ?>">
+                                                    <?php echo htmlspecialchars($category['name']); ?>
+                                                    <span class="count">(<?php echo getCategoryProductCount($category['category_id']); ?>)</span>
+                                                </a>
+                                            </li>
                                         <?php endforeach; ?>
                                     </ul>
                                 </div>
@@ -474,188 +485,190 @@ $popular_products = getPopularProducts(3);
                             </form>
                         </div>
                     </div>
-
-                    <?php 
+                    <?php
                     $ai_products = [];
                     $displayed_ids = [];
 
-                    if (isset($_SESSION['viewed_products']) && !empty($_SESSION['viewed_products'])) {
-                        $viewed_items = $_SESSION['viewed_products'];
-                        $query_params = [];
-                        foreach ($viewed_items as $v_item) {
-                            $query_params[] = "cart_items=" . rawurlencode($v_item);
-                        }
-                        $api_url = "http://127.0.0.1:8000/recommend?" . implode('&', $query_params);
+                    // ✅ LẤY DATA TỪ CART (đã lưu trước đó)
+                    $recommendations = $_SESSION['ai_recommendations'] ?? [];
 
-                        $ch = curl_init();
-                        curl_setopt($ch, CURLOPT_URL, $api_url);
-                        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                        curl_setopt($ch, CURLOPT_TIMEOUT, 5);
-                        $res = curl_exec($ch);
-                        curl_close($ch);
+                    if (!empty($recommendations)) {
 
-                        if ($res) {
-                            $api_data = json_decode($res, true);
-                            if (!empty($api_data['recommendations'])) {
-                                foreach ($api_data['recommendations'] as $r_ai) {
-                                    if (in_array($r_ai['name'], $viewed_items)) continue;
+                        foreach ($recommendations as $r_ai) {
 
-                                    $stmt_p = $conn->prepare("
-                                        SELECT p.*, c.name as category_name, 
-                                               COALESCE(AVG(pr.rating), 0) as avg_rating,
-                                               COUNT(pr.review_id) as review_count
-                                        FROM products p
-                                        LEFT JOIN product_categories c ON p.category_id = c.category_id
-                                        LEFT JOIN product_reviews pr ON p.product_id = pr.product_id
-                                        WHERE p.name = ? AND p.stock > 0 
-                                        GROUP BY p.product_id LIMIT 1
-                                    ");
-                                    $stmt_p->bind_param("s", $r_ai['name']);
-                                    $stmt_p->execute();
-                                    $p_info = $stmt_p->get_result()->fetch_assoc();
+                            // ❌ bỏ nếu thiếu name
+                            if (empty($r_ai['name'])) continue;
 
-                                    if ($p_info) {
-                                        $p_info['display_image'] = $p_info['image_url'] ?: '../assets/images/default-product.jpg';
-                                        $p_info['is_ai_recommended'] = true; 
-                                        $ai_products[] = $p_info;
-                                        $displayed_ids[] = $p_info['product_id']; 
-                                    }
-                                    if (count($ai_products) >= 3) break; 
-                                }
+                            $stmt_p = $conn->prepare("
+            SELECT p.*, c.name as category_name, 
+                   COALESCE(AVG(pr.rating), 0) as avg_rating,
+                   COUNT(pr.review_id) as review_count
+            FROM products p
+            LEFT JOIN product_categories c 
+                ON p.category_id = c.category_id
+            LEFT JOIN product_reviews pr 
+                ON p.product_id = pr.product_id
+            WHERE p.name = ? AND p.stock > 0
+            GROUP BY p.product_id 
+            LIMIT 1
+        ");
+
+                            $stmt_p->bind_param("s", $r_ai['name']);
+                            $stmt_p->execute();
+                            $p_info = $stmt_p->get_result()->fetch_assoc();
+
+                            if ($p_info) {
+
+                                // ❌ tránh trùng
+                                if (in_array($p_info['product_id'], $displayed_ids)) continue;
+
+                                $p_info['display_image'] = !empty($p_info['image_url'])
+                                    ? '/' . ltrim($p_info['image_url'], '/')
+                                    : '/assets/images/default-product.jpg';
+                                $p_info['is_ai_recommended'] = true;
+                                $p_info['confidence'] = $r_ai['confidence'] ?? 0;
+                                $p_info['type'] = $r_ai['type'] ?? 'GỢI Ý TỪ AI';
+
+                                $ai_products[] = $p_info;
+                                $displayed_ids[] = $p_info['product_id'];
                             }
+
+                            if (count($ai_products) >= 3) break;
                         }
                     }
 
+                    // ✅ merge như cũ
                     $filtered_normal_products = [];
+
                     foreach ($products as $p) {
                         if (!in_array($p['product_id'], $displayed_ids)) {
                             $filtered_normal_products[] = $p;
                         }
                     }
+
                     $final_product_list = array_merge($ai_products, $filtered_normal_products);
                     ?>
-
                     <div class="row g-4">
                         <?php foreach ($final_product_list as $index => $product): ?>
-                        <div class="col-6 col-md-4" data-aos="fade-up" data-aos-delay="<?php echo min($index * 50, 300); ?>">
-                            
-                            <div class="product-card <?php echo isset($product['is_ai_recommended']) ? 'border-primary border border-2' : ''; ?>" 
-                                 <?php echo isset($product['is_ai_recommended']) ? 'style="box-shadow: 0 5px 15px rgba(13, 110, 253, 0.15);"' : ''; ?>>
-                                
-                                <div class="product-image position-relative">
-                                    <a href="details.php?id=<?php echo $product['product_id']; ?>">
-                                        <img src="<?php echo htmlspecialchars($product['display_image'] ?? ($product['image_url'] ?? '../assets/images/default-product.jpg')); ?>" 
-                                             alt="<?php echo htmlspecialchars($product['name']); ?>"
-                                             class="img-fluid">
-                                    </a>
-                                    
-                                    <?php 
-                                    $badgeOriginalPrice = floatval($product['price']);
-                                    $badgeDiscountAmount = floatval($product['discount_amount'] ?? 0);
-                                    $badgeDiscountPercent = $badgeOriginalPrice > 0 && $badgeDiscountAmount > 0 ? round(($badgeDiscountAmount / $badgeOriginalPrice) * 100) : 0;
-                                    ?>
-                                    
-                                    <?php if ($badgeDiscountPercent > 0): ?>
-                                    <div class="product-badge">
-                                        -<?php echo $badgeDiscountPercent; ?>%
-                                    </div>
-                                    <?php endif; ?>
+                            <div class="col-6 col-md-4" data-aos="fade-up" data-aos-delay="<?php echo min($index * 50, 300); ?>">
 
-                                    <?php if (isset($product['is_ai_recommended'])): ?>
-                                    <div class="product-badge bg-primary text-white" style="left: auto; right: 10px;">
-                                        <i class="fas fa-magic me-1"></i> Gợi ý
-                                    </div>
-                                    <?php endif; ?>
+                                <div class="product-card <?php echo isset($product['is_ai_recommended']) ? 'border-primary border border-2' : ''; ?>"
+                                    <?php echo isset($product['is_ai_recommended']) ? 'style="box-shadow: 0 5px 15px rgba(13, 110, 253, 0.15);"' : ''; ?>>
 
-                                    <div class="action-buttons">
-                                        <button class="action-btn add-to-cart" 
+                                    <div class="product-image position-relative">
+                                        <a href="details.php?id=<?php echo $product['product_id']; ?>">
+                                            <img src="<?php echo htmlspecialchars($product['display_image'] ?? ($product['image_url'] ?? '../assets/images/default-product.jpg')); ?>"
+                                                alt="<?php echo htmlspecialchars($product['name']); ?>"
+                                                class="img-fluid">
+                                        </a>
+
+                                        <?php
+                                        $badgeOriginalPrice = floatval($product['price']);
+                                        $badgeDiscountAmount = floatval($product['discount_amount'] ?? 0);
+                                        $badgeDiscountPercent = $badgeOriginalPrice > 0 && $badgeDiscountAmount > 0 ? round(($badgeDiscountAmount / $badgeOriginalPrice) * 100) : 0;
+                                        ?>
+
+                                        <?php if ($badgeDiscountPercent > 0): ?>
+                                            <div class="product-badge">
+                                                -<?php echo $badgeDiscountPercent; ?>%
+                                            </div>
+                                        <?php endif; ?>
+
+                                        <?php if (isset($product['is_ai_recommended'])): ?>
+                                            <div class="product-badge bg-primary text-white" style="left: auto; right: 10px;">
+                                                <i class="fas fa-magic me-1"></i> Gợi ý
+                                            </div>
+                                        <?php endif; ?>
+
+                                        <div class="action-buttons">
+                                            <button class="action-btn add-to-cart"
                                                 data-id="<?php echo $product['product_id']; ?>"
                                                 <?php echo $product['stock'] <= 0 ? 'disabled' : ''; ?>>
-                                            <i class="fas fa-cart-plus"></i>
-                                        </button>
-                                        <button class="action-btn add-to-wishlist"
+                                                <i class="fas fa-cart-plus"></i>
+                                            </button>
+                                            <button class="action-btn add-to-wishlist"
                                                 data-id="<?php echo $product['product_id']; ?>">
-                                            <i class="far fa-heart"></i>
-                                        </button>
-                                        <button class="action-btn quick-view"
+                                                <i class="far fa-heart"></i>
+                                            </button>
+                                            <button class="action-btn quick-view"
                                                 onclick="window.location.href='details.php?id=<?php echo $product['product_id']; ?>'">
-                                            <i class="far fa-eye"></i>
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div class="product-content">
-                                    <a href="#" class="product-category">
-                                        <i class="fas fa-tag me-1"></i>
-                                        <?php echo htmlspecialchars($product['category_name'] ?? 'Sản phẩm'); ?>
-                                    </a>
-
-                                    <h3 class="product-title">
-                                        <a href="details.php?id=<?php echo $product['product_id']; ?>">
-                                            <?php echo htmlspecialchars($product['name']); ?>
-                                        </a>
-                                    </h3>
-
-                                    <div class="product-rating">
-                                        <div class="rating-stars">
-                                            <?php 
-                                            $rating = floatval($product['avg_rating'] ?? 0);
-                                            for ($i = 1; $i <= 5; $i++) {
-                                                if ($i <= floor($rating)) {
-                                                    echo '<i class="fas fa-star"></i>';
-                                                } elseif ($i <= $rating) {
-                                                    echo '<i class="fas fa-star-half-alt"></i>';
-                                                } else {
-                                                    echo '<i class="far fa-star"></i>';
-                                                }
-                                            }
-                                            ?>
+                                                <i class="far fa-eye"></i>
+                                            </button>
                                         </div>
-                                        <span class="rating-text">(<?php echo $product['review_count'] ?? 0; ?> đánh giá)</span>
                                     </div>
 
-                                    <div class="product-price">
-                                        <?php if ($badgeDiscountAmount > 0): ?>
-                                            <span class="current-price"><?php echo format_currency(max(0, $badgeOriginalPrice - $badgeDiscountAmount)); ?></span>
-                                            <span class="original-price"><?php echo format_currency($badgeOriginalPrice); ?></span>
-                                        <?php else: ?>
-                                            <span class="current-price"><?php echo format_currency($badgeOriginalPrice); ?></span>
-                                        <?php endif; ?>
+                                    <div class="product-content">
+                                        <a href="#" class="product-category">
+                                            <i class="fas fa-tag me-1"></i>
+                                            <?php echo htmlspecialchars($product['category_name'] ?? 'Sản phẩm'); ?>
+                                        </a>
+
+                                        <h3 class="product-title">
+                                            <a href="details.php?id=<?php echo $product['product_id']; ?>">
+                                                <?php echo htmlspecialchars($product['name']); ?>
+                                            </a>
+                                        </h3>
+
+                                        <div class="product-rating">
+                                            <div class="rating-stars">
+                                                <?php
+                                                $rating = floatval($product['avg_rating'] ?? 0);
+                                                for ($i = 1; $i <= 5; $i++) {
+                                                    if ($i <= floor($rating)) {
+                                                        echo '<i class="fas fa-star"></i>';
+                                                    } elseif ($i <= $rating) {
+                                                        echo '<i class="fas fa-star-half-alt"></i>';
+                                                    } else {
+                                                        echo '<i class="far fa-star"></i>';
+                                                    }
+                                                }
+                                                ?>
+                                            </div>
+                                            <span class="rating-text">(<?php echo $product['review_count'] ?? 0; ?> đánh giá)</span>
+                                        </div>
+
+                                        <div class="product-price">
+                                            <?php if ($badgeDiscountAmount > 0): ?>
+                                                <span class="current-price"><?php echo format_currency(max(0, $badgeOriginalPrice - $badgeDiscountAmount)); ?></span>
+                                                <span class="original-price"><?php echo format_currency($badgeOriginalPrice); ?></span>
+                                            <?php else: ?>
+                                                <span class="current-price"><?php echo format_currency($badgeOriginalPrice); ?></span>
+                                            <?php endif; ?>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
                         <?php endforeach; ?>
                     </div>
 
                     <?php if ($total_pages > 1): ?>
-                    <nav class="mt-4" data-aos="fade-up">
-                        <ul class="pagination justify-content-center">
-                            <?php if ($page > 1): ?>
-                            <li class="page-item">
-                                <a class="page-link" href="products.php?page=<?php echo $page-1; ?>&category=<?php echo $category_id; ?>&sort=<?php echo $sort; ?>&min_price=<?php echo $min_price; ?>&max_price=<?php echo $max_price; ?>">
-                                    <i class="fas fa-chevron-left"></i>
-                                </a>
-                            </li>
-                            <?php endif; ?>
-                            
-                            <?php for ($i = max(1, $page-2); $i <= min($total_pages, $page+2); $i++): ?>
-                            <li class="page-item <?php echo $i == $page ? 'active' : ''; ?>">
-                                <a class="page-link" href="products.php?page=<?php echo $i; ?>&category=<?php echo $category_id; ?>&sort=<?php echo $sort; ?>&min_price=<?php echo $min_price; ?>&max_price=<?php echo $max_price; ?>">
-                                    <?php echo $i; ?>
-                                </a>
-                            </li>
-                            <?php endfor; ?>
-                            
-                            <?php if ($page < $total_pages): ?>
-                            <li class="page-item">
-                                <a class="page-link" href="products.php?page=<?php echo $page+1; ?>&category=<?php echo $category_id; ?>&sort=<?php echo $sort; ?>&min_price=<?php echo $min_price; ?>&max_price=<?php echo $max_price; ?>">
-                                    <i class="fas fa-chevron-right"></i>
-                                </a>
-                            </li>
-                            <?php endif; ?>
-                        </ul>
-                    </nav>
+                        <nav class="mt-4" data-aos="fade-up">
+                            <ul class="pagination justify-content-center">
+                                <?php if ($page > 1): ?>
+                                    <li class="page-item">
+                                        <a class="page-link" href="products.php?page=<?php echo $page - 1; ?>&category=<?php echo $category_id; ?>&sort=<?php echo $sort; ?>&min_price=<?php echo $min_price; ?>&max_price=<?php echo $max_price; ?>">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </a>
+                                    </li>
+                                <?php endif; ?>
+
+                                <?php for ($i = max(1, $page - 2); $i <= min($total_pages, $page + 2); $i++): ?>
+                                    <li class="page-item <?php echo $i == $page ? 'active' : ''; ?>">
+                                        <a class="page-link" href="products.php?page=<?php echo $i; ?>&category=<?php echo $category_id; ?>&sort=<?php echo $sort; ?>&min_price=<?php echo $min_price; ?>&max_price=<?php echo $max_price; ?>">
+                                            <?php echo $i; ?>
+                                        </a>
+                                    </li>
+                                <?php endfor; ?>
+
+                                <?php if ($page < $total_pages): ?>
+                                    <li class="page-item">
+                                        <a class="page-link" href="products.php?page=<?php echo $page + 1; ?>&category=<?php echo $category_id; ?>&sort=<?php echo $sort; ?>&min_price=<?php echo $min_price; ?>&max_price=<?php echo $max_price; ?>">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </a>
+                                    </li>
+                                <?php endif; ?>
+                            </ul>
+                        </nav>
                     <?php endif; ?>
                 </div>
             </div>
@@ -668,7 +681,7 @@ $popular_products = getPopularProducts(3);
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-body">
-                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -695,15 +708,15 @@ $popular_products = getPopularProducts(3);
                     </div>
                 </div>
             `);
-            
+
             $('body').append(notification);
             setTimeout(() => notification.addClass('show'), 100);
-            
+
             notification.find('.close').on('click', () => {
                 notification.removeClass('show');
                 setTimeout(() => notification.remove(), 300);
             });
-            
+
             setTimeout(() => {
                 notification.removeClass('show');
                 setTimeout(() => notification.remove(), 300);
@@ -723,36 +736,36 @@ $popular_products = getPopularProducts(3);
                 e.preventDefault();
                 const categoryId = this.dataset.category;
                 const currentUrl = new URL(window.location.href);
-                
+
                 if (categoryId) {
                     currentUrl.searchParams.set('category', categoryId);
                 } else {
                     currentUrl.searchParams.delete('category');
                 }
-                
+
                 const minPrice = document.getElementById('min-price').value;
                 const maxPrice = document.getElementById('max-price').value;
                 const sort = document.querySelector('select[name="sort"]').value;
-                
+
                 if (minPrice) currentUrl.searchParams.set('min_price', minPrice);
                 if (maxPrice) currentUrl.searchParams.set('max_price', maxPrice);
                 if (sort !== 'default') currentUrl.searchParams.set('sort', sort);
-                
+
                 document.querySelectorAll('.category-filter').forEach(el => {
                     el.parentElement.classList.remove('active');
                 });
                 this.parentElement.classList.add('active');
-                
+
                 fetch(currentUrl)
                     .then(response => response.text())
                     .then(html => {
                         const parser = new DOMParser();
                         const doc = parser.parseFromString(html, 'text/html');
-                        
+
                         const productsGrid = document.querySelector('.products-toolbar').parentElement;
                         const newProductsGrid = doc.querySelector('.products-toolbar').parentElement;
                         productsGrid.innerHTML = newProductsGrid.innerHTML;
-                        
+
                         window.history.pushState({}, '', currentUrl);
                         initializeProductActions();
                         AOS.refresh();
@@ -766,7 +779,7 @@ $popular_products = getPopularProducts(3);
                 btn.addEventListener('click', function() {
                     const productId = this.dataset.id;
                     const modal = new bootstrap.Modal(document.getElementById('quickViewModal'));
-                    
+
                     fetch(`../api/product.php?id=${productId}`)
                         .then(response => response.json())
                         .then(data => {
@@ -782,13 +795,13 @@ $popular_products = getPopularProducts(3);
             $('.add-to-cart').off('click').on('click', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
-                
+
                 const $btn = $(this);
                 const productId = $btn.data('id');
                 const quantity = 1;
 
                 $btn.addClass('loading').prop('disabled', true);
-                
+
                 $.ajax({
                     url: '/api/cart/add.php',
                     type: 'POST',
@@ -839,7 +852,7 @@ $popular_products = getPopularProducts(3);
             btn.addEventListener('click', function() {
                 const productId = this.dataset.id;
                 const modal = new bootstrap.Modal(document.getElementById('quickViewModal'));
-                
+
                 fetch(`../api/product.php?id=${productId}`)
                     .then(response => response.json())
                     .then(data => {
@@ -885,4 +898,5 @@ $popular_products = getPopularProducts(3);
         }
     </script>
 </body>
+
 </html>

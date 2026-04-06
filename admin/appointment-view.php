@@ -52,21 +52,21 @@ try {
             LEFT JOIN users_info ui_doctor ON d.user_id = ui_doctor.user_id
             LEFT JOIN clinics c ON a.clinic_id = c.clinic_id
             WHERE a.appointment_id = ?";
-    
+
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
         error_log("SQL Error in appointment-view.php: " . $conn->error);
         header('Location: appointments.php?error=database_error');
         exit();
     }
-    
+
     $stmt->bind_param("i", $appointment_id);
     if (!$stmt->execute()) {
         error_log("Query execution failed in appointment-view.php: " . $stmt->error);
         header('Location: appointments.php?error=database_error');
         exit();
     }
-    
+
     $result = $stmt->get_result();
     if ($result && $result->num_rows > 0) {
         $data = $result->fetch_assoc();
@@ -117,14 +117,14 @@ $clinic_phone = $appointment['clinic_phone'];
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_status'])) {
     $new_status = $_POST['status'];
     $allowed_statuses = ['pending', 'confirmed', 'completed', 'cancelled'];
-    
+
     if (in_array($new_status, $allowed_statuses)) {
         $update_sql = "UPDATE appointments SET status = ?, updated_at = NOW() WHERE appointment_id = ?";
         $update_stmt = $conn->prepare($update_sql);
-        
+
         if ($update_stmt) {
             $update_stmt->bind_param("si", $new_status, $appointment_id);
-            
+
             if ($update_stmt->execute()) {
                 $appointment['status'] = $new_status;
                 $success_message = "Cập nhật trạng thái thành công!";
@@ -148,6 +148,7 @@ $current_status = $status_configs[$appointment['status']] ?? ['class' => 'second
 
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -163,24 +164,28 @@ $current_status = $status_configs[$appointment['status']] ?? ['class' => 'second
         .info-card {
             border: none;
             border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
         }
+
         .info-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
+
         .status-badge {
             font-size: 1.1rem;
             padding: 0.75rem 1.5rem;
             border-radius: 25px;
         }
+
         .timeline-item {
             border-left: 3px solid #e9ecef;
             padding-left: 1.5rem;
             margin-bottom: 1.5rem;
             position: relative;
         }
+
         .timeline-item::before {
             content: '';
             position: absolute;
@@ -191,20 +196,24 @@ $current_status = $status_configs[$appointment['status']] ?? ['class' => 'second
             border-radius: 50%;
             background: #6c757d;
         }
+
         .timeline-item.active::before {
             background: #0d6efd;
         }
+
         .timeline-item.completed::before {
             background: #198754;
         }
+
         .timeline-item.cancelled::before {
             background: #dc3545;
         }
     </style>
 </head>
+
 <body>
-<?php include 'includes/headeradmin.php'; ?>
-<?php include 'includes/sidebaradmin.php'; ?>
+    <?php include 'includes/headeradmin.php'; ?>
+    <?php include 'includes/sidebaradmin.php'; ?>
 
     <main class="main-content">
         <div class="container-fluid">
@@ -282,7 +291,7 @@ $current_status = $status_configs[$appointment['status']] ?? ['class' => 'second
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <?php if ($appointment['reason']): ?>
                                 <div class="mb-3">
                                     <label class="form-label text-muted">Lý do khám</label>
@@ -313,7 +322,7 @@ $current_status = $status_configs[$appointment['status']] ?? ['class' => 'second
                     <div class="card info-card mb-4">
                         <div class="card-header bg-info text-white">
                             <h5 class="mb-0">
-                                <i class="fas fa-user me-2"></i>Thông tin bệnh nhân
+                                <i class="fas fa-user me-2"></i>Thông tin khách hàng
                             </h5>
                         </div>
                         <div class="card-body">
@@ -361,7 +370,7 @@ $current_status = $status_configs[$appointment['status']] ?? ['class' => 'second
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <?php if ($patient_address): ?>
                                 <div class="mb-3">
                                     <label class="form-label text-muted">Địa chỉ</label>
@@ -451,7 +460,7 @@ $current_status = $status_configs[$appointment['status']] ?? ['class' => 'second
                                         <?php endif; ?>
                                     </div>
                                 </div>
-                                
+
                                 <?php if ($clinic_address): ?>
                                     <div class="mb-3">
                                         <label class="form-label text-muted">Địa chỉ</label>
@@ -510,22 +519,22 @@ $current_status = $status_configs[$appointment['status']] ?? ['class' => 'second
                                 <h6 class="mb-1">Tạo lịch hẹn</h6>
                                 <small class="text-muted"><?= date('d/m/Y H:i', strtotime($appointment['created_at'])) ?></small>
                             </div>
-                            
+
                             <div class="timeline-item <?= in_array($appointment['status'], ['confirmed', 'completed']) ? 'completed' : ($appointment['status'] == 'pending' ? 'active' : '') ?>">
                                 <h6 class="mb-1">Chờ xác nhận</h6>
                                 <small class="text-muted">Đang chờ xác nhận từ bác sĩ</small>
                             </div>
-                            
+
                             <div class="timeline-item <?= $appointment['status'] == 'completed' ? 'completed' : ($appointment['status'] == 'confirmed' ? 'active' : '') ?>">
                                 <h6 class="mb-1">Đã xác nhận</h6>
                                 <small class="text-muted">Lịch hẹn đã được xác nhận</small>
                             </div>
-                            
+
                             <div class="timeline-item <?= $appointment['status'] == 'completed' ? 'completed active' : '' ?>">
                                 <h6 class="mb-1">Hoàn thành</h6>
                                 <small class="text-muted">Cuộc hẹn đã hoàn thành</small>
                             </div>
-                            
+
                             <?php if ($appointment['status'] == 'cancelled'): ?>
                                 <div class="timeline-item cancelled active">
                                     <h6 class="mb-1 text-danger">Đã hủy</h6>
@@ -550,9 +559,9 @@ $current_status = $status_configs[$appointment['status']] ?? ['class' => 'second
                                 <button class="btn btn-outline-info" onclick="window.print()">
                                     <i class="fas fa-print me-2"></i>In thông tin
                                 </button>
-                                <a href="appointments.php?action=delete&id=<?= $appointment_id ?>" 
-                                   class="btn btn-outline-danger"
-                                   onclick="return confirm('Bạn có chắc chắn muốn xóa lịch hẹn này?')">
+                                <a href="appointments.php?action=delete&id=<?= $appointment_id ?>"
+                                    class="btn btn-outline-danger"
+                                    onclick="return confirm('Bạn có chắc chắn muốn xóa lịch hẹn này?')">
                                     <i class="fas fa-trash me-2"></i>Xóa lịch hẹn
                                 </a>
                             </div>
@@ -568,4 +577,5 @@ $current_status = $status_configs[$appointment['status']] ?? ['class' => 'second
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/admin.js"></script>
 </body>
-</html> 
+
+</html>

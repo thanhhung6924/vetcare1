@@ -27,7 +27,7 @@ CREATE TABLE roles (
 -- Thêm dữ liệu mẫu cho roles
 INSERT INTO roles (role_name, description) VALUES 
 ('admin', 'Quản trị viên hệ thống'),
-('patient', 'Bệnh nhân'),
+('patient', 'Khách hàng'),
 ('doctor', 'Bác sĩ');
 
 -- Bảng lưu thông tin tài khoản

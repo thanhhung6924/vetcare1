@@ -1,3 +1,28 @@
 [2026-04-02 10:11:46] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 1 cart items for user 1
 [2026-04-02 10:11:46] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2393, ProductID: 10, Name: 'Xương gặm sạch răng cho chó', Price: 178497, UnitPrice: 178497, Qty: 1
 [2026-04-02 10:11:46] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 178497
+[2026-04-02 15:29:34] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 3 cart items for user 1
+[2026-04-02 15:29:34] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2397, ProductID: 7, Name: 'Đồ chơi chuột giả cho mèo', Price: 80313, UnitPrice: 80313, Qty: 1
+[2026-04-02 15:29:34] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2396, ProductID: 15, Name: 'Thuốc nhỏ mắt thú cưng', Price: 20465, UnitPrice: 20465, Qty: 1
+[2026-04-02 15:29:34] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 2 - ItemID: 2395, ProductID: 20, Name: 'Bát ăn inox cho chó mèo', Price: 234612, UnitPrice: 234612, Qty: 100
+[2026-04-02 15:29:34] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 23561978
+[2026-04-02 15:29:48] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 1 cart items for user 1
+[2026-04-02 15:29:48] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2397, ProductID: 7, Name: 'Đồ chơi chuột giả cho mèo', Price: 80313, UnitPrice: 80313, Qty: 1
+[2026-04-02 15:29:48] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 80313
+[2026-04-02 15:33:47] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 1 cart items for user 1
+[2026-04-02 15:33:47] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2397, ProductID: 7, Name: 'Đồ chơi chuột giả cho mèo', Price: 80313, UnitPrice: 80313, Qty: 1
+[2026-04-02 15:33:47] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 80313
+[2026-04-02 15:33:51] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 1 cart items for user 1
+[2026-04-02 15:33:51] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2397, ProductID: 7, Name: 'Đồ chơi chuột giả cho mèo', Price: 80313, UnitPrice: 80313, Qty: 1
+[2026-04-02 15:33:51] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 80313
+[2026-04-02 15:50:57] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Found 2 cart items for user 0
+[2026-04-02 15:50:57] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2399, ProductID: 10, Name: 'Xương gặm sạch răng cho chó', Price: 178497, UnitPrice: 178497, Qty: 1
+[2026-04-02 15:50:57] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2398, ProductID: 12, Name: 'Thuốc tiêu chảy cho chó', Price: 109895, UnitPrice: 109895, Qty: 1
+[2026-04-02 15:50:57] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Total calculated: 288392
+[2026-04-02 15:57:03] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Found 2 cart items for user 0
+[2026-04-02 15:57:03] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2400, ProductID: 7, Name: 'Đồ chơi chuột giả cho mèo', Price: 80313, UnitPrice: 80313, Qty: 1
+[2026-04-02 15:57:03] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2399, ProductID: 10, Name: 'Xương gặm sạch răng cho chó', Price: 178497, UnitPrice: 178497, Qty: 1
+[2026-04-02 15:57:03] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Total calculated: 258810
+[2026-04-02 16:16:54] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Found 1 cart items for user 0
+[2026-04-02 16:16:54] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2400, ProductID: 7, Name: 'Đồ chơi chuột giả cho mèo', Price: 80313, UnitPrice: 80313, Qty: 1
+[2026-04-02 16:16:54] [INFO] [User: 0] [IP: ::1] CART_DEBUG: Total calculated: 80313

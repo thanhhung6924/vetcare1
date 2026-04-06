@@ -147,6 +147,7 @@ try {
 ?>
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -166,39 +167,48 @@ try {
             margin-bottom: 1.5rem;
             transition: all 0.3s ease;
         }
+
         .stats-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
+
         .stats-card.success {
             background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
         }
+
         .stats-card.warning {
             background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
         }
+
         .stats-card.info {
             background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
             color: #333;
         }
+
         .stats-card.danger {
             background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
             color: #333;
         }
+
         .quick-action-card {
             border: none;
             border-radius: 15px;
             transition: all 0.3s ease;
             height: 100%;
         }
+
         .quick-action-card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
         }
+
         .table-modern {
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
+
         .badge-status {
             padding: 0.5rem 1rem;
             border-radius: 20px;
@@ -206,6 +216,7 @@ try {
         }
     </style>
 </head>
+
 <body>
     <?php include 'includes/headeradmin.php'; ?>
     <?php include 'includes/sidebaradmin.php'; ?>
@@ -227,7 +238,7 @@ try {
                     <span class="text-muted"><?= date('d/m/Y H:i') ?></span>
                 </div>
             </div>
-        
+
             <!-- Stats Cards Row 1 -->
             <div class="row mb-4">
                 <div class="col-xl-3 col-md-6">
@@ -235,7 +246,7 @@ try {
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
                                 <div class="text-uppercase mb-1" style="font-size: 0.8rem; opacity: 0.8;">
-                                    Tổng bệnh nhân
+                                    Tổng khách hàng
                                 </div>
                                 <div class="h4 mb-0 font-weight-bold"><?= number_format($stats['patients']) ?></div>
                                 <small class="opacity-75">
@@ -469,9 +480,9 @@ try {
                                 <table class="table table-hover mb-0 table-modern">
                                     <thead class="table-light">
                                         <tr>
-                                            <th class="border-0">Bệnh nhân</th>
+                                            <th class="border-0">Khách hàng</th>
                                             <th class="border-0">Bác sĩ</th>
-                                            <th class="border-0">Phòng khám</th>
+
                                             <th class="border-0">Ngày hẹn</th>
                                             <th class="border-0">Trạng thái</th>
                                             <th class="border-0">Thao tác</th>
@@ -485,7 +496,7 @@ try {
                                                         <div class="d-flex align-items-center">
                                                             <div class="avatar-sm me-2">
                                                                 <div class="avatar-title bg-soft-primary text-primary rounded-circle">
-                                                                    <?php 
+                                                                    <?php
                                                                     $patient_name = $appointment['patient_name'] ?? $appointment['guest_name'] ?? 'N/A';
                                                                     echo strtoupper(substr($patient_name, 0, 1));
                                                                     ?>
@@ -495,7 +506,7 @@ try {
                                                         </div>
                                                     </td>
                                                     <td><?= htmlspecialchars($appointment['doctor_name'] ?? 'N/A') ?></td>
-                                                    <td><?= htmlspecialchars($appointment['clinic_name'] ?? 'N/A') ?></td>
+
                                                     <td>
                                                         <small class="text-muted">
                                                             <?= date('d/m/Y', strtotime($appointment['appointment_time'])) ?><br>
@@ -506,7 +517,7 @@ try {
                                                         <?php
                                                         $status_class = '';
                                                         $status_text = '';
-                                                        switch($appointment['status']) {
+                                                        switch ($appointment['status']) {
                                                             case 'pending':
                                                                 $status_class = 'warning';
                                                                 $status_text = 'Chờ xác nhận';
@@ -600,7 +611,7 @@ try {
                             <?php else: ?>
                                 <p class="text-center text-muted">Chưa có đơn hàng nào</p>
                             <?php endif; ?>
-                            
+
                             <div class="text-center mt-3">
                                 <a href="orders.php" class="btn btn-success btn-sm">
                                     <i class="fas fa-eye me-2"></i>Xem tất cả
@@ -621,14 +632,14 @@ try {
                                 <?php while ($product = $top_products->fetch_assoc()): ?>
                                     <div class="d-flex align-items-center mb-3">
                                         <div class="avatar-sm me-3">
-                                            <img src="<?= htmlspecialchars($product['image_url'] ?? 'assets/images/default-product.jpg') ?>" 
-                                                 alt="<?= htmlspecialchars($product['name']) ?>" 
-                                                 class="avatar-title rounded">
+                                            <img src="<?= htmlspecialchars($product['image_url'] ?? 'assets/images/default-product.jpg') ?>"
+                                                alt="<?= htmlspecialchars($product['name']) ?>"
+                                                class="avatar-title rounded">
                                         </div>
                                         <div class="flex-grow-1">
                                             <h6 class="mb-0"><?= htmlspecialchars($product['name']) ?></h6>
                                             <p class="text-muted mb-0 small">
-                                                Đã bán: <?= $product['sold_count'] ?? 0 ?> | 
+                                                Đã bán: <?= $product['sold_count'] ?? 0 ?> |
                                                 Giá: <?= number_format($product['price']) ?>đ
                                             </p>
                                         </div>
@@ -637,7 +648,7 @@ try {
                             <?php else: ?>
                                 <p class="text-center text-muted">Chưa có dữ liệu bán hàng</p>
                             <?php endif; ?>
-                            
+
                             <div class="text-center mt-3">
                                 <a href="products.php" class="btn btn-warning btn-sm">
                                     <i class="fas fa-eye me-2"></i>Xem tất cả
@@ -650,7 +661,7 @@ try {
                     <div class="card shadow-sm border-0">
                         <div class="card-header bg-white py-3">
                             <h6 class="m-0 font-weight-bold text-info">
-                                <i class="fas fa-user-plus me-2"></i>Bệnh nhân mới
+                                <i class="fas fa-user-plus me-2"></i>Khách hàng mới
                             </h6>
                         </div>
                         <div class="card-body">
@@ -674,9 +685,9 @@ try {
                                     </div>
                                 <?php endwhile; ?>
                             <?php else: ?>
-                                <p class="text-center text-muted">Chưa có bệnh nhân mới</p>
+                                <p class="text-center text-muted">Chưa có khách hàng mới</p>
                             <?php endif; ?>
-                            
+
                             <div class="text-center mt-3">
                                 <a href="users.php?role=patient" class="btn btn-info btn-sm">
                                     <i class="fas fa-eye me-2"></i>Xem tất cả
@@ -699,27 +710,27 @@ try {
         function updateAppointmentStatus(appointmentId, status) {
             if (confirm('Bạn có chắc chắn muốn ' + (status === 'confirmed' ? 'xác nhận' : 'hủy') + ' lịch hẹn này?')) {
                 fetch('ajax/update_appointment_status.php', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        appointment_id: appointmentId,
-                        status: status
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            appointment_id: appointmentId,
+                            status: status
+                        })
                     })
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        location.reload();
-                    } else {
-                        alert('Có lỗi xảy ra: ' + data.message);
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('Có lỗi xảy ra khi cập nhật trạng thái');
-                });
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            location.reload();
+                        } else {
+                            alert('Có lỗi xảy ra: ' + data.message);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('Có lỗi xảy ra khi cập nhật trạng thái');
+                    });
             }
         }
 
@@ -729,4 +740,5 @@ try {
         }, 300000);
     </script>
 </body>
-</html> 
+
+</html>

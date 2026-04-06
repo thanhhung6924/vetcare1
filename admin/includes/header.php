@@ -31,29 +31,33 @@
                         <span class="badge bg-danger position-absolute top-0 start-100 translate-middle badge-sm">3</span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownNotifications">
-                        <li><h6 class="dropdown-header">Thông báo mới</h6></li>
+                        <li>
+                            <h6 class="dropdown-header">Thông báo mới</h6>
+                        </li>
                         <li><a class="dropdown-item" href="#">
-                            <div class="dropdown-item-content">
-                                <i class="fas fa-calendar-plus me-2 text-primary"></i>
-                                Lịch hẹn mới từ bệnh nhân
-                                <div class="small text-muted">2 phút trước</div>
-                            </div>
-                        </a></li>
+                                <div class="dropdown-item-content">
+                                    <i class="fas fa-calendar-plus me-2 text-primary"></i>
+                                    Lịch hẹn mới từ khách hàng
+                                    <div class="small text-muted">2 phút trước</div>
+                                </div>
+                            </a></li>
                         <li><a class="dropdown-item" href="#">
-                            <div class="dropdown-item-content">
-                                <i class="fas fa-user-plus me-2 text-success"></i>
-                                Bệnh nhân mới đăng ký
-                                <div class="small text-muted">15 phút trước</div>
-                            </div>
-                        </a></li>
+                                <div class="dropdown-item-content">
+                                    <i class="fas fa-user-plus me-2 text-success"></i>
+                                    Bệnh nhân mới đăng ký
+                                    <div class="small text-muted">15 phút trước</div>
+                                </div>
+                            </a></li>
                         <li><a class="dropdown-item" href="#">
-                            <div class="dropdown-item-content">
-                                <i class="fas fa-exclamation-triangle me-2 text-warning"></i>
-                                Lịch hẹn cần xác nhận
-                                <div class="small text-muted">1 giờ trước</div>
-                            </div>
-                        </a></li>
-                        <li><hr class="dropdown-divider" /></li>
+                                <div class="dropdown-item-content">
+                                    <i class="fas fa-exclamation-triangle me-2 text-warning"></i>
+                                    Lịch hẹn cần xác nhận
+                                    <div class="small text-muted">1 giờ trước</div>
+                                </div>
+                            </a></li>
+                        <li>
+                            <hr class="dropdown-divider" />
+                        </li>
                         <li><a class="dropdown-item" href="#">Xem tất cả thông báo</a></li>
                     </ul>
                 </li>
@@ -71,24 +75,30 @@
                         </div>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><h6 class="dropdown-header">Xin chào, <?= htmlspecialchars($_SESSION['full_name'] ?? $_SESSION['username']) ?>!</h6></li>
-                        <li><hr class="dropdown-divider" /></li>
+                        <li>
+                            <h6 class="dropdown-header">Xin chào, <?= htmlspecialchars($_SESSION['full_name'] ?? $_SESSION['username']) ?>!</h6>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider" />
+                        </li>
                         <li><a class="dropdown-item" href="profile.php">
-                            <i class="fas fa-user me-2"></i>Hồ sơ cá nhân
-                        </a></li>
+                                <i class="fas fa-user me-2"></i>Hồ sơ cá nhân
+                            </a></li>
                         <li><a class="dropdown-item" href="settings.php">
-                            <i class="fas fa-cog me-2"></i>Cài đặt
-                        </a></li>
+                                <i class="fas fa-cog me-2"></i>Cài đặt
+                            </a></li>
                         <li><a class="dropdown-item" href="activity-log.php">
-                            <i class="fas fa-list me-2"></i>Nhật ký hoạt động
-                        </a></li>
-                        <li><hr class="dropdown-divider" /></li>
+                                <i class="fas fa-list me-2"></i>Nhật ký hoạt động
+                            </a></li>
+                        <li>
+                            <hr class="dropdown-divider" />
+                        </li>
                         <li><a class="dropdown-item" href="../logout.php">
-                            <i class="fas fa-sign-out-alt me-2"></i>Đăng xuất
-                        </a></li>
+                                <i class="fas fa-sign-out-alt me-2"></i>Đăng xuất
+                            </a></li>
                     </ul>
                 </li>
             </ul>
         </div>
     </nav>
-</header> 
+</header>

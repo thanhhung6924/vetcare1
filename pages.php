@@ -4,12 +4,13 @@ require_once 'includes/db.php';
 ?>
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> VetCare Store Medical & Health Care</title>
     <meta name="description" content="Khám phá các trang thông tin về VetCare - đội ngũ bác sĩ, chuyên khoa, đánh giá khách hàng và câu hỏi thường gặp.">
-    
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -17,6 +18,7 @@ require_once 'includes/db.php';
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/assets/css/pages.css">
 </head>
+
 <body>
     <?php include 'includes/header.php'; ?>
 
@@ -30,7 +32,7 @@ require_once 'includes/db.php';
                         <div class="hero-content">
                             <h1 class="hero-title">Khám phá VetCare</h1>
                             <p class="hero-subtitle">
-                                Tìm hiểu chi tiết về đội ngũ y bác sĩ, các chuyên khoa và những dịch vụ 
+                                Tìm hiểu chi tiết về đội ngũ y bác sĩ, các chuyên khoa và những dịch vụ
                                 chăm sóc sức khỏe tốt nhất dành cho bạn
                             </p>
                         </div>
@@ -61,7 +63,7 @@ require_once 'includes/db.php';
                                     <li>50+ bác sĩ chuyên khoa</li>
                                     <li>Trình độ chuyên môn cao</li>
                                     <li>Kinh nghiệm quốc tế</li>
-                                    <li>Tận tâm với bệnh nhân</li>
+                                    <li>Tận tâm với khách hàng</li>
                                 </ul>
                                 <a href="/pages/doctors.php" class="btn btn-primary">Xem chi tiết <i class="fas fa-arrow-right ms-2"></i></a>
                             </div>
@@ -106,11 +108,11 @@ require_once 'includes/db.php';
                             </div>
                             <div class="page-content">
                                 <h3>Đánh giá khách hàng</h3>
-                                <p>Cảm nhận của bệnh nhân về chất lượng dịch vụ và sự chăm sóc tận tình của chúng tôi.</p>
+                                <p>Cảm nhận của khách hàng về chất lượng dịch vụ và sự chăm sóc tận tình của chúng tôi.</p>
                                 <ul class="page-features">
                                     <li>1000+ đánh giá tích cực</li>
                                     <li>Độ hài lòng 98%</li>
-                                    <li>Chia sẻ thật từ bệnh nhân</li>
+                                    <li>Chia sẻ thật từ khách hàng</li>
                                     <li>Minh bạch và trung thực</li>
                                 </ul>
                                 <a href="/pages/testimonials.php" class="btn btn-primary">Xem chi tiết <i class="fas fa-arrow-right ms-2"></i></a>
@@ -236,4 +238,5 @@ require_once 'includes/db.php';
     <!-- Custom JS -->
     <script src="/assets/js/pages.js"></script>
 </body>
-</html> 
+
+</html>

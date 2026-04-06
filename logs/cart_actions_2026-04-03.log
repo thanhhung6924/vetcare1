@@ -1,0 +1,114 @@
+[2026-04-03 21:48:16] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 5 | Quantity: 1
+[2026-04-03 21:48:16] [CART] [User: 1] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 5 | Quantity: 1 | Details: Name: Thuốc tẩy giun cho mèo, Price: 56888, Stock: 185
+[2026-04-03 21:48:16] [CART] [User: 1] [IP: ::1] CART_ACTION: CART_FOUND | Product: 5 | Quantity: 1 | Details: Existing Cart ID: 1015
+[2026-04-03 21:48:16] [CART] [User: 1] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 5 | Quantity: 1 | Details: Original: 56888, Discount: , Final: 56888
+[2026-04-03 21:48:16] [CART] [User: 1] [IP: ::1] CART_ACTION: ITEM_ADDED | Product: 5 | Quantity: 1 | Details: Cart ID: 1015, Unit Price: 56888
+[2026-04-03 21:48:16] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 5 | Quantity: 1 | Details: Cart ID: 1015, Cart Count: 2
+[2026-04-03 21:55:08] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 16 | Quantity: 1
+[2026-04-03 21:55:08] [CART] [User: 1] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 16 | Quantity: 1 | Details: Name: Men tiêu hóa thú cưng, Price: 64881, Stock: 36
+[2026-04-03 21:55:08] [CART] [User: 1] [IP: ::1] CART_ACTION: CART_FOUND | Product: 16 | Quantity: 1 | Details: Existing Cart ID: 1015
+[2026-04-03 21:55:08] [CART] [User: 1] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 16 | Quantity: 1 | Details: Original: 64881, Discount: , Final: 64881
+[2026-04-03 21:55:08] [CART] [User: 1] [IP: ::1] CART_ACTION: ITEM_ADDED | Product: 16 | Quantity: 1 | Details: Cart ID: 1015, Unit Price: 64881
+[2026-04-03 21:55:08] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 16 | Quantity: 1 | Details: Cart ID: 1015, Cart Count: 1
+[2026-04-03 21:55:34] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 20 | Quantity: 1
+[2026-04-03 21:55:34] [CART] [User: 1] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 20 | Quantity: 1 | Details: Name: Bát ăn inox cho chó mèo, Price: 234612, Stock: 126
+[2026-04-03 21:55:34] [CART] [User: 1] [IP: ::1] CART_ACTION: CART_FOUND | Product: 20 | Quantity: 1 | Details: Existing Cart ID: 1015
+[2026-04-03 21:55:34] [CART] [User: 1] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 20 | Quantity: 1 | Details: Original: 234612, Discount: , Final: 234612
+[2026-04-03 21:55:34] [CART] [User: 1] [IP: ::1] CART_ACTION: ITEM_ADDED | Product: 20 | Quantity: 1 | Details: Cart ID: 1015, Unit Price: 234612
+[2026-04-03 21:55:34] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 20 | Quantity: 1 | Details: Cart ID: 1015, Cart Count: 2
+[2026-04-03 21:56:30] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 3 | Quantity: 1
+[2026-04-03 21:56:30] [CART] [User: 1] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 3 | Quantity: 1 | Details: Name: Cát vệ sinh mèo 10L, Price: 205093, Stock: 149
+[2026-04-03 21:56:30] [CART] [User: 1] [IP: ::1] CART_ACTION: CART_FOUND | Product: 3 | Quantity: 1 | Details: Existing Cart ID: 1015
+[2026-04-03 21:56:30] [CART] [User: 1] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 3 | Quantity: 1 | Details: Original: 205093, Discount: , Final: 205093
+[2026-04-03 21:56:30] [CART] [User: 1] [IP: ::1] CART_ACTION: ITEM_ADDED | Product: 3 | Quantity: 1 | Details: Cart ID: 1015, Unit Price: 205093
+[2026-04-03 21:56:30] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 3 | Quantity: 1 | Details: Cart ID: 1015, Cart Count: 3
+[2026-04-03 21:58:29] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 14 | Quantity: 1
+[2026-04-03 21:58:29] [CART] [User: 1] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 14 | Quantity: 1 | Details: Name: Vòng cổ chống ve rận cho chó, Price: 315995, Stock: 232
+[2026-04-03 21:58:29] [CART] [User: 1] [IP: ::1] CART_ACTION: CART_FOUND | Product: 14 | Quantity: 1 | Details: Existing Cart ID: 1015
+[2026-04-03 21:58:29] [CART] [User: 1] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 14 | Quantity: 1 | Details: Original: 315995, Discount: , Final: 315995
+[2026-04-03 21:58:29] [CART] [User: 1] [IP: ::1] CART_ACTION: ITEM_ADDED | Product: 14 | Quantity: 1 | Details: Cart ID: 1015, Unit Price: 315995
+[2026-04-03 21:58:29] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 14 | Quantity: 1 | Details: Cart ID: 1015, Cart Count: 4
+[2026-04-03 22:00:34] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 16 | Quantity: 1
+[2026-04-03 22:00:34] [CART] [User: 1] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 16 | Quantity: 1 | Details: Name: Men tiêu hóa thú cưng, Price: 64881, Stock: 36
+[2026-04-03 22:00:34] [CART] [User: 1] [IP: ::1] CART_ACTION: CART_FOUND | Product: 16 | Quantity: 1 | Details: Existing Cart ID: 1015
+[2026-04-03 22:00:34] [CART] [User: 1] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 16 | Quantity: 1 | Details: Original: 64881, Discount: , Final: 64881
+[2026-04-03 22:00:34] [CART] [User: 1] [IP: ::1] CART_ACTION: ITEM_ADDED | Product: 16 | Quantity: 1 | Details: Cart ID: 1015, Unit Price: 64881
+[2026-04-03 22:00:34] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 16 | Quantity: 1 | Details: Cart ID: 1015, Cart Count: 1
+[2026-04-03 22:01:21] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 11 | Quantity: 1
+[2026-04-03 22:01:21] [CART] [User: 1] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 11 | Quantity: 1 | Details: Name: Vitamin tăng đề kháng cho chó, Price: 36651, Stock: 235
+[2026-04-03 22:01:21] [CART] [User: 1] [IP: ::1] CART_ACTION: CART_FOUND | Product: 11 | Quantity: 1 | Details: Existing Cart ID: 1015
+[2026-04-03 22:01:21] [CART] [User: 1] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 11 | Quantity: 1 | Details: Original: 36651, Discount: , Final: 36651
+[2026-04-03 22:01:21] [CART] [User: 1] [IP: ::1] CART_ACTION: ITEM_ADDED | Product: 11 | Quantity: 1 | Details: Cart ID: 1015, Unit Price: 36651
+[2026-04-03 22:01:21] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 11 | Quantity: 1 | Details: Cart ID: 1015, Cart Count: 2
+[2026-04-03 22:02:25] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 16 | Quantity: 1
+[2026-04-03 22:02:25] [CART] [User: 1] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 16 | Quantity: 1 | Details: Name: Men tiêu hóa thú cưng, Price: 64881, Stock: 36
+[2026-04-03 22:02:25] [CART] [User: 1] [IP: ::1] CART_ACTION: CART_FOUND | Product: 16 | Quantity: 1 | Details: Existing Cart ID: 1015
+[2026-04-03 22:02:25] [CART] [User: 1] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 16 | Quantity: 1 | Details: Original: 64881, Discount: , Final: 64881
+[2026-04-03 22:02:25] [CART] [User: 1] [IP: ::1] CART_ACTION: ITEM_ADDED | Product: 16 | Quantity: 1 | Details: Cart ID: 1015, Unit Price: 64881
+[2026-04-03 22:02:25] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 16 | Quantity: 1 | Details: Cart ID: 1015, Cart Count: 1
+[2026-04-03 22:02:56] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 10 | Quantity: 1
+[2026-04-03 22:02:56] [CART] [User: 1] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 10 | Quantity: 1 | Details: Name: Xương gặm sạch răng cho chó, Price: 178497, Stock: 230
+[2026-04-03 22:02:56] [CART] [User: 1] [IP: ::1] CART_ACTION: CART_FOUND | Product: 10 | Quantity: 1 | Details: Existing Cart ID: 1015
+[2026-04-03 22:02:56] [CART] [User: 1] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 10 | Quantity: 1 | Details: Original: 178497, Discount: , Final: 178497
+[2026-04-03 22:02:56] [CART] [User: 1] [IP: ::1] CART_ACTION: ITEM_ADDED | Product: 10 | Quantity: 1 | Details: Cart ID: 1015, Unit Price: 178497
+[2026-04-03 22:02:56] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 10 | Quantity: 1 | Details: Cart ID: 1015, Cart Count: 1
+[2026-04-03 22:04:10] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 16 | Quantity: 1
+[2026-04-03 22:04:10] [CART] [User: 1] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 16 | Quantity: 1 | Details: Name: Men tiêu hóa thú cưng, Price: 64881, Stock: 36
+[2026-04-03 22:04:10] [CART] [User: 1] [IP: ::1] CART_ACTION: CART_FOUND | Product: 16 | Quantity: 1 | Details: Existing Cart ID: 1015
+[2026-04-03 22:04:10] [CART] [User: 1] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 16 | Quantity: 1 | Details: Original: 64881, Discount: , Final: 64881
+[2026-04-03 22:04:10] [CART] [User: 1] [IP: ::1] CART_ACTION: ITEM_ADDED | Product: 16 | Quantity: 1 | Details: Cart ID: 1015, Unit Price: 64881
+[2026-04-03 22:04:10] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 16 | Quantity: 1 | Details: Cart ID: 1015, Cart Count: 1
+[2026-04-03 22:04:34] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 10 | Quantity: 1
+[2026-04-03 22:04:34] [CART] [User: 1] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 10 | Quantity: 1 | Details: Name: Xương gặm sạch răng cho chó, Price: 178497, Stock: 230
+[2026-04-03 22:04:34] [CART] [User: 1] [IP: ::1] CART_ACTION: CART_FOUND | Product: 10 | Quantity: 1 | Details: Existing Cart ID: 1015
+[2026-04-03 22:04:34] [CART] [User: 1] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 10 | Quantity: 1 | Details: Original: 178497, Discount: , Final: 178497
+[2026-04-03 22:04:34] [CART] [User: 1] [IP: ::1] CART_ACTION: ITEM_ADDED | Product: 10 | Quantity: 1 | Details: Cart ID: 1015, Unit Price: 178497
+[2026-04-03 22:04:34] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 10 | Quantity: 1 | Details: Cart ID: 1015, Cart Count: 1
+[2026-04-03 22:10:39] [CART] [User: Quản trị viên (ID: 1)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":20,"product_name":null,"quantity":1}
+[2026-04-03 22:11:34] [CART] [User: Quản trị viên (ID: 1)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":16,"product_name":null,"quantity":1}
+[2026-04-03 22:11:48] [CART] [User: Quản trị viên (ID: 1)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":15,"product_name":null,"quantity":1}
+[2026-04-03 22:12:53] [CART] [User: Quản trị viên (ID: 1)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":14,"product_name":null,"quantity":1}
+[2026-04-03 22:13:45] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 16 | Quantity: 1
+[2026-04-03 22:13:45] [CART] [User: 1] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 16 | Quantity: 1 | Details: Name: Men tiêu hóa thú cưng, Price: 64881, Stock: 36
+[2026-04-03 22:13:45] [CART] [User: 1] [IP: ::1] CART_ACTION: CART_FOUND | Product: 16 | Quantity: 1 | Details: Existing Cart ID: 1015
+[2026-04-03 22:13:45] [CART] [User: 1] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 16 | Quantity: 1 | Details: Original: 64881, Discount: , Final: 64881
+[2026-04-03 22:13:45] [CART] [User: 1] [IP: ::1] CART_ACTION: ITEM_ADDED | Product: 16 | Quantity: 1 | Details: Cart ID: 1015, Unit Price: 64881
+[2026-04-03 22:13:45] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 16 | Quantity: 1 | Details: Cart ID: 1015, Cart Count: 1
+[2026-04-03 22:14:27] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 10 | Quantity: 1
+[2026-04-03 22:14:27] [CART] [User: 1] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 10 | Quantity: 1 | Details: Name: Xương gặm sạch răng cho chó, Price: 178497, Stock: 230
+[2026-04-03 22:14:27] [CART] [User: 1] [IP: ::1] CART_ACTION: CART_FOUND | Product: 10 | Quantity: 1 | Details: Existing Cart ID: 1015
+[2026-04-03 22:14:27] [CART] [User: 1] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 10 | Quantity: 1 | Details: Original: 178497, Discount: , Final: 178497
+[2026-04-03 22:14:27] [CART] [User: 1] [IP: ::1] CART_ACTION: ITEM_ADDED | Product: 10 | Quantity: 1 | Details: Cart ID: 1015, Unit Price: 178497
+[2026-04-03 22:14:27] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 10 | Quantity: 1 | Details: Cart ID: 1015, Cart Count: 1
+[2026-04-03 22:18:36] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 16 | Quantity: 1
+[2026-04-03 22:18:36] [CART] [User: 1] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 16 | Quantity: 1 | Details: Name: Men tiêu hóa thú cưng, Price: 64881, Stock: 36
+[2026-04-03 22:18:36] [CART] [User: 1] [IP: ::1] CART_ACTION: CART_FOUND | Product: 16 | Quantity: 1 | Details: Existing Cart ID: 1015
+[2026-04-03 22:18:36] [CART] [User: 1] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 16 | Quantity: 1 | Details: Original: 64881, Discount: , Final: 64881
+[2026-04-03 22:18:36] [CART] [User: 1] [IP: ::1] CART_ACTION: ITEM_ADDED | Product: 16 | Quantity: 1 | Details: Cart ID: 1015, Unit Price: 64881
+[2026-04-03 22:18:36] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 16 | Quantity: 1 | Details: Cart ID: 1015, Cart Count: 1
+[2026-04-03 22:20:44] [CART] [User: Quản trị viên (ID: 1)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":10,"product_name":null,"quantity":1}
+[2026-04-03 22:20:46] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 10 | Quantity: 1
+[2026-04-03 22:20:46] [CART] [User: 1] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 10 | Quantity: 1 | Details: Name: Xương gặm sạch răng cho chó, Price: 178497, Stock: 230
+[2026-04-03 22:20:46] [CART] [User: 1] [IP: ::1] CART_ACTION: CART_FOUND | Product: 10 | Quantity: 1 | Details: Existing Cart ID: 1015
+[2026-04-03 22:20:46] [CART] [User: 1] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 10 | Quantity: 1 | Details: Original: 178497, Discount: , Final: 178497
+[2026-04-03 22:20:46] [CART] [User: 1] [IP: ::1] CART_ACTION: ITEM_UPDATED | Product: 10 | Quantity: 2 | Details: Item ID: 2421
+[2026-04-03 22:20:46] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 10 | Quantity: 1 | Details: Cart ID: 1015, Cart Count: 1
+[2026-04-03 22:24:17] [CART] [User: Quản trị viên (ID: 1)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":10,"product_name":null,"quantity":1}
+[2026-04-03 22:26:22] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 17 | Quantity: 1
+[2026-04-03 22:26:22] [CART] [User: 1] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 17 | Quantity: 1 | Details: Name: Bình sữa cho thú con, Price: 268565, Stock: 141
+[2026-04-03 22:26:22] [CART] [User: 1] [IP: ::1] CART_ACTION: CART_FOUND | Product: 17 | Quantity: 1 | Details: Existing Cart ID: 1015
+[2026-04-03 22:26:22] [CART] [User: 1] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 17 | Quantity: 1 | Details: Original: 268565, Discount: , Final: 268565
+[2026-04-03 22:26:22] [CART] [User: 1] [IP: ::1] CART_ACTION: ITEM_ADDED | Product: 17 | Quantity: 1 | Details: Cart ID: 1015, Unit Price: 268565
+[2026-04-03 22:26:22] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 17 | Quantity: 1 | Details: Cart ID: 1015, Cart Count: 1
+[2026-04-03 22:27:21] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 10 | Quantity: 1
+[2026-04-03 22:27:21] [CART] [User: 1] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 10 | Quantity: 1 | Details: Name: Xương gặm sạch răng cho chó, Price: 178497, Stock: 230
+[2026-04-03 22:27:21] [CART] [User: 1] [IP: ::1] CART_ACTION: CART_FOUND | Product: 10 | Quantity: 1 | Details: Existing Cart ID: 1015
+[2026-04-03 22:27:21] [CART] [User: 1] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 10 | Quantity: 1 | Details: Original: 178497, Discount: , Final: 178497
+[2026-04-03 22:27:21] [CART] [User: 1] [IP: ::1] CART_ACTION: ITEM_ADDED | Product: 10 | Quantity: 1 | Details: Cart ID: 1015, Unit Price: 178497
+[2026-04-03 22:27:21] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 10 | Quantity: 1 | Details: Cart ID: 1015, Cart Count: 2
+[2026-04-03 22:29:05] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 10 | Quantity: 1
+[2026-04-03 22:29:05] [CART] [User: 1] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 10 | Quantity: 1 | Details: Name: Xương gặm sạch răng cho chó, Price: 178497, Stock: 230
+[2026-04-03 22:29:05] [CART] [User: 1] [IP: ::1] CART_ACTION: CART_FOUND | Product: 10 | Quantity: 1 | Details: Existing Cart ID: 1015
+[2026-04-03 22:29:05] [CART] [User: 1] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 10 | Quantity: 1 | Details: Original: 178497, Discount: , Final: 178497
+[2026-04-03 22:29:05] [CART] [User: 1] [IP: ::1] CART_ACTION: ITEM_ADDED | Product: 10 | Quantity: 1 | Details: Cart ID: 1015, Unit Price: 178497
+[2026-04-03 22:29:05] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 10 | Quantity: 1 | Details: Cart ID: 1015, Cart Count: 1

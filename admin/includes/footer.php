@@ -8,11 +8,11 @@
             </div>
             <div class="col-md-6">
                 <div class="text-end text-muted small">
-                    Phiên bản 1.0.0 | 
-                    <a href="#" class="text-decoration-none">Hỗ trợ</a> | 
+                    Phiên bản 1.0.0 |
+                    <a href="#" class="text-decoration-none">Hỗ trợ</a> |
                     <a href="#" class="text-decoration-none">Tài liệu</a>
                 </div>
             </div>
         </div>
     </div>
-</footer> 
+</footer>

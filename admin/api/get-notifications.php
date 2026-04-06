@@ -10,20 +10,21 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role_id'] != 1) {
 }
 
 // BƯỚC QUAN TRỌNG: Đem hàm này lên trên cùng để PHP "học" trước khi dùng
-function getTimeAgo($datetime) {
+function getTimeAgo($datetime)
+{
     $time = time() - strtotime($datetime);
-    
+
     if ($time < 60) return 'Vừa xong';
-    if ($time < 3600) return floor($time/60) . ' phút trước';
-    if ($time < 86400) return floor($time/3600) . ' giờ trước';
-    if ($time < 2592000) return floor($time/86400) . ' ngày trước';
-    if ($time < 31104000) return floor($time/2592000) . ' tháng trước';
-    return floor($time/31104000) . ' năm trước';
+    if ($time < 3600) return floor($time / 60) . ' phút trước';
+    if ($time < 86400) return floor($time / 3600) . ' giờ trước';
+    if ($time < 2592000) return floor($time / 86400) . ' ngày trước';
+    if ($time < 31104000) return floor($time / 2592000) . ' tháng trước';
+    return floor($time / 31104000) . ' năm trước';
 }
 
 try {
     $notifications = [];
-    
+
     // 1. Lấy lịch hẹn mới (trong 24h qua)
     $appointmentQuery = "
         SELECT 
@@ -41,7 +42,7 @@ try {
         ORDER BY a.created_at DESC
         LIMIT 5
     ";
-    
+
     $appointmentResult = $conn->query($appointmentQuery);
     if ($appointmentResult) {
         while ($row = $appointmentResult->fetch_assoc()) {
@@ -59,7 +60,7 @@ try {
             ];
         }
     }
-    
+
     // 2. Lấy đơn hàng mới (trong 24h qua)
     $orderQuery = "
         SELECT 
@@ -77,7 +78,7 @@ try {
         ORDER BY o.order_date DESC
         LIMIT 5
     ";
-    
+
     $orderResult = $conn->query($orderQuery);
     if ($orderResult) {
         while ($row = $orderResult->fetch_assoc()) {
@@ -95,7 +96,7 @@ try {
             ];
         }
     }
-    
+
     // 3. Lấy người dùng mới đăng ký (trong 24h qua)
     $userQuery = "
         SELECT 
@@ -113,7 +114,7 @@ try {
         ORDER BY u.created_at DESC
         LIMIT 3
     ";
-    
+
     $userResult = $conn->query($userQuery);
     if ($userResult) {
         while ($row = $userResult->fetch_assoc()) {
@@ -122,7 +123,7 @@ try {
             if ($row['role_name']) {
                 switch (strtolower($row['role_name'])) {
                     case 'patient':
-                        $roleText = 'bệnh nhân';
+                        $roleText = 'khách hàng';
                         break;
                     case 'doctor':
                         $roleText = 'bác sĩ';
@@ -145,7 +146,7 @@ try {
             ];
         }
     }
-    
+
     // 4. Lấy các thông báo hệ thống (nếu có bảng notifications)
     $systemQuery = "
         SELECT COUNT(*) as has_table
@@ -153,10 +154,10 @@ try {
         WHERE table_schema = DATABASE() 
         AND table_name = 'notifications'
     ";
-    
+
     $systemResult = $conn->query($systemQuery);
     $hasNotificationTable = $systemResult && $systemResult->fetch_assoc()['has_table'] > 0;
-    
+
     if ($hasNotificationTable) {
         $notifQuery = "
             SELECT 
@@ -172,7 +173,7 @@ try {
             ORDER BY created_at DESC
             LIMIT 5
         ";
-        
+
         $notifResult = $conn->query($notifQuery);
         if ($notifResult) {
             while ($row = $notifResult->fetch_assoc()) {
@@ -183,9 +184,9 @@ try {
                     'error' => ['fas fa-exclamation-circle', 'bg-danger'],
                     'success' => ['fas fa-check-circle', 'bg-success']
                 ];
-                
+
                 $icon = $iconMap[$row['type']] ?? ['fas fa-bell', 'bg-secondary'];
-                
+
                 $notifications[] = [
                     'id' => 'notif_' . $row['notification_id'],
                     'type' => 'system',
@@ -201,15 +202,15 @@ try {
             }
         }
     }
-    
+
     // Sắp xếp theo thời gian tạo
-    usort($notifications, function($a, $b) {
+    usort($notifications, function ($a, $b) {
         return strtotime($b['created_at']) - strtotime($a['created_at']);
     });
-    
+
     // Lấy 10 thông báo mới nhất
     $notifications = array_slice($notifications, 0, 10);
-    
+
     // Đếm tổng số thông báo chưa đọc
     $unreadCount = 0;
     foreach ($notifications as $notif) {
@@ -217,15 +218,14 @@ try {
             $unreadCount++;
         }
     }
-    
+
     // Trả về kết quả
-   echo json_encode([
+    echo json_encode([
         'success' => true,
         'notifications' => $notifications,
         'unread_count' => $unreadCount,
         'total_count' => count($notifications)
     ]);
-    
 } catch (Exception $e) {
     error_log("Notification API Error: " . $e->getMessage());
     http_response_code(500);
@@ -234,4 +234,3 @@ try {
         'details' => $e->getMessage()
     ]);
 }
-?> 

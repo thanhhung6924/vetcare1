@@ -36,7 +36,7 @@ VetCare là hệ thống quản lý phòng khám toàn diện, tích hợp nhi�
 | Mô-đun                | Mô tả                                |
 | --------------------- | ------------------------------------ |
 | 👨‍⚕️ Quản lý Lịch hẹn   | Đặt lịch online, quản lý lịch bác sĩ |
-| 👥 Quản lý Người dùng | Hồ sơ bệnh nhân, bác sĩ, nhân viên   |
+| 👥 Quản lý Người dùng | Hồ sơ thú cưng, bác sĩ, nhân viên    |
 | 💊 Bán Thuốc          | E-commerce, quản lý kho, đơn hàng    |
 | 🤖 Chatbot AI         | Tư vấn 24/7, phân tích triệu chứng   |
 | 📊 Báo cáo            | Thống kê, phân tích dữ liệu          |
@@ -91,7 +91,7 @@ VetCare là hệ thống quản lý phòng khám toàn diện, tích hợp nhi�
 
 ### 👥 Quản Lý Người Dùng
 
-- 👨‍⚕️ Phân quyền: Admin, Bác sĩ, Bệnh nhân
+- 👨‍⚕️ Phân quyền: Admin, Bác sĩ, Khách hàng
 - 📋 Hồ sơ chi tiết
 - 📜 Lịch sử khám bệnh
 - 💊 Quản lý đơn thuốc

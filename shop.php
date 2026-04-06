@@ -134,6 +134,27 @@ $popularSearches = [
             }
         }
 
+        .ai-badge {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: linear-gradient(45deg, #3b82f6, #6366f1);
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 4px 8px;
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .ai-badge i {
+            font-size: 0.65rem;
+        }
+
         /* Force notification to be on top of everything */
         .cart-notification,
         .cart-notification.position-fixed,
@@ -211,7 +232,7 @@ $popularSearches = [
 
     <main>
         <!-- Hero Section -->
-        <section class="hero-section">
+        <!-- <section class="hero-section">
             <div class="hero-bg-pattern"></div>
             <div class="container position-relative">
                 <div class="row align-items-center min-vh-50">
@@ -289,7 +310,7 @@ $popularSearches = [
 
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- Categories Section -->
         <section class="categories-section">
             <div class="container">
@@ -347,14 +368,14 @@ $popularSearches = [
         </section>
 
         <!-- Featured Products -->
-        <section class="featured-products">
+        <section class="featured-products mt2">
             <div class="container">
                 <!-- Section Header -->
                 <div class="row">
                     <div class="col-lg-8 mx-auto text-center">
                         <div class="section-header">
                             <span class="section-badge">Sản Phẩm Nổi Bật</span>
-                            <h2 class="section-title">Được Tin Dùng Nhiều Nhất</h2>
+                            <h2 class="section-title">Sản phẩm của VetCare Store</h2>
                             <p class="section-description">
                                 Khám phá những sản phẩm chất lượng cao được đánh giá và tin dùng bởi hàng nghìn khách hàng
                             </p>
@@ -471,7 +492,153 @@ $popularSearches = [
                 </div>
             </div>
         </section>
+        <?php
+        $ai_products = [];
 
+        $recommendations = $_SESSION['ai_recommendations'] ?? [];
+
+        if (!empty($recommendations)) {
+
+            foreach ($recommendations as $r_ai) {
+
+                if (empty($r_ai['name'])) continue;
+
+                $stmt = $conn->prepare("
+            SELECT p.*, c.name as category_name,
+                   COALESCE(AVG(pr.rating), 0) as avg_rating,
+                   COUNT(pr.review_id) as review_count
+            FROM products p
+            LEFT JOIN product_categories c ON p.category_id = c.category_id
+            LEFT JOIN product_reviews pr ON p.product_id = pr.product_id
+            WHERE p.name = ? AND p.stock > 0
+            GROUP BY p.product_id
+            LIMIT 1
+        ");
+
+                $stmt->bind_param("s", $r_ai['name']);
+                $stmt->execute();
+
+                $p = $stmt->get_result()->fetch_assoc();
+
+                if ($p) {
+
+                    // ✅ FIX ẢNH
+                    $p['display_image'] = !empty($p['image_url'])
+                        ? '/' . ltrim($p['image_url'], '/')
+                        : '/assets/images/default-product.jpg';
+
+                    $p['confidence'] = $r_ai['confidence'] ?? 0;
+                    $p['type'] = $r_ai['type'] ?? 'AI';
+
+                    $ai_products[] = $p;
+                }
+
+                if (count($ai_products) >= 4) break;
+            }
+        }
+        ?>
+        <?php if (!empty($ai_products)): ?>
+            <section class="featured-products mt-2">
+                <div class="container">
+
+                    <!-- Header -->
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto text-center">
+                            <div class="section-header">
+                                <span class="section-badge">Gợi ý cho bạn</span>
+                                <h2 class="section-title">Sản phẩm đề xuất</h2>
+                                <p class="section-description">
+                                    Những sản phẩm phù hợp với nhu cầu của bạn dựa trên hành vi mua sắm
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grid -->
+                    <div class="row g-2">
+                        <?php foreach ($ai_products as $index => $product): ?>
+                            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="<?php echo $index * 100; ?>">
+
+                                <div class="product-card">
+
+                                    <div class="product-image">
+                                        <img src="<?php echo htmlspecialchars($product['display_image']); ?>"
+                                            alt="<?php echo htmlspecialchars($product['name']); ?>"
+                                            class="img-fluid">
+
+                                        <!-- Badge AI -->
+
+
+                                        <!-- Confidence -->
+                                        <?php if (!empty($product['confidence'])): ?>
+                                            <div class="ai-badge">
+
+                                                <?php echo round($product['confidence']); ?>%
+                                            </div>
+                                        <?php endif; ?>
+
+                                        <div class="product-actions">
+                                            <button class="action-btn add-to-cart"
+                                                data-id="<?php echo $product['product_id']; ?>">
+                                                <i class="fas fa-cart-plus"></i>
+                                                <span class="tooltip">Thêm vào giỏ</span>
+                                            </button>
+
+                                            <button class="action-btn quick-view"
+                                                data-id="<?php echo $product['product_id']; ?>">
+                                                <i class="fas fa-eye"></i>
+                                                <span class="tooltip">Xem nhanh</span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-content">
+
+                                        <div class="product-category">
+                                            <i class="fas fa-tag"></i>
+                                            <?php echo htmlspecialchars($product['category_name'] ?? ''); ?>
+                                        </div>
+
+                                        <h3 class="product-title">
+                                            <a href="/shop/details.php?id=<?php echo $product['product_id']; ?>">
+                                                <?php echo htmlspecialchars($product['name']); ?>
+                                            </a>
+                                        </h3>
+
+                                        <!-- Rating -->
+                                        <div class="product-rating">
+                                            <div class="rating-stars">
+                                                <?php
+                                                $rating = round($product['avg_rating'] ?? 0);
+                                                for ($i = 1; $i <= 5; $i++) {
+                                                    echo $i <= $rating
+                                                        ? '<i class="fas fa-star"></i>'
+                                                        : '<i class="far fa-star"></i>';
+                                                }
+                                                ?>
+                                            </div>
+                                            <span class="rating-count">
+                                                (<?php echo $product['review_count'] ?? 0; ?> đánh giá)
+                                            </span>
+                                        </div>
+
+                                        <!-- Price -->
+                                        <div class="product-price">
+                                            <span class="current-price">
+                                                <?php echo number_format($product['price'], 0, ',', '.'); ?>đ
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+
+                </div>
+            </section>
+        <?php endif; ?>
         <!-- Why Choose Us -->
         <section class="features-section py-5">
             <div class="container">

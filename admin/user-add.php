@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $date_of_birth = $_POST['date_of_birth'];
     $gender = $_POST['gender'];
     $status = $_POST['status'];
-    
+
     // Validation
     if (empty($username) || empty($email) || empty($password)) {
         $error = 'Vui lòng điền đầy đủ thông tin bắt buộc!';
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $check_stmt->bind_param("ss", $username, $email);
             $check_stmt->execute();
             $result = $check_stmt->get_result();
-            
+
             if ($result->num_rows > 0) {
                 $error = 'Tên đăng nhập hoặc email đã tồn tại!';
             } else {
@@ -49,16 +49,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $user_stmt = $conn->prepare("INSERT INTO users (username, email, password, role_id, status, created_at) VALUES (?, ?, ?, ?, ?, NOW())");
                     $user_stmt->bind_param("sssis", $username, $email, $hashed_password, $role_id, $status);
                     $user_stmt->execute();
-                    
+
                     $user_id = $conn->insert_id;
-                    
+
                     // Insert user info
                     if (!empty($full_name) || !empty($phone) || !empty($address) || !empty($date_of_birth)) {
                         $info_stmt = $conn->prepare("INSERT INTO users_info (user_id, full_name, phone, address, date_of_birth, gender, created_at) VALUES (?, ?, ?, ?, ?, ?, NOW())");
                         $info_stmt->bind_param("isssss", $user_id, $full_name, $phone, $address, $date_of_birth, $gender);
                         $info_stmt->execute();
                     }
-                    
+
                     $conn->commit();
                     header('Location: users.php?success=added');
                     exit;
@@ -76,6 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,6 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link href="assets/css/sidebar.css" rel="stylesheet">
     <link href="assets/css/header.css" rel="stylesheet">
 </head>
+
 <body>
     <?php include 'includes/headeradmin.php'; ?>
     <?php include 'includes/sidebaradmin.php'; ?>
@@ -124,14 +126,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label class="form-label">Tên đăng nhập <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" name="username" 
-                                           value="<?= htmlspecialchars($_POST['username'] ?? '') ?>" required>
+                                    <input type="text" class="form-control" name="username"
+                                        value="<?= htmlspecialchars($_POST['username'] ?? '') ?>" required>
                                 </div>
 
                                 <div class="mb-3">
                                     <label class="form-label">Email <span class="text-danger">*</span></label>
-                                    <input type="email" class="form-control" name="email" 
-                                           value="<?= htmlspecialchars($_POST['email'] ?? '') ?>" required>
+                                    <input type="email" class="form-control" name="email"
+                                        value="<?= htmlspecialchars($_POST['email'] ?? '') ?>" required>
                                 </div>
 
                                 <div class="mb-3">
@@ -149,7 +151,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     <select class="form-select" name="role_id" required>
                                         <option value="">Chọn vai trò</option>
                                         <option value="1">Quản trị viên</option>
-                                        <option value="2">Bệnh nhân</option>
+                                        <option value="2">Khách hàng</option>
                                         <option value="3">Bác sĩ</option>
                                     </select>
                                 </div>
@@ -158,14 +160,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label class="form-label">Họ và tên</label>
-                                    <input type="text" class="form-control" name="full_name" 
-                                           value="<?= htmlspecialchars($_POST['full_name'] ?? '') ?>">
+                                    <input type="text" class="form-control" name="full_name"
+                                        value="<?= htmlspecialchars($_POST['full_name'] ?? '') ?>">
                                 </div>
 
                                 <div class="mb-3">
                                     <label class="form-label">Số điện thoại</label>
-                                    <input type="tel" class="form-control" name="phone" 
-                                           value="<?= htmlspecialchars($_POST['phone'] ?? '') ?>">
+                                    <input type="tel" class="form-control" name="phone"
+                                        value="<?= htmlspecialchars($_POST['phone'] ?? '') ?>">
                                 </div>
 
                                 <div class="mb-3">
@@ -175,8 +177,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                                 <div class="mb-3">
                                     <label class="form-label">Ngày sinh</label>
-                                    <input type="date" class="form-control" name="date_of_birth" 
-                                           value="<?= htmlspecialchars($_POST['date_of_birth'] ?? '') ?>">
+                                    <input type="date" class="form-control" name="date_of_birth"
+                                        value="<?= htmlspecialchars($_POST['date_of_birth'] ?? '') ?>">
                                 </div>
 
                                 <div class="mb-3">
@@ -217,4 +219,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

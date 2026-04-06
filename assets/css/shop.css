@@ -1217,7 +1217,7 @@ main {
 
 /* Featured Products Section */
 .featured-products {
-  padding: 4rem 0;
+  /* padding: 4rem 0; */
 }
 
 /* Featured Products Grid */
@@ -1531,10 +1531,10 @@ main {
   }
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .featured-products {
     padding: 2rem 0;
-  }
+  } */
 
   .featured-products-grid {
     grid-template-columns: repeat(2, 1fr);

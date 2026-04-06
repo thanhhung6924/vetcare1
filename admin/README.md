@@ -12,7 +12,7 @@ Hệ thống quản trị toàn diện cho phòng khám VetCare với giao diệ
 
 ### 👥 Quản lý người dùng
 
-- Quản lý Admin, Bác sĩ, Bệnh nhân
+- Quản lý Admin, Bác sĩ, Khách hàng
 - Tìm kiếm và lọc theo vai trò
 - Phân trang và sắp xếp
 - CRUD operations đầy đủ

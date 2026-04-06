@@ -1,0 +1,178 @@
+[2026-04-04 05:47:03] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 1 cart items for user 1
+[2026-04-04 05:47:03] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2428, ProductID: 10, Name: 'Xương gặm sạch răng cho chó', Price: 178497, UnitPrice: 178497, Qty: 1
+[2026-04-04 05:47:03] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 178497
+[2026-04-04 05:47:09] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 0 cart items for user 1
+[2026-04-04 05:47:09] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 0
+[2026-04-04 05:57:09] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 2 cart items for user 1
+[2026-04-04 05:57:09] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2430, ProductID: 15, Name: 'Thuốc nhỏ mắt thú cưng', Price: 20465, UnitPrice: 20465, Qty: 1
+[2026-04-04 05:57:09] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2429, ProductID: 16, Name: 'Men tiêu hóa thú cưng', Price: 64881, UnitPrice: 64881, Qty: 1
+[2026-04-04 05:57:09] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 85346
+[2026-04-04 05:57:14] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 0 cart items for user 1
+[2026-04-04 05:57:14] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 0
+[2026-04-04 05:59:40] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 1 cart items for user 1
+[2026-04-04 05:59:40] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2431, ProductID: 15, Name: 'Thuốc nhỏ mắt thú cưng', Price: 20465, UnitPrice: 20465, Qty: 1
+[2026-04-04 05:59:40] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 20465
+[2026-04-04 05:59:42] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 0 cart items for user 1
+[2026-04-04 05:59:42] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 0
+[2026-04-04 06:02:10] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 2 cart items for user 1
+[2026-04-04 06:02:10] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2433, ProductID: 11, Name: 'Vitamin tăng đề kháng cho chó', Price: 36651, UnitPrice: 36651, Qty: 1
+[2026-04-04 06:02:10] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2432, ProductID: 16, Name: 'Men tiêu hóa thú cưng', Price: 64881, UnitPrice: 64881, Qty: 1
+[2026-04-04 06:02:10] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 101532
+[2026-04-04 06:04:23] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 2 cart items for user 1
+[2026-04-04 06:04:23] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2433, ProductID: 11, Name: 'Vitamin tăng đề kháng cho chó', Price: 36651, UnitPrice: 36651, Qty: 1
+[2026-04-04 06:04:23] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2432, ProductID: 16, Name: 'Men tiêu hóa thú cưng', Price: 64881, UnitPrice: 64881, Qty: 1
+[2026-04-04 06:04:23] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 101532
+[2026-04-04 06:04:38] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 2 cart items for user 1
+[2026-04-04 06:04:38] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2433, ProductID: 11, Name: 'Vitamin tăng đề kháng cho chó', Price: 36651, UnitPrice: 36651, Qty: 1
+[2026-04-04 06:04:38] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2432, ProductID: 16, Name: 'Men tiêu hóa thú cưng', Price: 64881, UnitPrice: 64881, Qty: 1
+[2026-04-04 06:04:38] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 101532
+[2026-04-04 06:04:47] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 1 cart items for user 1
+[2026-04-04 06:04:47] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2432, ProductID: 16, Name: 'Men tiêu hóa thú cưng', Price: 64881, UnitPrice: 64881, Qty: 1
+[2026-04-04 06:04:47] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 64881
+[2026-04-04 06:06:02] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 1 cart items for user 1
+[2026-04-04 06:06:02] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2432, ProductID: 16, Name: 'Men tiêu hóa thú cưng', Price: 64881, UnitPrice: 64881, Qty: 1
+[2026-04-04 06:06:02] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 64881
+[2026-04-04 06:06:05] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 0 cart items for user 1
+[2026-04-04 06:06:05] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 0
+[2026-04-04 06:34:33] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 1 cart items for user 1
+[2026-04-04 06:34:33] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2434, ProductID: 12, Name: 'Thuốc tiêu chảy cho chó', Price: 109895, UnitPrice: 109895, Qty: 1
+[2026-04-04 06:34:33] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 109895
+[2026-04-04 06:35:23] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 1 cart items for user 1
+[2026-04-04 06:35:23] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2434, ProductID: 12, Name: 'Thuốc tiêu chảy cho chó', Price: 109895, UnitPrice: 109895, Qty: 1
+[2026-04-04 06:35:23] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 109895
+[2026-04-04 06:35:50] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 1 cart items for user 1
+[2026-04-04 06:35:50] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2434, ProductID: 12, Name: 'Thuốc tiêu chảy cho chó', Price: 109895, UnitPrice: 109895, Qty: 1
+[2026-04-04 06:35:50] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 109895
+[2026-04-04 06:40:04] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 2 cart items for user 1
+[2026-04-04 06:40:04] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2435, ProductID: 14, Name: 'Vòng cổ chống ve rận cho chó', Price: 315995, UnitPrice: 315995, Qty: 1
+[2026-04-04 06:40:04] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2434, ProductID: 12, Name: 'Thuốc tiêu chảy cho chó', Price: 109895, UnitPrice: 109895, Qty: 1
+[2026-04-04 06:40:04] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 425890
+[2026-04-04 07:04:23] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 2 cart items for user 1
+[2026-04-04 07:04:23] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2435, ProductID: 14, Name: 'Vòng cổ chống ve rận cho chó', Price: 315995, UnitPrice: 315995, Qty: 1
+[2026-04-04 07:04:23] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2434, ProductID: 12, Name: 'Thuốc tiêu chảy cho chó', Price: 109895, UnitPrice: 109895, Qty: 1
+[2026-04-04 07:04:23] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 425890
+[2026-04-04 07:09:42] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 2 cart items for user 1
+[2026-04-04 07:09:42] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2435, ProductID: 14, Name: 'Vòng cổ chống ve rận cho chó', Price: 315995, UnitPrice: 315995, Qty: 1
+[2026-04-04 07:09:42] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2434, ProductID: 12, Name: 'Thuốc tiêu chảy cho chó', Price: 109895, UnitPrice: 109895, Qty: 1
+[2026-04-04 07:09:42] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 425890
+[2026-04-04 07:09:47] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 0 cart items for user 1
+[2026-04-04 07:09:47] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 0
+[2026-04-04 07:32:21] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 1 cart items for user 1
+[2026-04-04 07:32:21] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2436, ProductID: 11, Name: 'Vitamin tăng đề kháng cho chó', Price: 36651, UnitPrice: 36651, Qty: 1
+[2026-04-04 07:32:21] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 36651
+[2026-04-04 07:33:44] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 1 cart items for user 1
+[2026-04-04 07:33:44] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2436, ProductID: 11, Name: 'Vitamin tăng đề kháng cho chó', Price: 36651, UnitPrice: 36651, Qty: 1
+[2026-04-04 07:33:44] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 36651
+[2026-04-04 07:36:55] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 1 cart items for user 1
+[2026-04-04 07:36:55] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2436, ProductID: 11, Name: 'Vitamin tăng đề kháng cho chó', Price: 36651, UnitPrice: 36651, Qty: 1
+[2026-04-04 07:36:55] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 36651
+[2026-04-04 07:36:58] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 0 cart items for user 1
+[2026-04-04 07:36:58] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 0
+[2026-04-04 07:37:24] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 2 cart items for user 1
+[2026-04-04 07:37:24] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2438, ProductID: 11, Name: 'Vitamin tăng đề kháng cho chó', Price: 36651, UnitPrice: 36651, Qty: 100
+[2026-04-04 07:37:24] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2437, ProductID: 2, Name: 'Pate mèo cá ngừ', Price: 207812, UnitPrice: 207812, Qty: 1
+[2026-04-04 07:37:24] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 3872912
+[2026-04-04 07:37:36] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 2 cart items for user 1
+[2026-04-04 07:37:36] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2438, ProductID: 11, Name: 'Vitamin tăng đề kháng cho chó', Price: 36651, UnitPrice: 36651, Qty: 100
+[2026-04-04 07:37:36] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2437, ProductID: 2, Name: 'Pate mèo cá ngừ', Price: 207812, UnitPrice: 207812, Qty: 100
+[2026-04-04 07:37:36] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 24446300
+[2026-04-04 07:45:04] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 2 cart items for user 1
+[2026-04-04 07:45:04] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2440, ProductID: 12, Name: 'Thuốc tiêu chảy cho chó', Price: 109895, UnitPrice: 109895, Qty: 100
+[2026-04-04 07:45:04] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2439, ProductID: 2, Name: 'Pate mèo cá ngừ', Price: 207812, UnitPrice: 207812, Qty: 1
+[2026-04-04 07:45:04] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 11197312
+[2026-04-04 07:45:07] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 2 cart items for user 1
+[2026-04-04 07:45:07] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2440, ProductID: 12, Name: 'Thuốc tiêu chảy cho chó', Price: 109895, UnitPrice: 109895, Qty: 100
+[2026-04-04 07:45:07] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2439, ProductID: 2, Name: 'Pate mèo cá ngừ', Price: 207812, UnitPrice: 207812, Qty: 2
+[2026-04-04 07:45:07] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 11405124
+[2026-04-04 07:45:07] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 2 cart items for user 1
+[2026-04-04 07:45:07] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2440, ProductID: 12, Name: 'Thuốc tiêu chảy cho chó', Price: 109895, UnitPrice: 109895, Qty: 100
+[2026-04-04 07:45:07] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2439, ProductID: 2, Name: 'Pate mèo cá ngừ', Price: 207812, UnitPrice: 207812, Qty: 3
+[2026-04-04 07:45:07] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 11612936
+[2026-04-04 07:45:08] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 2 cart items for user 1
+[2026-04-04 07:45:08] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2440, ProductID: 12, Name: 'Thuốc tiêu chảy cho chó', Price: 109895, UnitPrice: 109895, Qty: 100
+[2026-04-04 07:45:08] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2439, ProductID: 2, Name: 'Pate mèo cá ngừ', Price: 207812, UnitPrice: 207812, Qty: 4
+[2026-04-04 07:45:08] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 11820748
+[2026-04-04 07:45:09] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 2 cart items for user 1
+[2026-04-04 07:45:09] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2440, ProductID: 12, Name: 'Thuốc tiêu chảy cho chó', Price: 109895, UnitPrice: 109895, Qty: 100
+[2026-04-04 07:45:09] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2439, ProductID: 2, Name: 'Pate mèo cá ngừ', Price: 207812, UnitPrice: 207812, Qty: 5
+[2026-04-04 07:45:09] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 12028560
+[2026-04-04 07:45:15] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 2 cart items for user 1
+[2026-04-04 07:45:15] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2440, ProductID: 12, Name: 'Thuốc tiêu chảy cho chó', Price: 109895, UnitPrice: 109895, Qty: 100
+[2026-04-04 07:45:15] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2439, ProductID: 2, Name: 'Pate mèo cá ngừ', Price: 207812, UnitPrice: 207812, Qty: 100
+[2026-04-04 07:45:15] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 31770700
+[2026-04-04 07:55:47] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 2 cart items for user 1
+[2026-04-04 07:55:47] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2442, ProductID: 9, Name: 'Pate chó vị bò', Price: 319422, UnitPrice: 319422, Qty: 1
+[2026-04-04 07:55:47] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2441, ProductID: 11, Name: 'Vitamin tăng đề kháng cho chó', Price: 36651, UnitPrice: 36651, Qty: 1
+[2026-04-04 07:55:47] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 356073
+[2026-04-04 07:58:25] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 2 cart items for user 1
+[2026-04-04 07:58:25] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2444, ProductID: 18, Name: 'Khăn ướt vệ sinh thú cưng', Price: 138804, UnitPrice: 138804, Qty: 6
+[2026-04-04 07:58:25] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2443, ProductID: 11, Name: 'Vitamin tăng đề kháng cho chó', Price: 36651, UnitPrice: 36651, Qty: 6
+[2026-04-04 07:58:25] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 1052730
+[2026-04-04 07:58:38] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 2 cart items for user 1
+[2026-04-04 07:58:38] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2444, ProductID: 18, Name: 'Khăn ướt vệ sinh thú cưng', Price: 138804, UnitPrice: 138804, Qty: 6
+[2026-04-04 07:58:38] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2443, ProductID: 11, Name: 'Vitamin tăng đề kháng cho chó', Price: 36651, UnitPrice: 36651, Qty: 6
+[2026-04-04 07:58:38] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 1052730
+[2026-04-04 07:58:56] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 0 cart items for user 1
+[2026-04-04 07:58:56] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 0
+[2026-04-04 08:00:55] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 2 cart items for user 1
+[2026-04-04 08:00:55] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2446, ProductID: 2, Name: 'Pate mèo cá ngừ', Price: 207812, UnitPrice: 207812, Qty: 10
+[2026-04-04 08:00:55] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2445, ProductID: 11, Name: 'Vitamin tăng đề kháng cho chó', Price: 36651, UnitPrice: 36651, Qty: 10
+[2026-04-04 08:00:55] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 2444630
+[2026-04-04 08:03:17] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 2 cart items for user 1
+[2026-04-04 08:03:17] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2448, ProductID: 2, Name: 'Pate mèo cá ngừ', Price: 207812, UnitPrice: 207812, Qty: 10
+[2026-04-04 08:03:17] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2447, ProductID: 11, Name: 'Vitamin tăng đề kháng cho chó', Price: 36651, UnitPrice: 36651, Qty: 10
+[2026-04-04 08:03:17] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 2444630
+[2026-04-04 08:08:29] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Found 3 cart items for user 4
+[2026-04-04 08:08:29] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2390, ProductID: 1, Name: 'Hạt mèo Whiskas 1kg', Price: 295927, UnitPrice: 295927, Qty: 2
+[2026-04-04 08:08:29] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2389, ProductID: 3, Name: 'Cát vệ sinh mèo 10L', Price: 205093, UnitPrice: 205093, Qty: 1
+[2026-04-04 08:08:29] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Item 2 - ItemID: 2388, ProductID: 2, Name: 'Pate mèo cá ngừ', Price: 207812, UnitPrice: 207812, Qty: 1
+[2026-04-04 08:08:29] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Total calculated: 1004759
+[2026-04-04 08:08:48] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Found 0 cart items for user 4
+[2026-04-04 08:08:48] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Total calculated: 0
+[2026-04-04 08:09:21] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Found 2 cart items for user 4
+[2026-04-04 08:09:21] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2450, ProductID: 18, Name: 'Khăn ướt vệ sinh thú cưng', Price: 138804, UnitPrice: 138804, Qty: 10
+[2026-04-04 08:09:21] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2449, ProductID: 17, Name: 'Bình sữa cho thú con', Price: 268565, UnitPrice: 268565, Qty: 10
+[2026-04-04 08:09:21] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Total calculated: 4073690
+[2026-04-04 08:13:20] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Found 2 cart items for user 4
+[2026-04-04 08:13:20] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2452, ProductID: 20, Name: 'Bát ăn inox cho chó mèo', Price: 234612, UnitPrice: 234612, Qty: 10
+[2026-04-04 08:13:20] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2451, ProductID: 13, Name: 'Sữa tắm cho chó', Price: 78160, UnitPrice: 78160, Qty: 10
+[2026-04-04 08:13:20] [INFO] [User: 4] [IP: ::1] CART_DEBUG: Total calculated: 3127720
+[2026-04-04 08:16:30] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 1 cart items for user 1
+[2026-04-04 08:16:30] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2455, ProductID: 18, Name: 'Khăn ướt vệ sinh thú cưng', Price: 138804, UnitPrice: 138804, Qty: 10
+[2026-04-04 08:16:30] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 1388040
+[2026-04-04 08:16:32] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 1 cart items for user 1
+[2026-04-04 08:16:32] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2455, ProductID: 18, Name: 'Khăn ướt vệ sinh thú cưng', Price: 138804, UnitPrice: 138804, Qty: 10
+[2026-04-04 08:16:32] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 1388040
+[2026-04-04 08:17:13] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 3 cart items for user 1
+[2026-04-04 08:17:13] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2457, ProductID: 10, Name: 'Xương gặm sạch răng cho chó', Price: 178497, UnitPrice: 178497, Qty: 10
+[2026-04-04 08:17:13] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2456, ProductID: 12, Name: 'Thuốc tiêu chảy cho chó', Price: 109895, UnitPrice: 109895, Qty: 10
+[2026-04-04 08:17:13] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 2 - ItemID: 2455, ProductID: 18, Name: 'Khăn ướt vệ sinh thú cưng', Price: 138804, UnitPrice: 138804, Qty: 10
+[2026-04-04 08:17:13] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 4271960
+[2026-04-04 08:32:44] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 1 cart items for user 1
+[2026-04-04 08:32:44] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2460, ProductID: 3, Name: 'Cát vệ sinh mèo 10L', Price: 205093, UnitPrice: 205093, Qty: 1
+[2026-04-04 08:32:44] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 205093
+[2026-04-04 08:32:47] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 0 cart items for user 1
+[2026-04-04 08:32:47] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 0
+[2026-04-04 08:42:11] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 1 cart items for user 1
+[2026-04-04 08:42:11] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2461, ProductID: 12, Name: 'Thuốc tiêu chảy cho chó', Price: 109895, UnitPrice: 109895, Qty: 1
+[2026-04-04 08:42:11] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 109895
+[2026-04-04 08:44:11] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 1 cart items for user 1
+[2026-04-04 08:44:11] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2461, ProductID: 12, Name: 'Thuốc tiêu chảy cho chó', Price: 109895, UnitPrice: 109895, Qty: 1
+[2026-04-04 08:44:11] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 109895
+[2026-04-04 08:47:02] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 1 cart items for user 1
+[2026-04-04 08:47:02] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2461, ProductID: 12, Name: 'Thuốc tiêu chảy cho chó', Price: 109895, UnitPrice: 109895, Qty: 1
+[2026-04-04 08:47:02] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 109895
+[2026-04-04 08:48:08] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 1 cart items for user 1
+[2026-04-04 08:48:08] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2461, ProductID: 12, Name: 'Thuốc tiêu chảy cho chó', Price: 109895, UnitPrice: 109895, Qty: 1
+[2026-04-04 08:48:08] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 109895
+[2026-04-04 08:54:56] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 2 cart items for user 1
+[2026-04-04 08:54:56] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2462, ProductID: 5, Name: 'Thuốc tẩy giun cho mèo', Price: 56888, UnitPrice: 56888, Qty: 19
+[2026-04-04 08:54:56] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2461, ProductID: 12, Name: 'Thuốc tiêu chảy cho chó', Price: 109895, UnitPrice: 109895, Qty: 1
+[2026-04-04 08:54:56] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 1190767
+[2026-04-04 08:55:02] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 2 cart items for user 1
+[2026-04-04 08:55:02] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2462, ProductID: 5, Name: 'Thuốc tẩy giun cho mèo', Price: 56888, UnitPrice: 56888, Qty: 19
+[2026-04-04 08:55:02] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2461, ProductID: 12, Name: 'Thuốc tiêu chảy cho chó', Price: 109895, UnitPrice: 109895, Qty: 10
+[2026-04-04 08:55:02] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 2179822
+[2026-04-04 08:58:30] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 1 cart items for user 1
+[2026-04-04 08:58:30] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2463, ProductID: 7, Name: 'Đồ chơi chuột giả cho mèo', Price: 80313, UnitPrice: 80313, Qty: 1
+[2026-04-04 08:58:30] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 80313

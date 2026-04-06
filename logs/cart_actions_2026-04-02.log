@@ -24,3 +24,52 @@
 [2026-04-02 10:04:44] [CART] [User: 1] [IP: ::1] CART_ACTION: ITEM_UPDATED | Product: 10 | Quantity: 2 | Details: Item ID: 2393
 [2026-04-02 10:04:44] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 10 | Quantity: 1 | Details: Cart ID: 1014, Cart Count: 1
 [2026-04-02 10:11:41] [CART] [User: Quản trị viên (ID: 1)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":10,"product_name":null,"quantity":1}
+[2026-04-02 13:58:21] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 2 | Quantity: 1
+[2026-04-02 13:58:21] [CART] [User: 1] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 2 | Quantity: 1 | Details: Name: Pate mèo cá ngừ, Price: 207812, Stock: 225
+[2026-04-02 13:58:21] [CART] [User: 1] [IP: ::1] CART_ACTION: CART_CREATED | Product: 2 | Quantity: 1 | Details: New Cart ID: 1012
+[2026-04-02 13:58:21] [CART] [User: 1] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 2 | Quantity: 1 | Details: Original: 207812, Discount: , Final: 207812
+[2026-04-02 13:58:21] [CART] [User: 1] [IP: ::1] CART_ACTION: ITEM_ADDED | Product: 2 | Quantity: 1 | Details: Cart ID: 1012, Unit Price: 207812
+[2026-04-02 13:58:21] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 2 | Quantity: 1 | Details: Cart ID: 1012, Cart Count: 1
+[2026-04-02 13:58:49] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 2 | Quantity: 1
+[2026-04-02 13:58:49] [CART] [User: 1] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 2 | Quantity: 1 | Details: Name: Pate mèo cá ngừ, Price: 207812, Stock: 225
+[2026-04-02 13:58:49] [CART] [User: 1] [IP: ::1] CART_ACTION: CART_FOUND | Product: 2 | Quantity: 1 | Details: Existing Cart ID: 1012
+[2026-04-02 13:58:49] [CART] [User: 1] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 2 | Quantity: 1 | Details: Original: 207812, Discount: , Final: 207812
+[2026-04-02 13:58:49] [CART] [User: 1] [IP: ::1] CART_ACTION: ITEM_UPDATED | Product: 2 | Quantity: 2 | Details: Item ID: 2391
+[2026-04-02 13:58:49] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 2 | Quantity: 1 | Details: Cart ID: 1012, Cart Count: 1
+[2026-04-02 14:01:50] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 19 | Quantity: 180
+[2026-04-02 14:01:50] [CART] [User: 1] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 19 | Quantity: 180 | Details: Name: Lồng vận chuyển thú cưng, Price: 40202, Stock: 180
+[2026-04-02 14:01:50] [CART] [User: 1] [IP: ::1] CART_ACTION: CART_CREATED | Product: 19 | Quantity: 180 | Details: New Cart ID: 1013
+[2026-04-02 14:01:50] [CART] [User: 1] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 19 | Quantity: 180 | Details: Original: 40202, Discount: , Final: 40202
+[2026-04-02 14:01:50] [CART] [User: 1] [IP: ::1] CART_ACTION: ITEM_ADDED | Product: 19 | Quantity: 180 | Details: Cart ID: 1013, Unit Price: 40202
+[2026-04-02 14:01:50] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 19 | Quantity: 180 | Details: Cart ID: 1013, Cart Count: 1
+[2026-04-02 14:04:48] [CART] [User: Quản trị viên (ID: 1)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 100) | {"action":"ADD_TO_CART","product_id":4,"product_name":null,"quantity":100}
+[2026-04-02 14:04:57] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 16 | Quantity: 100
+[2026-04-02 14:04:57] [CART] [User: 1] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 16 | Quantity: 100 | Details: Name: Men tiêu hóa thú cưng, Price: 64881, Stock: 136
+[2026-04-02 14:04:57] [CART] [User: 1] [IP: ::1] CART_ACTION: CART_FOUND | Product: 16 | Quantity: 100 | Details: Existing Cart ID: 1014
+[2026-04-02 14:04:57] [CART] [User: 1] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 16 | Quantity: 100 | Details: Original: 64881, Discount: , Final: 64881
+[2026-04-02 14:04:57] [CART] [User: 1] [IP: ::1] CART_ACTION: ITEM_ADDED | Product: 16 | Quantity: 100 | Details: Cart ID: 1014, Unit Price: 64881
+[2026-04-02 14:04:57] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 16 | Quantity: 100 | Details: Cart ID: 1014, Cart Count: 2
+[2026-04-02 14:12:38] [CART] [User: Quản trị viên (ID: 1)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":20,"product_name":null,"quantity":1}
+[2026-04-02 14:12:45] [CART] [User: Quản trị viên (ID: 1)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 100) | {"action":"ADD_TO_CART","product_id":20,"product_name":null,"quantity":100}
+[2026-04-02 14:13:04] [CART] [User: Quản trị viên (ID: 1)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":15,"product_name":null,"quantity":1}
+[2026-04-02 15:29:23] [CART] [User: Quản trị viên (ID: 1)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":7,"product_name":null,"quantity":1}
+[2026-04-02 15:47:40] [CART] [User: 0] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 12 | Quantity: 1
+[2026-04-02 15:47:40] [CART] [User: 0] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 12 | Quantity: 1 | Details: Name: Thuốc tiêu chảy cho chó, Price: 109895, Stock: 148
+[2026-04-02 15:47:40] [CART] [User: 0] [IP: ::1] CART_ACTION: CART_CREATED | Product: 12 | Quantity: 1 | Details: New Cart ID: 1016
+[2026-04-02 15:47:40] [CART] [User: 0] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 12 | Quantity: 1 | Details: Original: 109895, Discount: , Final: 109895
+[2026-04-02 15:47:40] [CART] [User: 0] [IP: ::1] CART_ACTION: ITEM_ADDED | Product: 12 | Quantity: 1 | Details: Cart ID: 1016, Unit Price: 109895
+[2026-04-02 15:47:40] [CART] [User: 0] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 12 | Quantity: 1 | Details: Cart ID: 1016, Cart Count: 1
+[2026-04-02 15:47:48] [CART] [User: Hưng Dương Phước Lê (ID: 0)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":12,"product_name":null,"quantity":1}
+[2026-04-02 15:50:55] [CART] [User: Hưng Dương Phước Lê (ID: 0)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 1) | {"action":"ADD_TO_CART","product_id":10,"product_name":null,"quantity":1}
+[2026-04-02 16:17:08] [CART] [User: 0] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 4 | Quantity: 1
+[2026-04-02 16:17:08] [CART] [User: 0] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 4 | Quantity: 1 | Details: Name: Vitamin tổng hợp cho mèo, Price: 46459, Stock: 67
+[2026-04-02 16:17:08] [CART] [User: 0] [IP: ::1] CART_ACTION: CART_FOUND | Product: 4 | Quantity: 1 | Details: Existing Cart ID: 1016
+[2026-04-02 16:17:08] [CART] [User: 0] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 4 | Quantity: 1 | Details: Original: 46459, Discount: , Final: 46459
+[2026-04-02 16:17:08] [CART] [User: 0] [IP: ::1] CART_ACTION: ITEM_ADDED | Product: 4 | Quantity: 1 | Details: Cart ID: 1016, Unit Price: 46459
+[2026-04-02 16:17:08] [CART] [User: 0] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 4 | Quantity: 1 | Details: Cart ID: 1016, Cart Count: 2
+[2026-04-02 16:17:21] [CART] [User: 0] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 16 | Quantity: 1
+[2026-04-02 16:17:21] [CART] [User: 0] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 16 | Quantity: 1 | Details: Name: Men tiêu hóa thú cưng, Price: 64881, Stock: 36
+[2026-04-02 16:17:21] [CART] [User: 0] [IP: ::1] CART_ACTION: CART_FOUND | Product: 16 | Quantity: 1 | Details: Existing Cart ID: 1016
+[2026-04-02 16:17:21] [CART] [User: 0] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 16 | Quantity: 1 | Details: Original: 64881, Discount: , Final: 64881
+[2026-04-02 16:17:21] [CART] [User: 0] [IP: ::1] CART_ACTION: ITEM_ADDED | Product: 16 | Quantity: 1 | Details: Cart ID: 1016, Unit Price: 64881
+[2026-04-02 16:17:21] [CART] [User: 0] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 16 | Quantity: 1 | Details: Cart ID: 1016, Cart Count: 3

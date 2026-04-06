@@ -1,0 +1,36 @@
+[2026-04-03 21:48:16] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":5,"quantity":1}
+[2026-04-03 21:48:16] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":5,"quantity":1} | Response: {"success":true,"message":"\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng","cart_count":2}
+[2026-04-03 21:55:08] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":16,"quantity":1}
+[2026-04-03 21:55:08] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":16,"quantity":1} | Response: {"success":true,"message":"\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng","cart_count":1}
+[2026-04-03 21:55:34] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":20,"quantity":1}
+[2026-04-03 21:55:34] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":20,"quantity":1} | Response: {"success":true,"message":"\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng","cart_count":2}
+[2026-04-03 21:56:30] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":3,"quantity":1}
+[2026-04-03 21:56:30] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":3,"quantity":1} | Response: {"success":true,"message":"\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng","cart_count":3}
+[2026-04-03 21:58:29] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":14,"quantity":1}
+[2026-04-03 21:58:29] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":14,"quantity":1} | Response: {"success":true,"message":"\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng","cart_count":4}
+[2026-04-03 22:00:34] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":16,"quantity":1}
+[2026-04-03 22:00:34] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":16,"quantity":1} | Response: {"success":true,"message":"\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng","cart_count":1}
+[2026-04-03 22:01:21] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":11,"quantity":1}
+[2026-04-03 22:01:21] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":11,"quantity":1} | Response: {"success":true,"message":"\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng","cart_count":2}
+[2026-04-03 22:02:25] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":16,"quantity":1}
+[2026-04-03 22:02:25] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":16,"quantity":1} | Response: {"success":true,"message":"\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng","cart_count":1}
+[2026-04-03 22:02:56] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":10,"quantity":1}
+[2026-04-03 22:02:56] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":10,"quantity":1} | Response: {"success":true,"message":"\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng","cart_count":1}
+[2026-04-03 22:04:10] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":16,"quantity":1}
+[2026-04-03 22:04:10] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":16,"quantity":1} | Response: {"success":true,"message":"\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng","cart_count":1}
+[2026-04-03 22:04:34] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":10,"quantity":1}
+[2026-04-03 22:04:34] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":10,"quantity":1} | Response: {"success":true,"message":"\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng","cart_count":1}
+[2026-04-03 22:13:45] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":16,"quantity":1}
+[2026-04-03 22:13:45] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":16,"quantity":1} | Response: {"success":true,"message":"\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng","cart_count":1}
+[2026-04-03 22:14:27] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":10,"quantity":1}
+[2026-04-03 22:14:27] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":10,"quantity":1} | Response: {"success":true,"message":"\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng","cart_count":1}
+[2026-04-03 22:18:36] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":16,"quantity":1}
+[2026-04-03 22:18:36] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":16,"quantity":1} | Response: {"success":true,"message":"\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng","cart_count":1}
+[2026-04-03 22:20:46] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":10,"quantity":1}
+[2026-04-03 22:20:46] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":10,"quantity":1} | Response: {"success":true,"message":"\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng","cart_count":1}
+[2026-04-03 22:26:22] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":17,"quantity":1}
+[2026-04-03 22:26:22] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":17,"quantity":1} | Response: {"success":true,"message":"\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng","cart_count":1}
+[2026-04-03 22:27:21] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":10,"quantity":1}
+[2026-04-03 22:27:21] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":10,"quantity":1} | Response: {"success":true,"message":"\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng","cart_count":2}
+[2026-04-03 22:29:05] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":10,"quantity":1}
+[2026-04-03 22:29:05] [API] [User: 1] [IP: ::1] API_CALL: POST /api/cart.php | Request: {"product_id":10,"quantity":1} | Response: {"success":true,"message":"\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng","cart_count":1}

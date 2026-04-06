@@ -18,20 +18,20 @@ $error = $_GET['error'] ?? '';
 // Xử lý delete user
 if ($action == 'delete' && isset($_GET['id'])) {
     $user_id = (int)$_GET['id'];
-    
+
     // Không cho phép xóa admin hiện tại
     if ($user_id == $_SESSION['user_id']) {
         header('Location: users.php?error=cannot_delete_self');
         exit();
     }
-    
+
     $conn->begin_transaction();
     try {
         // Xóa thông tin user
         $conn->query("DELETE FROM users_info WHERE user_id = $user_id");
         // Xóa user
         $conn->query("DELETE FROM users WHERE user_id = $user_id");
-        
+
         $conn->commit();
         header('Location: users.php?success=deleted');
         exit();
@@ -48,10 +48,16 @@ $params = [];
 
 if ($role_filter != 'all') {
     $role_id = 0;
-    switch($role_filter) {
-        case 'admin': $role_id = 1; break;  // Admin
-        case 'doctor': $role_id = 2; break; // Bác sĩ 
-        case 'patient': $role_id = 3; break; // Bệnh nhân
+    switch ($role_filter) {
+        case 'admin':
+            $role_id = 1;
+            break;  // Admin
+        case 'doctor':
+            $role_id = 2;
+            break; // Bác sĩ 
+        case 'patient':
+            $role_id = 3;
+            break; // Bệnh nhân
     }
     if ($role_id > 0) {
         $where_conditions[] = "u.role_id = ?";
@@ -129,6 +135,7 @@ try {
 
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -137,9 +144,10 @@ try {
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="assets/css/admin.css" rel="stylesheet">
-<link href="assets/css/sidebar.css" rel="stylesheet">
-<link href="assets/css/header.css" rel="stylesheet">
+    <link href="assets/css/sidebar.css" rel="stylesheet">
+    <link href="assets/css/header.css" rel="stylesheet">
 </head>
+
 <body>
     <?php include 'includes/headeradmin.php'; ?>
     <?php include 'includes/sidebaradmin.php'; ?>
@@ -163,11 +171,18 @@ try {
             <?php if ($success): ?>
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                     <?php
-                    switch($success) {
-                        case 'added': echo 'Thêm người dùng thành công!'; break;
-                        case 'updated': echo 'Cập nhật người dùng thành công!'; break;
-                        case 'deleted': echo 'Xóa người dùng thành công!'; break;
-                        default: echo 'Thao tác thành công!';
+                    switch ($success) {
+                        case 'added':
+                            echo 'Thêm người dùng thành công!';
+                            break;
+                        case 'updated':
+                            echo 'Cập nhật người dùng thành công!';
+                            break;
+                        case 'deleted':
+                            echo 'Xóa người dùng thành công!';
+                            break;
+                        default:
+                            echo 'Thao tác thành công!';
                     }
                     ?>
                     <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
@@ -177,10 +192,15 @@ try {
             <?php if ($error): ?>
                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
                     <?php
-                    switch($error) {
-                        case 'cannot_delete_self': echo 'Không thể xóa tài khoản của chính mình!'; break;
-                        case 'delete_failed': echo 'Xóa người dùng thất bại!'; break;
-                        default: echo 'Có lỗi xảy ra!';
+                    switch ($error) {
+                        case 'cannot_delete_self':
+                            echo 'Không thể xóa tài khoản của chính mình!';
+                            break;
+                        case 'delete_failed':
+                            echo 'Xóa người dùng thất bại!';
+                            break;
+                        default:
+                            echo 'Có lỗi xảy ra!';
                     }
                     ?>
                     <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
@@ -193,9 +213,9 @@ try {
                     <form method="GET" class="row g-3">
                         <div class="col-md-4">
                             <label class="form-label">Tìm kiếm</label>
-                            <input type="text" class="form-control" name="search" 
-                                   value="<?= htmlspecialchars($search) ?>" 
-                                   placeholder="Tìm theo tên, email, số điện thoại...">
+                            <input type="text" class="form-control" name="search"
+                                value="<?= htmlspecialchars($search) ?>"
+                                placeholder="Tìm theo tên, email, số điện thoại...">
                         </div>
                         <div class="col-md-3">
                             <label class="form-label">Vai trò</label>
@@ -203,7 +223,7 @@ try {
                                 <option value="all" <?= $role_filter == 'all' ? 'selected' : '' ?>>Tất cả</option>
                                 <option value="admin" <?= $role_filter == 'admin' ? 'selected' : '' ?>>Quản trị viên</option>
                                 <option value="doctor" <?= $role_filter == 'doctor' ? 'selected' : '' ?>>Bác sĩ</option>
-                                <option value="patient" <?= $role_filter == 'patient' ? 'selected' : '' ?>>Bệnh nhân</option>
+                                <option value="patient" <?= $role_filter == 'patient' ? 'selected' : '' ?>>Khách hàng</option>
                             </select>
                         </div>
                         <div class="col-md-2">
@@ -232,14 +252,14 @@ try {
                     <div class="row align-items-center">
                         <div class="col">
                             <h6 class="m-0 font-weight-bold text-primary">
-                                Danh sách người dùng 
+                                Danh sách người dùng
                                 <span class="badge bg-primary ms-2"><?= number_format($total_records) ?></span>
                             </h6>
                         </div>
                         <div class="col-auto">
                             <div class="dropdown">
-                                <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" 
-                                        data-bs-toggle="dropdown">
+                                <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown">
                                     <i class="fas fa-download me-2"></i>Xuất dữ liệu
                                 </button>
                                 <ul class="dropdown-menu">
@@ -318,18 +338,18 @@ try {
                                             </td>
                                             <td>
                                                 <div class="btn-group btn-group-sm">
-                                                    <a href="user-edit.php?id=<?= $user['user_id'] ?>" 
-                                                       class="btn btn-outline-primary" title="Chỉnh sửa">
+                                                    <a href="user-edit.php?id=<?= $user['user_id'] ?>"
+                                                        class="btn btn-outline-primary" title="Chỉnh sửa">
                                                         <i class="fas fa-edit"></i>
                                                     </a>
-                                                    <a href="user-view.php?id=<?= $user['user_id'] ?>" 
-                                                       class="btn btn-outline-info" title="Xem chi tiết">
+                                                    <a href="user-view.php?id=<?= $user['user_id'] ?>"
+                                                        class="btn btn-outline-info" title="Xem chi tiết">
                                                         <i class="fas fa-eye"></i>
                                                     </a>
                                                     <?php if ($user['user_id'] != $_SESSION['user_id']): ?>
-                                                        <a href="users.php?action=delete&id=<?= $user['user_id'] ?>" 
-                                                           class="btn btn-outline-danger" title="Xóa"
-                                                           onclick="return confirm('Bạn có chắc chắn muốn xóa người dùng này?')">
+                                                        <a href="users.php?action=delete&id=<?= $user['user_id'] ?>"
+                                                            class="btn btn-outline-danger" title="Xóa"
+                                                            onclick="return confirm('Bạn có chắc chắn muốn xóa người dùng này?')">
                                                             <i class="fas fa-trash"></i>
                                                         </a>
                                                     <?php endif; ?>
@@ -356,7 +376,7 @@ try {
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
                                 <small class="text-muted">
-                                    Hiển thị <?= $offset + 1 ?> - <?= min($offset + $limit, $total_records) ?> 
+                                    Hiển thị <?= $offset + 1 ?> - <?= min($offset + $limit, $total_records) ?>
                                     trong tổng số <?= $total_records ?> người dùng
                                 </small>
                             </div>
@@ -400,4 +420,5 @@ try {
     <script src="assets/js/notifications.js"></script>
     <script src="assets/js/admin.js"></script>
 </body>
-</html> 
+
+</html>
