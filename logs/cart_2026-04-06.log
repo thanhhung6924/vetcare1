@@ -101,3 +101,6 @@
 [2026-04-06 06:26:56] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 1 cart items for user 1
 [2026-04-06 06:26:56] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2469, ProductID: 2, Name: 'Pate mèo cá ngừ', Price: 207812, UnitPrice: 207812, Qty: 1
 [2026-04-06 06:26:56] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 207812
+[2026-04-06 06:31:13] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 1 cart items for user 1
+[2026-04-06 06:31:13] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2469, ProductID: 2, Name: 'Pate mèo cá ngừ', Price: 207812, UnitPrice: 207812, Qty: 1
+[2026-04-06 06:31:13] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 207812

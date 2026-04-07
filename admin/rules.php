@@ -103,10 +103,17 @@ $data = $response ? json_decode($response, true) : null;
                                 </nav>
                             </div>
                             <div class="page-actions">
-                                <a href="http://localhost:8000/reload-trend" class="btn btn-warning btn-sm" target="hidden_frame">
+                                <a href="http://localhost:8000/reload-trend"
+                                    class="btn btn-warning btn-sm"
+                                    target="hidden_frame"
+                                    onclick="setTimeout(() => { window.location.reload(); }, 1000);">
                                     <i class="fas fa-sync-alt me-1"></i>Làm mới Trend
                                 </a>
-                                <a href="http://localhost:8000/reload-core" class="btn btn-success btn-sm" target="hidden_frame">
+
+                                <a href="http://localhost:8000/reload-core"
+                                    class="btn btn-success btn-sm"
+                                    target="hidden_frame"
+                                    onclick="setTimeout(() => { window.location.reload(); }, 1500);">
                                     <i class="fas fa-database me-1"></i>Làm mới Core
                                 </a>
                             </div>
