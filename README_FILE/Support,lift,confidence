@@ -1,0 +1,88 @@
+SELECT 
+    SUM(CASE WHEN p.name = 'Cát vệ sinh mèo 10L' THEN oi.quantity ELSE 0 END) AS SoLuong_CatMeo,
+    SUM(CASE WHEN p.name = 'Hạt mèo Whiskas 1kg' THEN oi.quantity ELSE 0 END) AS SoLuong_HatMeo,
+    COUNT(DISTINCT o.order_id) AS TongSoDon_MuaChung,
+    SUM(oi.quantity) AS TongCaHai,
+    -- Tính Support: (Số đơn mua chung) / (Tổng số đơn hàng thành công trong hệ thống)
+    ROUND(COUNT(DISTINCT o.order_id) / (SELECT COUNT(*) FROM orders WHERE status = 'completed'), 4) AS Support
+FROM orders o
+JOIN order_items oi ON o.order_id = oi.order_id
+JOIN products p ON oi.product_id = p.product_id
+WHERE o.order_id IN (
+    -- Subquery: Chỉ lọc những đơn hàng chứa ĐỒNG THỜI cả 2 món
+    SELECT oi2.order_id
+    FROM order_items oi2
+    JOIN products p2 ON oi2.product_id = p2.product_id
+    WHERE p2.name IN ('Cát vệ sinh mèo 10L', 'Hạt mèo Whiskas 1kg')
+    GROUP BY oi2.order_id
+    HAVING COUNT(DISTINCT p2.name) = 2
+)
+AND p.name IN ('Cát vệ sinh mèo 10L', 'Hạt mèo Whiskas 1kg')
+AND o.status = 'completed';
+-- Công thức tính support(A->B) = (Tổng số đơn mua chung) / (Số đơn hàng của cửa hàng)
+SET @total_orders = (SELECT COUNT(*) FROM orders WHERE status = 'completed');
+
+SELECT 
+    (SELECT COUNT(DISTINCT order_id) FROM order_items oi JOIN products p ON oi.product_id = p.product_id 
+     WHERE p.name = 'Cát vệ sinh mèo 10L') AS Don_Co_Cat,
+    
+    (SELECT COUNT(DISTINCT order_id) FROM order_items oi JOIN products p ON oi.product_id = p.product_id 
+     WHERE p.name = 'Hạt mèo Whiskas 1kg') AS Don_Co_Hat,
+    
+    TongSoDon_MuaChung AS Don_Mua_Chung,
+    
+    -- Tính Lift
+    ROUND(
+        (TongSoDon_MuaChung / @total_orders) / 
+        ((SELECT COUNT(DISTINCT order_id) FROM order_items oi JOIN products p ON oi.product_id = p.product_id WHERE p.name = 'Cát vệ sinh mèo 10L') / @total_orders * (SELECT COUNT(DISTINCT order_id) FROM order_items oi JOIN products p ON oi.product_id = p.product_id WHERE p.name = 'Hạt mèo Whiskas 1kg') / @total_orders), 
+    4) AS Lift_Tu_Nhien
+FROM (
+    SELECT COUNT(DISTINCT o.order_id) AS TongSoDon_MuaChung
+    FROM orders o
+    JOIN order_items oi ON o.order_id = oi.order_id
+    JOIN products p ON oi.product_id = p.product_id
+    WHERE o.order_id IN (
+        SELECT oi2.order_id FROM order_items oi2
+        JOIN products p2 ON oi2.product_id = p2.product_id
+        WHERE p2.name IN ('Cát vệ sinh mèo 10L', 'Hạt mèo Whiskas 1kg')
+        GROUP BY oi2.order_id
+        HAVING COUNT(DISTINCT p2.name) = 2
+    )
+    AND o.status = 'completed'
+) AS Data_Mua_Chung;
+-- công thưc tính lift =support(a,b) / (support(a) * support(b))
+-- support(a,b) = (Số đơn mua chung) / (Tổng số đơn hàng thành công trong hệ thống)
+SELECT 
+    -- 1. Đếm số đơn mua Cát (Tử số)
+    (SELECT COUNT(DISTINCT order_id) 
+     FROM order_items oi 
+     JOIN products p ON oi.product_id = p.product_id 
+     WHERE p.name = 'Cát vệ sinh mèo 10L') AS Tong_Don_Mua_Cat,
+
+    -- 2. Đếm số đơn mua cả Cát và Whiskas (Mẫu số)
+    TongSoDon_MuaChung AS Don_Mua_Chung,
+
+    -- 3. Tính Confidence
+    ROUND(
+        TongSoDon_MuaChung / 
+        (SELECT COUNT(DISTINCT order_id) 
+         FROM order_items oi 
+         JOIN products p ON oi.product_id = p.product_id 
+         WHERE p.name = 'Cát vệ sinh mèo 10L'), 
+    4) AS Confidence_Cat_Den_Whiskas
+FROM (
+    SELECT COUNT(DISTINCT o.order_id) AS TongSoDon_MuaChung
+    FROM orders o
+    JOIN order_items oi ON o.order_id = oi.order_id
+    JOIN products p ON oi.product_id = p.product_id
+    WHERE o.order_id IN (
+        SELECT oi2.order_id FROM order_items oi2
+        JOIN products p2 ON oi2.product_id = p2.product_id
+        WHERE p2.name IN ('Cát vệ sinh mèo 10L', 'Hạt mèo Whiskas 1kg')
+        GROUP BY oi2.order_id
+        HAVING COUNT(DISTINCT p2.name) = 2
+    )
+    AND o.status = 'completed'
+) AS Data_Mua_Chung;
+-- Công thức tính confidence(A->B) = (Số đơn mua chung) / (Số đơn mua A)
+

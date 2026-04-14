@@ -1,0 +1,9 @@
+[2026-04-14 05:02:08] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 1 cart items for user 1
+[2026-04-14 05:02:08] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2498, ProductID: 4, Name: 'Vitamin tổng hợp cho mèo', Price: 46459, UnitPrice: 46459, Qty: 1
+[2026-04-14 05:02:08] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 46459
+[2026-04-14 06:25:09] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 1 cart items for user 1
+[2026-04-14 06:25:09] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2498, ProductID: 4, Name: 'Vitamin tổng hợp cho mèo', Price: 46459, UnitPrice: 46459, Qty: 1
+[2026-04-14 06:25:09] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 46459
+[2026-04-14 07:45:45] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 1 cart items for user 1
+[2026-04-14 07:45:45] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2498, ProductID: 4, Name: 'Vitamin tổng hợp cho mèo', Price: 46459, UnitPrice: 46459, Qty: 1
+[2026-04-14 07:45:45] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 46459

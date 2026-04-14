@@ -1,0 +1,66 @@
+/* 1. Container chính: Ép hàng ngang và cho phép cuộn */
+.order-container {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  padding: 15px 5px !important; /* Tạo khoảng trống cho bóng đổ không bị cắt */
+  gap: 0; /* Khoảng cách do padding của col đảm nhận */
+}
+
+/* Ẩn thanh cuộn xấu xí trên một số trình duyệt để nhìn sạch hơn */
+.order-container::-webkit-scrollbar {
+  height: 4px;
+}
+.order-container::-webkit-scrollbar-thumb {
+  background: #e0e0e0;
+  border-radius: 10px;
+}
+
+/* 2. Định dạng lại kích thước các ô */
+.order-container .col-md-2 {
+  flex: 0 0 170px !important; /* Tăng lên 170px cho thoáng */
+  width: 170px !important;
+  max-width: 170px !important;
+  padding: 0 8px !important; /* Khoảng cách giữa các card */
+}
+
+/* 3. Thay viền đỏ bằng Box Shadow */
+.order-container .card {
+  border: none !important; /* Bỏ viền đỏ và viền mặc định */
+  border-radius: 12px !important; /* Bo góc tròn cho hiện đại */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important; /* Đổ bóng nhẹ */
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  height: 100% !important;
+  background: #fff !important;
+}
+
+/* Hiệu ứng bay lên khi di chuột vào (tùy chọn) */
+.order-container .card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* 4. Căn chỉnh nội dung bên trong cho đều chặn chặn */
+.order-container .card-body {
+  padding: 1.25rem 0.75rem !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-container h5 {
+  font-weight: 700 !important;
+  color: #2d3436 !important;
+  margin-top: 5px;
+  margin-bottom: 2px;
+  font-size: 1.1rem !important;
+}
+
+.order-container small {
+  font-size: 0.75rem !important;
+  font-weight: 500;
+  text-transform: uppercase; /* Làm chữ nhỏ nhìn chuyên nghiệp hơn */
+  letter-spacing: 0.5px;
+}

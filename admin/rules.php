@@ -27,55 +27,154 @@ $data = $response ? json_decode($response, true) : null;
     <link href="assets/css/admin.css" rel="stylesheet">
     <link href="assets/css/sidebar.css" rel="stylesheet">
     <link href="assets/css/header.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/rules.css">
 
     <style>
-        /* Giữ lại style riêng cho bảng luật */
-        .table-responsive {
-            border-radius: 8px;
+        /* 1. Tổng thể nội dung và Layout */
+        .main-content {
+            background-color: #f4f7f6;
+            /* Màu nền xám nhạt cực sang */
+        }
+
+        /* 2. Card Style - Đồng bộ với Dashboard */
+        .card {
+            border: none !important;
+            border-radius: 12px !important;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05) !important;
+            margin-bottom: 1.5rem !important;
             overflow: hidden;
+            background: #fff !important;
         }
 
+        /* Tiêu đề Card cho TREND và CORE */
+        .card-header {
+            padding: 1.25rem !important;
+            border-bottom: 1px solid #f1f4f8 !important;
+            background: #fff !important;
+        }
+
+        .card-header.bg-warning {
+            background: linear-gradient(45deg, #ff9800, #ffc107) !important;
+            color: #fff !important;
+        }
+
+        .card-header.bg-primary {
+            background: linear-gradient(45deg, #4e73df, #224abe) !important;
+            color: #fff !important;
+        }
+
+        /* 3. Table UI - Làm mới bảng luật */
+        .table-responsive {
+            border-radius: 0 0 12px 12px;
+        }
+
+        .table thead th {
+            background-color: #f8fafc !important;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+            color: #64748b;
+            padding: 1rem !important;
+            border-bottom: 1px solid #e2e8f0 !important;
+        }
+
+        .table tbody td {
+
+            vertical-align: middle !important;
+            border-bottom: 1px solid #f1f5f9 !important;
+        }
+
+        /* 4. Badges - Tên sản phẩm */
+        .badge {
+            padding: 0.5rem 0.75rem !important;
+            font-weight: 500 !important;
+            border-radius: 8px !important;
+            font-size: 0.85rem !important;
+        }
+
+        /* Màu cho Điều kiện (Antecedents) */
+        .bg-info.text-dark {
+            background-color: #e0f2fe !important;
+            color: #0369a1 !important;
+            border: 1px solid #bae6fd !important;
+        }
+
+        /* Màu cho Gợi ý (Consequents) */
+        .bg-secondary {
+            background-color: #f1f5f9 !important;
+            color: #475569 !important;
+            border: 1px solid #e2e8f0 !important;
+        }
+
+        /* 5. Progress Bar & Chỉ số phân tích */
         .progress-container {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-
-        .progress-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            min-width: 200px;
         }
 
         .progress-custom {
-            height: 14px;
-            flex-grow: 1;
-            background-color: #e9ecef;
-            border-radius: 4px;
+            height: 8px !important;
+            /* Làm thanh progress mảnh mai */
+            background-color: #f1f5f9 !important;
+            border-radius: 10px !important;
             overflow: hidden;
+            margin-bottom: 6px;
+        }
+
+        .progress-bar {
+            border-radius: 10px;
+            background: linear-gradient(90deg, #10b981, #34d399) !important;
         }
 
         .percent-text {
-            font-weight: bold;
-            color: #198754;
-            /* Màu success */
-            min-width: 55px;
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: #10b981;
         }
 
         .stats-detail {
-            font-size: 0.8rem;
-            color: #212529;
-            text-align: center;
+            font-size: 0.75rem !important;
+            color: #64748b !important;
+            background: #f8fafc;
+            padding: 5px 10px;
+            border-radius: 6px;
+            display: block;
+            margin-top: 5px;
+            border: 1px solid #f1f5f9;
         }
 
-        .badge-rule {
-            font-weight: 500;
-            padding: 0.4rem 0.7rem;
+        .stats-detail b {
+            color: #1e293b;
         }
 
-        .progress {
-            background-color: #e9ecef;
-            border-radius: 10px;
+        /* 6. Mũi tên chỉ hướng giữa 2 cột */
+        /* .table tbody td:nth-child(2)::after {
+            content: "\f105";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #cbd5e1;
+            font-size: 1.2rem;
+        } */
+
+        /* 7. Sản phẩm phổ biến (Top bán chạy) */
+        .rounded-pill.bg-light {
+            background: #fff !important;
+            border: 1px solid #e2e8f0 !important;
+            color: #475569 !important;
+            transition: all 0.2s;
+        }
+
+        .rounded-pill.bg-light:hover {
+            border-color: #ffc107 !important;
+            transform: translateY(-2px);
+        }
+
+        /* Nút bấm hành động */
+        .page-actions .btn {
+            border-radius: 8px !important;
+            padding: 0.5rem 1rem !important;
+            font-weight: 600 !important;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
         }
     </style>
 </head>
@@ -169,9 +268,9 @@ $data = $response ? json_decode($response, true) : null;
                                         <table class="table table-hover align-middle mb-0">
                                             <thead class="table-light">
                                                 <tr>
-                                                    <th style="width: 40%">Điều kiện </th>
-                                                    <th style="width: 5%" class="text-center"></th>
-                                                    <th style="width: 35%">Gợi ý </th>
+                                                    <th style="width: 45%">Điều kiện </th>
+
+                                                    <th style="width: 25%">Gợi ý </th>
                                                     <th class="text-center">Chỉ số phân tích</th>
                                                 </tr>
                                             </thead>
@@ -188,7 +287,7 @@ $data = $response ? json_decode($response, true) : null;
                                                                     <span class="badge bg-info text-dark fw-normal mb-1"><?= htmlspecialchars($a) ?></span>
                                                                 <?php endforeach; ?>
                                                             </td>
-                                                            <td class="text-center text-muted"></td>
+
                                                             <td>
                                                                 <?php foreach ($rule['Gợi ý mua kèm (Consequents)'] as $c): ?>
                                                                     <span class="badge bg-secondary mb-1"><?= htmlspecialchars($c) ?></span>

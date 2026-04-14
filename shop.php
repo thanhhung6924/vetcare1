@@ -318,11 +318,11 @@ $popularSearches = [
                 <div class="row">
                     <div class="col-lg-8 mx-auto text-center">
                         <div class="section-header">
-                            <span class="section-badge">Danh Mục</span>
+                            <!-- <span class="section-badge">Danh Mục</span> -->
                             <h2 class="section-title">Danh Mục Sản Phẩm</h2>
-                            <p class="section-description">
+                            <!-- <p class="section-description">
                                 Khám phá các danh mục sản phẩm y tế chất lượng cao, được chọn lọc kỹ lưỡng để đáp ứng nhu cầu chăm sóc sức khỏe của bạn
-                            </p>
+                            </p> -->
                         </div>
                     </div>
                 </div>

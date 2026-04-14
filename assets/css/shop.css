@@ -1804,6 +1804,7 @@ main {
 }
 
 .section-badge {
+  
   display: inline-block;
   padding: 0.5rem 1rem;
   background: var(--primary-100);
@@ -1812,6 +1813,7 @@ main {
   font-size: 0.875rem;
   font-weight: 500;
   margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .section-title {
@@ -1832,8 +1834,8 @@ main {
 .categories-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  padding: 1rem;
+  gap: 1rem;
+  /* padding: 1rem; */
 }
 
 .category-card {

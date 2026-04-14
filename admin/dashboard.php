@@ -250,7 +250,7 @@ try {
                                 </div>
                                 <div class="h4 mb-0 font-weight-bold"><?= number_format($stats['patients']) ?></div>
                                 <small class="opacity-75">
-                                    <i class="fas fa-arrow-up me-1"></i>+12% so với tháng trước
+                                    <i class="fas fa-arrow-up me-1"></i>+12% tháng trước
                                 </small>
                             </div>
                             <div class="text-end">
@@ -632,9 +632,19 @@ try {
                                 <?php while ($product = $top_products->fetch_assoc()): ?>
                                     <div class="d-flex align-items-center mb-3">
                                         <div class="avatar-sm me-3">
-                                            <img src="<?= htmlspecialchars($product['image_url'] ?? 'assets/images/default-product.jpg') ?>"
+                                            <?php
+                                            // Kiểm tra xem biến nào có dữ liệu thì dùng biến đó
+                                            $imagePath = $product['display_image'] ?? $product['image_url'] ?? 'assets/images/default-product.jpg';
+
+                                            // Đảm bảo đường dẫn luôn bắt đầu từ gốc (thêm / nếu chưa có)
+                                            if (!str_starts_with($imagePath, 'http') && !str_starts_with($imagePath, '/')) {
+                                                $imagePath = '/' . $imagePath;
+                                            }
+                                            ?>
+                                            <img src="<?= htmlspecialchars($imagePath) ?>"
                                                 alt="<?= htmlspecialchars($product['name']) ?>"
-                                                class="avatar-title rounded">
+                                                class="avatar-title rounded"
+                                                style="width: 40px; height: 40px; object-fit: cover;">
                                         </div>
                                         <div class="flex-grow-1">
                                             <h6 class="mb-0"><?= htmlspecialchars($product['name']) ?></h6>

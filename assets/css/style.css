@@ -1,12 +1,20 @@
 body {
   background: #f8fafc;
   color: #222;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
-a { text-decoration: none; color: inherit; }
-ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul,
+ol {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
 
 .navbar {
   background: #fff !important;
@@ -15,7 +23,8 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
 .navbar .navbar-brand span {
   color: #1976d2 !important;
 }
-.navbar .nav-link.active, .navbar .nav-link:hover {
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
   color: #1976d2 !important;
   font-weight: 600;
 }
@@ -33,13 +42,17 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
   max-width: 80%;
   margin: 0 auto;
 }
-.service-box, .product-box, .choose-box {
+.service-box,
+.product-box,
+.choose-box {
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 2px 12px rgba(25, 118, 210, 0.07);
   transition: box-shadow 0.2s;
 }
-.service-box:hover, .product-box:hover, .choose-box:hover {
+.service-box:hover,
+.product-box:hover,
+.choose-box:hover {
   box-shadow: 0 4px 24px rgba(25, 118, 210, 0.15);
 }
 
@@ -62,22 +75,64 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
 }
 
 .logo-circle {
-  display:inline-block;width:48px;height:48px;background:linear-gradient(135deg,#e0eafc,#ffd6e0);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#6a1b9a;font-size:2rem;font-weight:900;box-shadow:0 2px 8px rgba(106,27,154,0.10);margin-right:10px;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #e0eafc, #ffd6e0);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6a1b9a;
+  font-size: 2rem;
+  font-weight: 900;
+  box-shadow: 0 2px 8px rgba(106, 27, 154, 0.1);
+  margin-right: 10px;
 }
 .logo-text {
-  font-weight:900;font-size:1.7rem;color:#6a1b9a;font-family:'Montserrat',Arial,sans-serif;
+  font-weight: 900;
+  font-size: 1.7rem;
+  color: #6a1b9a;
+  font-family: "Montserrat", Arial, sans-serif;
 }
 .logo-circle-footer {
-  display:inline-block;width:40px;height:40px;background:linear-gradient(135deg,#fff,#ffd6e0);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#6a1b9a;font-size:1.5rem;font-weight:900;margin-right:10px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #fff, #ffd6e0);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6a1b9a;
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-right: 10px;
 }
 .logo-text-footer {
-  font-weight:900;font-size:1.3rem;font-family:'Montserrat',Arial,sans-serif;
+  font-weight: 900;
+  font-size: 1.3rem;
+  font-family: "Montserrat", Arial, sans-serif;
 }
-.footer-title {font-weight:700; margin-bottom: 0.5rem;}
-.footer-social a {margin-right: 12px; color: #6a1b9a; font-size: 1.5rem;}
-.footer-social a:hover {color: #ffb300;}
-.footer-desc {opacity:0.9;}
-.copyright {opacity:0.7;font-size:0.95rem;}
+.footer-title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.footer-social a {
+  margin-right: 12px;
+  color: #6a1b9a;
+  font-size: 1.5rem;
+}
+.footer-social a:hover {
+  color: #ffb300;
+}
+.footer-desc {
+  opacity: 0.9;
+}
+.copyright {
+  opacity: 0.7;
+  font-size: 0.95rem;
+}
 
 @media (max-width: 991px) {
   .section-content {
@@ -101,7 +156,9 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
   z-index: 1;
   pointer-events: none;
 }
-.hero-section h1, .hero-section p, .hero-section a {
+.hero-section h1,
+.hero-section p,
+.hero-section a {
   position: relative;
   z-index: 2;
 }
@@ -132,7 +189,7 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
 .custom-navbar {
   background: linear-gradient(90deg, #2196f3 80%, #1976d2 100%) !important;
   border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(25, 118, 210, 0.10);
+  box-shadow: 0 4px 24px rgba(25, 118, 210, 0.1);
   margin-top: 24px;
   margin-bottom: 24px;
 }
@@ -143,7 +200,7 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
 .logo-text-navbar {
   color: #fff !important;
   font-size: 1.7rem;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   font-weight: 900;
   letter-spacing: 1px;
 }
@@ -154,14 +211,15 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
   margin-right: 8px;
   transition: color 0.2s;
 }
-.custom-navbar .navbar-nav .nav-link.active, .custom-navbar .navbar-nav .nav-link:hover {
+.custom-navbar .navbar-nav .nav-link.active,
+.custom-navbar .navbar-nav .nav-link:hover {
   color: #fff !important;
   text-shadow: 0 2px 8px rgba(25, 118, 210, 0.15);
 }
 .custom-navbar .navbar-brand img {
   background: #fff;
   border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(33,150,243,0.10);
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.1);
 }
 @media (max-width: 991.98px) {
   .custom-navbar-container {
@@ -181,7 +239,7 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
 .modern-navbar {
   background: #fff !important;
   border-radius: 16px;
-  box-shadow: 0 2px 12px rgba(33, 150, 243, 0.10);
+  box-shadow: 0 2px 12px rgba(33, 150, 243, 0.1);
   border: 1.5px solid #e3f2fd;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -196,7 +254,7 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
 .modern-logo-text {
   color: #1976d2 !important;
   font-size: 1.5rem;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   font-weight: 800;
   letter-spacing: 1px;
   text-shadow: none;
@@ -204,7 +262,7 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
 .modern-navbar .navbar-brand img {
   background: #fff;
   border-radius: 50%;
-  box-shadow: 0 1px 4px rgba(33,150,243,0.08);
+  box-shadow: 0 1px 4px rgba(33, 150, 243, 0.08);
   border: 1.5px solid #e3f2fd;
   width: 40px !important;
   height: 40px !important;
@@ -218,25 +276,27 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
   font-size: 1rem;
   border-radius: 18px;
   padding: 7px 18px !important;
-  transition: all 0.18s cubic-bezier(.4,2,.6,1.2), box-shadow 0.18s;
+  transition: all 0.18s cubic-bezier(0.4, 2, 0.6, 1.2), box-shadow 0.18s;
   background: transparent;
   box-shadow: none;
   display: flex;
   align-items: center;
   gap: 4px;
 }
-.modern-nav-link:hover, .modern-nav-link.active {
+.modern-nav-link:hover,
+.modern-nav-link.active {
   color: #1976d2 !important;
   background: #e3f2fd;
-  box-shadow: 0 1px 4px rgba(33,150,243,0.08);
+  box-shadow: 0 1px 4px rgba(33, 150, 243, 0.08);
   transform: translateY(-1px) scale(1.03);
 }
 .modern-nav-link i {
   color: #1976d2;
   font-size: 1.05em;
-  transition: transform 0.4s cubic-bezier(.4,2,.6,1.2);
+  transition: transform 0.4s cubic-bezier(0.4, 2, 0.6, 1.2);
 }
-.modern-nav-link:hover i, .modern-nav-link.active i {
+.modern-nav-link:hover i,
+.modern-nav-link.active i {
   transform: rotate(360deg) scale(1.1);
 }
 .modern-toggler {
@@ -252,9 +312,9 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
   padding: 10px 26px;
   background: linear-gradient(90deg, #42a5f5 0%, #1976d2 100%);
   color: #fff !important;
-  box-shadow: 0 2px 12px rgba(33,150,243,0.10);
+  box-shadow: 0 2px 12px rgba(33, 150, 243, 0.1);
   border: none;
-  transition: all 0.18s cubic-bezier(.4,2,.6,1.2), box-shadow 0.18s;
+  transition: all 0.18s cubic-bezier(0.4, 2, 0.6, 1.2), box-shadow 0.18s;
   position: relative;
   overflow: hidden;
   margin-left: 10px;
@@ -263,12 +323,12 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
   background: linear-gradient(90deg, #1976d2 0%, #42a5f5 100%);
   color: #fff;
   transform: translateY(-1px) scale(1.04);
-  box-shadow: 0 4px 18px rgba(33,150,243,0.13);
+  box-shadow: 0 4px 18px rgba(33, 150, 243, 0.13);
 }
 .btn-appointment i {
   margin-left: 7px;
   font-size: 1.1em;
-  transition: transform 0.4s cubic-bezier(.4,2,.6,1.2);
+  transition: transform 0.4s cubic-bezier(0.4, 2, 0.6, 1.2);
   display: inline-block;
 }
 .btn-appointment:hover i {
@@ -299,30 +359,34 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
 }
 
 /* Modern Button */
-.btn-primary, .btn-modern {
+.btn-primary,
+.btn-modern {
   border-radius: 32px;
   font-weight: 700;
   font-size: 1.15rem;
   padding: 12px 36px;
-  box-shadow: 0 4px 24px rgba(33,150,243,0.13);
+  box-shadow: 0 4px 24px rgba(33, 150, 243, 0.13);
   background: linear-gradient(90deg, #1976d2 0%, #42a5f5 100%);
   border: none;
-  transition: all 0.25s cubic-bezier(.4,2,.6,1.2), box-shadow 0.2s;
+  transition: all 0.25s cubic-bezier(0.4, 2, 0.6, 1.2), box-shadow 0.2s;
   position: relative;
   overflow: hidden;
 }
-.btn-primary:hover, .btn-modern:hover {
+.btn-primary:hover,
+.btn-modern:hover {
   background: linear-gradient(90deg, #42a5f5 0%, #1976d2 100%);
   color: #fff;
   transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 8px 32px rgba(33,150,243,0.18);
+  box-shadow: 0 8px 32px rgba(33, 150, 243, 0.18);
 }
-.btn-primary i, .btn-modern i {
+.btn-primary i,
+.btn-modern i {
   margin-left: 8px;
-  transition: transform 0.5s cubic-bezier(.4,2,.6,1.2);
+  transition: transform 0.5s cubic-bezier(0.4, 2, 0.6, 1.2);
   display: inline-block;
 }
-.btn-primary:hover i, .btn-modern:hover i {
+.btn-primary:hover i,
+.btn-modern:hover i {
   transform: rotate(360deg) scale(1.2);
 }
 
@@ -351,7 +415,7 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
   width: 38px !important;
   height: 38px !important;
   border-radius: 10px;
-  box-shadow: 0 1px 4px rgba(33,150,243,0.10);
+  box-shadow: 0 1px 4px rgba(33, 150, 243, 0.1);
   background: #fff;
   object-fit: cover;
 }
@@ -359,11 +423,11 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
   color: #fff;
   font-size: 1.1rem;
   font-weight: 700;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   line-height: 1.1;
   letter-spacing: 0.5px;
   margin-top: 1px;
-  text-shadow: 0 1px 4px rgba(25,118,210,0.10);
+  text-shadow: 0 1px 4px rgba(25, 118, 210, 0.1);
 }
 .mediox-logo-desc {
   color: #bbdefb;
@@ -372,7 +436,7 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
   letter-spacing: 0.5px;
 }
 .mediox-menu {
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   font-weight: 700;
   font-size: 1rem;
   gap: 1.5rem !important;
@@ -387,10 +451,11 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
   letter-spacing: 0.2px;
   background: transparent;
 }
-.mediox-nav-link.active, .mediox-nav-link:hover {
+.mediox-nav-link.active,
+.mediox-nav-link:hover {
   color: #1976d2 !important;
   background: #bbdefb;
-  box-shadow: 0 2px 8px rgba(33,150,243,0.10);
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.1);
   transform: translateY(-1px) scale(1.03);
 }
 .mediox-navbar-icons {
@@ -407,7 +472,7 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
   justify-content: center;
   font-size: 1.05rem;
   transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.18s;
-  box-shadow: 0 1px 4px rgba(33,150,243,0.07);
+  box-shadow: 0 1px 4px rgba(33, 150, 243, 0.07);
 }
 /* .mediox-icon-btn:hover {
   background: #bbdefb;
@@ -422,9 +487,9 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
   padding: 8px 18px;
   background: linear-gradient(90deg, #1ec0f7 0%, #1976d2 100%);
   color: #fff !important;
-  box-shadow: 0 2px 8px rgba(33,150,243,0.13);
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.13);
   border: none;
-  transition: all 0.18s cubic-bezier(.4,2,.6,1.2), box-shadow 0.18s;
+  transition: all 0.18s cubic-bezier(0.4, 2, 0.6, 1.2), box-shadow 0.18s;
   position: relative;
   overflow: hidden;
   margin-left: 8px;
@@ -439,7 +504,7 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
 .mediox-appointment-btn i {
   margin-left: 6px;
   font-size: 1.08em;
-  transition: transform 0.4s cubic-bezier(.4,2,.6,1.2);
+  transition: transform 0.4s cubic-bezier(0.4, 2, 0.6, 1.2);
   display: inline-block;
 }
 /* .mediox-appointment-btn:hover i {
@@ -480,7 +545,7 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
 .clinic-navbar {
   background: #fff !important;
   border-radius: 24px;
-  box-shadow: 0 4px 32px rgba(33, 150, 243, 0.10);
+  box-shadow: 0 4px 32px rgba(33, 150, 243, 0.1);
   margin: 18px auto 18px auto;
   width: 95vw;
   max-width: 1440px;
@@ -502,7 +567,7 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
   width: 48px !important;
   height: 48px !important;
   border-radius: 12px;
-  box-shadow: 0 1px 4px rgba(33,150,243,0.10);
+  box-shadow: 0 1px 4px rgba(33, 150, 243, 0.1);
   background: #fff;
   object-fit: cover;
 }
@@ -510,7 +575,7 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
   color: #1976d2;
   font-size: 1.15rem;
   font-weight: 800;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   line-height: 1.1;
   letter-spacing: 0.5px;
   margin-top: 1px;
@@ -522,7 +587,7 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
   letter-spacing: 0.5px;
 }
 .clinic-menu {
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   font-weight: 700;
   font-size: 1.08rem;
   gap: 2.2rem !important;
@@ -537,10 +602,11 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
   letter-spacing: 0.2px;
   background: transparent;
 }
-.clinic-nav-link.active, .clinic-nav-link:hover {
+.clinic-nav-link.active,
+.clinic-nav-link:hover {
   color: #1976d2 !important;
   background: #e3f6fd;
-  box-shadow: 0 2px 8px rgba(33,150,243,0.10);
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.1);
   transform: translateY(-1px) scale(1.03);
 }
 .clinic-navbar-icons {
@@ -557,7 +623,7 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
   justify-content: center;
   font-size: 1.05rem;
   transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.18s;
-  box-shadow: 0 1px 4px rgba(33,150,243,0.07);
+  box-shadow: 0 1px 4px rgba(33, 150, 243, 0.07);
 }
 /* .clinic-icon-btn:hover {
   background: #e3f6fd;
@@ -572,9 +638,9 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
   padding: 10px 28px;
   background: linear-gradient(90deg, #1ec0f7 0%, #1976d2 100%);
   color: #fff !important;
-  box-shadow: 0 2px 8px rgba(33,150,243,0.13);
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.13);
   border: none;
-  transition: all 0.18s cubic-bezier(.4,2,.6,1.2), box-shadow 0.18s;
+  transition: all 0.18s cubic-bezier(0.4, 2, 0.6, 1.2), box-shadow 0.18s;
   position: relative;
   overflow: hidden;
   margin-left: 10px;
@@ -589,7 +655,7 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
 .clinic-appointment-btn i {
   margin-left: 8px;
   font-size: 1.08em;
-  transition: transform 0.4s cubic-bezier(.4,2,.6,1.2);
+  transition: transform 0.4s cubic-bezier(0.4, 2, 0.6, 1.2);
   display: inline-block;
 }
 /* .clinic-appointment-btn:hover i {
@@ -639,10 +705,10 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
   overflow: hidden;
 }
 .clinic-hero::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255,255,255,0.55);
+  background: rgba(255, 255, 255, 0.55);
   z-index: 1;
   pointer-events: none;
 }
@@ -651,7 +717,8 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
   z-index: 2;
 }
 .clinic-hero img[alt="Doctor"] {
-  box-shadow: 0 8px 40px rgba(33,150,243,0.18), 0 2px 12px rgba(25, 118, 210, 0.10);
+  box-shadow: 0 8px 40px rgba(33, 150, 243, 0.18),
+    0 2px 12px rgba(25, 118, 210, 0.1);
   border-radius: 32px;
   background: #fff;
   border: 4px solid #e3f6fd;
@@ -689,9 +756,9 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
   padding: 12px 36px;
   background: linear-gradient(90deg, #1ec0f7 0%, #1976d2 100%);
   color: #fff !important;
-  box-shadow: 0 2px 8px rgba(33,150,243,0.13);
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.13);
   border: none;
-  transition: all 0.18s cubic-bezier(.4,2,.6,1.2), box-shadow 0.18s;
+  transition: all 0.18s cubic-bezier(0.4, 2, 0.6, 1.2), box-shadow 0.18s;
   position: relative;
   overflow: hidden;
 }
@@ -737,27 +804,31 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
   transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(33,150,243,0.12);
+  box-shadow: 0 20px 50px rgba(33, 150, 243, 0.12);
   border: none;
   height: 100%;
 }
 
 .team-card:hover {
   transform: translateY(-25px);
-  box-shadow: 0 30px 70px rgba(33,150,243,0.25);
+  box-shadow: 0 30px 70px rgba(33, 150, 243, 0.25);
 }
 
 .doctor-image-wrapper {
   position: relative;
   padding: 3.5rem 3.5rem 0;
-  background: linear-gradient(180deg, rgba(33,150,243,0.06) 0%, rgba(33,150,243,0) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(33, 150, 243, 0.06) 0%,
+    rgba(33, 150, 243, 0) 100%
+  );
 }
 
 .doctor-image-wrapper img {
   width: 220px !important;
   height: 220px !important;
   border: 6px solid #fff !important;
-  box-shadow: 0 20px 50px rgba(33,150,243,0.25) !important;
+  box-shadow: 0 20px 50px rgba(33, 150, 243, 0.25) !important;
   transition: all 0.5s ease;
   border-radius: 50%;
   object-fit: cover;
@@ -765,7 +836,7 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
 
 .team-card:hover .doctor-image-wrapper img {
   transform: scale(1.1);
-  box-shadow: 0 25px 60px rgba(33,150,243,0.35) !important;
+  box-shadow: 0 25px 60px rgba(33, 150, 243, 0.35) !important;
 }
 
 .experience-badge {
@@ -777,7 +848,7 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
   padding: 1rem 1.5rem;
   border-radius: 25px;
   font-weight: 600;
-  box-shadow: 0 10px 25px rgba(33,150,243,0.3);
+  box-shadow: 0 10px 25px rgba(33, 150, 243, 0.3);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -787,7 +858,7 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
 
 .team-card:hover .experience-badge {
   transform: scale(1.2);
-  box-shadow: 0 15px 30px rgba(33,150,243,0.4);
+  box-shadow: 0 15px 30px rgba(33, 150, 243, 0.4);
 }
 
 .experience-badge span {
@@ -827,13 +898,13 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
   gap: 1rem;
   justify-content: center;
   margin: 2.5rem 0;
-  background: rgba(33,150,243,0.05);
+  background: rgba(33, 150, 243, 0.05);
   border-radius: 30px;
   padding: 2.5rem;
 }
 
 .qualification-badge {
-  background: rgba(33,150,243,0.08);
+  background: rgba(33, 150, 243, 0.08);
   color: #1976d2;
   padding: 1.2rem 2.5rem;
   border-radius: 25px;
@@ -844,9 +915,9 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
 }
 
 .qualification-badge:hover {
-  background: rgba(33,150,243,0.15);
+  background: rgba(33, 150, 243, 0.15);
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(33,150,243,0.2);
+  box-shadow: 0 8px 20px rgba(33, 150, 243, 0.2);
 }
 
 .social-links {
@@ -873,7 +944,7 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
   background: #1976d2;
   color: #fff;
   transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(33,150,243,0.3);
+  box-shadow: 0 10px 25px rgba(33, 150, 243, 0.3);
 }
 
 .swiper {
@@ -894,7 +965,7 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
   width: 65px;
   height: 65px;
   border-radius: 50%;
-  box-shadow: 0 10px 30px rgba(33,150,243,0.25);
+  box-shadow: 0 10px 30px rgba(33, 150, 243, 0.25);
   transition: all 0.4s ease;
 }
 
@@ -902,7 +973,7 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
 .swiper-button-prev:hover {
   background: #1976d2;
   color: #fff;
-  box-shadow: 0 15px 35px rgba(33,150,243,0.35);
+  box-shadow: 0 15px 35px rgba(33, 150, 243, 0.35);
   transform: scale(1.15);
 }
 
@@ -914,7 +985,7 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
 .swiper-pagination-bullet {
   width: 16px;
   height: 16px;
-  background: rgba(33,150,243,0.2);
+  background: rgba(33, 150, 243, 0.2);
   opacity: 1;
   transition: all 0.4s ease;
 }
@@ -929,37 +1000,103 @@ ul, ol { list-style: none; padding-left: 0; margin-bottom: 0; }
   .swiper-slide {
     width: 360px;
   }
-  
+
   .team-card .card-title {
     font-size: 1.8rem;
   }
-  
+
   .team-card .specialty {
     font-size: 1.3rem;
   }
-  
+
   .doctor-image-wrapper img {
     width: 200px !important;
     height: 200px !important;
   }
-  
+
   .team-card .card-body {
     padding: 3rem;
   }
-  
+
   .qualifications {
     padding: 2rem;
     margin: 2rem 0;
   }
-  
+
   .qualification-badge {
     font-size: 1.1rem;
     padding: 1rem 2rem;
   }
-  
+
   .social-link {
     width: 55px !important;
     height: 55px !important;
     font-size: 1.3rem;
   }
+}
+/* 1. Container chính: Ép hàng ngang và cho phép cuộn */
+.order-container {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  padding: 15px 5px !important; /* Tạo khoảng trống cho bóng đổ không bị cắt */
+  gap: 0; /* Khoảng cách do padding của col đảm nhận */
+}
+
+/* Ẩn thanh cuộn xấu xí trên một số trình duyệt để nhìn sạch hơn */
+.order-container::-webkit-scrollbar {
+  height: 4px;
+}
+.order-container::-webkit-scrollbar-thumb {
+  background: #e0e0e0;
+  border-radius: 10px;
+}
+
+/* 2. Định dạng lại kích thước các ô */
+.order-container .col-md-2 {
+  flex: 0 0 170px !important; /* Tăng lên 170px cho thoáng */
+  width: 170px !important;
+  max-width: 170px !important;
+  padding: 0 8px !important; /* Khoảng cách giữa các card */
+}
+
+/* 3. Thay viền đỏ bằng Box Shadow */
+.order-container .card {
+  border: none !important; /* Bỏ viền đỏ và viền mặc định */
+  border-radius: 12px !important; /* Bo góc tròn cho hiện đại */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important; /* Đổ bóng nhẹ */
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  height: 100% !important;
+  background: #fff !important;
+}
+
+/* Hiệu ứng bay lên khi di chuột vào (tùy chọn) */
+.order-container .card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* 4. Căn chỉnh nội dung bên trong cho đều chặn chặn */
+.order-container .card-body {
+  padding: 1.25rem 0.75rem !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-container h5 {
+  font-weight: 700 !important;
+  color: #2d3436 !important;
+  margin-top: 5px;
+  margin-bottom: 2px;
+  font-size: 1.1rem !important;
+}
+
+.order-container small {
+  font-size: 0.75rem !important;
+  font-weight: 500;
+  text-transform: uppercase; /* Làm chữ nhỏ nhìn chuyên nghiệp hơn */
+  letter-spacing: 0.5px;
 }

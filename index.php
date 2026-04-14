@@ -311,7 +311,7 @@ $categories = get_blog_categories();
               </a>
 
               <div class="founder-box animate__animated animate__fadeInUp">
-                <img src="./assets/images/logo.png" alt="VetCare Store" class="rounded-circle">
+                <img src="./assets/images/logo.png alt=" VetCare Store" class="rounded-circle">
                 <div>
                   <div class="founder-name">VetCare Store</div>
                   <div class="founder-title">Pet Care & Pet Shop</div>
@@ -444,90 +444,7 @@ $categories = get_blog_categories();
       </style>
 
     </section>
-    <!-- Products -->
-    <!-- <section id="products" class="py-5 position-relative overflow-hidden">
-      <div class="products-bg"></div>
-      <div class="container position-relative">
-        <div class="text-center mb-5">
-          <div class="section-badge-wrapper">
-            <span class="section-badge">Sản Phẩm</span>
-          </div>
-          <h2 class="section-title display-5 fw-bold mb-3">Sản Phẩm Của Chúng Tôi</h2>
-          <p class="section-desc">Cung cấp các sản phẩm chất lượng cao, an toàn và hiệu quả cho sức khỏe của bạn</p>
-        </div>
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="product-card animate__animated animate__fadeInLeft">
-              <div class="product-icon">
-                <i class="fas fa-pills"></i>
-              </div>
-              <div class="product-image">
-                <img src="/assets/images/thuc_pham_chuc_nang.jpg" alt="Thực phẩm chức năng">
-                <div class="product-overlay">
-                  <a href="#" class="btn btn-light btn-sm rounded-pill px-4">Chi tiết</a>
-                </div>
-              </div>
-              <div class="product-content">
-                <h4 class="product-title">Thực Phẩm Chức Năng</h4>
-                <p class="product-description">Bổ sung dinh dưỡng, tăng cường sức khỏe với các sản phẩm được chứng nhận an toàn và hiệu quả.</p>
-                <div class="product-features">
-                  <span class="badge">Tăng cường miễn dịch</span>
-                  <span class="badge">Bổ sung vitamin</span>
-                  <span class="badge">Hỗ trợ tiêu hóa</span>
-                </div>
-                <a href="#" class="product-link">Tìm Hiểu Thêm <i class="fas fa-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="product-card animate__animated animate__fadeInUp">
-              <div class="product-icon">
-                <i class="fas fa-capsules"></i>
-              </div>
-              <div class="product-image">
-                <img src="/assets/images/thuoc_1.1.jpg" alt="Thuốc">
-                <div class="product-overlay">
-                  <a href="#" class="btn btn-light btn-sm rounded-pill px-4">Chi tiết</a>
-                </div>
-              </div>
-              <div class="product-content">
-                <h4 class="product-title">Thuốc</h4>
-                <p class="product-description">Cung cấp các loại thuốc chất lượng cao, được kiểm định nghiêm ngặt và đảm bảo nguồn gốc xuất xứ.</p>
-                <div class="product-features">
-                  <span class="badge">Thuốc kê đơn</span>
-                  <span class="badge">Thuốc không kê đơn</span>
-                  <span class="badge">Thuốc đặc trị</span>
-                </div>
-                <a href="#" class="product-link">Tìm Hiểu Thêm <i class="fas fa-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="product-card animate__animated animate__fadeInRight">
-              <div class="product-icon">
-                <i class="fas fa-stethoscope"></i>
-              </div>
-              <div class="product-image">
-                <img src="/assets/images/thiet_bi_y_te.jpg" alt="Thiết bị y tế">
-                <div class="product-overlay">
-                  <a href="#" class="btn btn-light btn-sm rounded-pill px-4">Chi tiết</a>
-                </div>
-              </div>
-              <div class="product-content">
-                <h4 class="product-title">Thiết Bị Y Tế</h4>
-                <p class="product-description">Các thiết bị y tế hiện đại, chính xác giúp theo dõi và chăm sóc sức khỏe tại nhà một cách hiệu quả.</p>
-                <div class="product-features">
-                  <span class="badge">Máy đo huyết áp</span>
-                  <span class="badge">Máy đo đường huyết</span>
-                  <span class="badge">Máy xông khí dung</span>
-                </div>
-                <a href="#" class="product-link">Tìm Hiểu Thêm <i class="fas fa-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
+
     <!-- Health Blog Section -->
     <section id="blog" class="py-5">
       <div class="container">
@@ -771,135 +688,7 @@ $categories = get_blog_categories();
         </div>
       </div>
     </section>
-    <!-- Book An Appointment -->
-    <!-- <section id="book" class="py-5 position-relative overflow-hidden">
-      <div class="booking-bg"></div>
-      <div class="container position-relative">
-        <div class="booking-wrapper text-center">
-          <div class="section-badge-wrapper">
-            <span class="section-badge">
-              <i class="fas fa-calendar-alt me-2"></i>Đặt Lịch
-            </span>
-          </div>
-          
-          <h2 class="section-title display-4 fw-bold mb-4">Đặt Lịch Khám Ngay</h2>
-          
-          <p class="section-desc mx-auto mb-5">
-            Nhanh chóng, tiện lợi và hoàn toàn miễn phí. <br>
-            Đội ngũ chuyên gia của chúng tôi luôn sẵn sàng hỗ trợ bạn!
-          </p>
 
-            <div class="booking-button-group">
-              <a href="/book-appointment.php" class="btn btn-outline-primary btn-booking">
-                <span class="btn-icon">
-                  <i class="fas fa-calendar-plus"></i>
-                </span>
-                <span class="btn-text">
-                  <strong>Đặt Lịch Ngay</strong>
-                  <small>Chỉ mất 2 phút của bạn</small>
-                </span>
-              </a>
-
-              <div class="divider">
-                <span>hoặc</span>
-              </div>
-
-              <a href="tel:0123456789" class="btn btn-outline-primary btn-hotline">
-                <span class="btn-icon">
-                  <i class="fas fa-phone-alt"></i>
-                </span>
-                <span class="btn-text">
-                  <strong>Gọi Hotline 24/7</strong>
-                  <small>0123 456 789</small>
-                </span>
-              </a>
-            </div>
-
-          <div class="booking-note mt-4">
-            <i class="fas fa-clock text-primary me-2"></i>
-            Thời gian làm việc: <strong>7:30 - 20:00</strong> (Thứ 2 - Chủ nhật)
-          </div>
-        </div>
-      </div>
-    </section> -->
-    <!-- We Are Skillful Health Care -->
-    <!-- <section id="skillful">
-      <div class="container">
-        <div class="skillful-grid">
-          <div class="skillful-content">
-            <div class="skillful-badge">Chuyên Môn Y Tế</div>
-            <h2 class="skillful-title">
-              Chăm Sóc Sức Khỏe
-              <span>Chuyên Nghiệp</span>
-            </h2>
-            <p class="skillful-desc">
-              Với đội ngũ y bác sĩ giàu kinh nghiệm và trang thiết bị hiện đại, chúng tôi cam kết mang đến dịch vụ chăm sóc sức khỏe tốt nhất cho bạn và gia đình.
-            </p>
-            <div class="skillful-features">
-              <div class="feature-item">
-                <div class="feature-icon">
-                  <i class="fas fa-user-md"></i>
-                </div>
-                <div class="feature-text">
-                  Đội ngũ bác sĩ chuyên môn cao
-                </div>
-              </div>
-              <div class="feature-item">
-                <div class="feature-icon">
-                  <i class="fas fa-clinic"></i>
-                </div>
-                <div class="feature-text">
-                  Cơ sở vật chất hiện đại
-                </div>
-              </div>
-              <div class="feature-item">
-                <div class="feature-icon">
-                  <i class="fas fa-clock"></i>
-                </div>
-                <div class="feature-text">
-                  Phục vụ 24/7
-                </div>
-              </div>
-              <div class="feature-item">
-                <div class="feature-icon">
-                  <i class="fas fa-heart"></i>
-                </div>
-                <div class="feature-text">
-                  Chăm sóc tận tâm
-                </div>
-              </div>
-            </div>
-            <a href="#" class="skillful-cta">
-              Đặt Lịch Ngay
-              <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-          <div class="skillful-stats">
-            <div class="stat-card">
-              <i class="fas fa-award stat-icon"></i>
-              <div class="stat-number">25+</div>
-              <div class="stat-text">Năm Kinh Nghiệm</div>
-            </div>
-            <div class="stat-card">
-              <i class="fas fa-users stat-icon"></i>
-              <div class="stat-number">10K+</div>
-              <div class="stat-text">Khách Hàng Hài Lòng</div>
-            </div>
-            <div class="stat-card">
-              <i class="fas fa-user-md stat-icon"></i>
-              <div class="stat-number">50+</div>
-              <div class="stat-text">Bác Sĩ Chuyên Khoa</div>
-            </div>
-            <div class="stat-card">
-              <i class="fas fa-clinic-medical stat-icon"></i>
-              <div class="stat-number">15+</div>
-              <div class="stat-text">Chuyên Khoa</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-    <!-- FAQ Section -->
     <section id="faqs" class="py-5 position-relative overflow-hidden">
       <div class="faq-bg-pattern"></div>
 

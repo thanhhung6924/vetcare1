@@ -1,0 +1,6 @@
+[2026-04-14 05:00:34] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 4 | Quantity: 1
+[2026-04-14 05:00:34] [CART] [User: 1] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 4 | Quantity: 1 | Details: Name: Vitamin tổng hợp cho mèo, Price: 46459, Stock: 39
+[2026-04-14 05:00:34] [CART] [User: 1] [IP: ::1] CART_ACTION: CART_FOUND | Product: 4 | Quantity: 1 | Details: Existing Cart ID: 1039
+[2026-04-14 05:00:34] [CART] [User: 1] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 4 | Quantity: 1 | Details: Original: 46459, Discount: , Final: 46459
+[2026-04-14 05:00:34] [CART] [User: 1] [IP: ::1] CART_ACTION: ITEM_ADDED | Product: 4 | Quantity: 1 | Details: Cart ID: 1039, Unit Price: 46459
+[2026-04-14 05:00:34] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 4 | Quantity: 1 | Details: Cart ID: 1039, Cart Count: 1

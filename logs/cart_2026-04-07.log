@@ -105,3 +105,29 @@
 [2026-04-07 11:27:39] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2494, ProductID: 12, Name: 'Thuốc tiêu chảy cho chó', Price: 109895, UnitPrice: 109895, Qty: 10
 [2026-04-07 11:27:39] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2493, ProductID: 15, Name: 'Thuốc nhỏ mắt thú cưng', Price: 20465, UnitPrice: 20465, Qty: 10
 [2026-04-07 11:27:39] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 1303600
+[2026-04-07 11:35:38] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 1 cart items for user 1
+[2026-04-07 11:35:38] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2495, ProductID: 2, Name: 'Pate mèo cá ngừ', Price: 207812, UnitPrice: 207812, Qty: 1
+[2026-04-07 11:35:38] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 207812
+[2026-04-07 11:35:41] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 0 cart items for user 1
+[2026-04-07 11:35:41] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 0
+[2026-04-07 11:36:21] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 1 cart items for user 1
+[2026-04-07 11:36:21] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2496, ProductID: 20, Name: 'Bát ăn inox cho chó mèo', Price: 234612, UnitPrice: 234612, Qty: 1
+[2026-04-07 11:36:21] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 234612
+[2026-04-07 13:19:53] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 2 cart items for user 1
+[2026-04-07 13:19:53] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2497, ProductID: 4, Name: 'Vitamin tổng hợp cho mèo', Price: 46459, UnitPrice: 46459, Qty: 1
+[2026-04-07 13:19:53] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2496, ProductID: 20, Name: 'Bát ăn inox cho chó mèo', Price: 234612, UnitPrice: 234612, Qty: 1
+[2026-04-07 13:19:53] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 281071
+[2026-04-07 13:20:00] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 2 cart items for user 1
+[2026-04-07 13:20:00] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2497, ProductID: 4, Name: 'Vitamin tổng hợp cho mèo', Price: 46459, UnitPrice: 46459, Qty: 1
+[2026-04-07 13:20:00] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2496, ProductID: 20, Name: 'Bát ăn inox cho chó mèo', Price: 234612, UnitPrice: 234612, Qty: 1
+[2026-04-07 13:20:00] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 281071
+[2026-04-07 13:20:13] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 2 cart items for user 1
+[2026-04-07 13:20:13] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2497, ProductID: 4, Name: 'Vitamin tổng hợp cho mèo', Price: 46459, UnitPrice: 46459, Qty: 1
+[2026-04-07 13:20:13] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2496, ProductID: 20, Name: 'Bát ăn inox cho chó mèo', Price: 234612, UnitPrice: 234612, Qty: 1
+[2026-04-07 13:20:13] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 281071
+[2026-04-07 13:24:28] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 2 cart items for user 1
+[2026-04-07 13:24:28] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 0 - ItemID: 2497, ProductID: 4, Name: 'Vitamin tổng hợp cho mèo', Price: 46459, UnitPrice: 46459, Qty: 1
+[2026-04-07 13:24:28] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Item 1 - ItemID: 2496, ProductID: 20, Name: 'Bát ăn inox cho chó mèo', Price: 234612, UnitPrice: 234612, Qty: 1
+[2026-04-07 13:24:28] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 281071
+[2026-04-07 13:24:33] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Found 0 cart items for user 1
+[2026-04-07 13:24:33] [INFO] [User: 1] [IP: ::1] CART_DEBUG: Total calculated: 0

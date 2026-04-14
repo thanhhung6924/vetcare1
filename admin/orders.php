@@ -16,16 +16,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_status'])) {
     $order_id = (int)$_POST['order_id'];
     $status = $_POST['status'];
     $old_status = $_POST['old_status'] ?? '';
-    
 
-    
+
+
     try {
         $conn->begin_transaction();
-        
+
         // Cập nhật trạng thái đơn hàng
         $stmt = $conn->prepare("UPDATE orders SET status = ?, updated_at = NOW() WHERE order_id = ?");
         $stmt->bind_param("si", $status, $order_id);
-        
+
         if ($stmt->execute()) {
             // Nếu đơn hàng chuyển từ trạng thái khác sang 'completed', trừ tồn kho
             if ($status === 'completed' && $old_status !== 'completed') {
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_status'])) {
                 $items_stmt->bind_param("i", $order_id);
                 $items_stmt->execute();
                 $items_result = $items_stmt->get_result();
-                
+
                 // Kiểm tra tồn kho trước khi trừ
                 $items = [];
                 while ($item = $items_result->fetch_assoc()) {
@@ -48,12 +48,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_status'])) {
                     }
                     $items[] = $item;
                 }
-                
+
                 // Nếu tất cả sản phẩm đều đủ hàng, tiến hành trừ tồn kho
                 foreach ($items as $item) {
                     $update_stock_stmt = $conn->prepare("UPDATE products SET stock = stock - ? WHERE product_id = ?");
                     $update_stock_stmt->bind_param("ii", $item['quantity'], $item['product_id']);
-                    
+
                     if (!$update_stock_stmt->execute()) {
                         throw new Exception("Không thể cập nhật tồn kho cho sản phẩm '{$item['product_name']}'");
                     }
@@ -71,18 +71,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_status'])) {
                 $items_stmt->bind_param("i", $order_id);
                 $items_stmt->execute();
                 $items_result = $items_stmt->get_result();
-                
+
                 while ($item = $items_result->fetch_assoc()) {
                     // Hoàn trả tồn kho cho từng sản phẩm
                     $update_stock_stmt = $conn->prepare("UPDATE products SET stock = stock + ? WHERE product_id = ?");
                     $update_stock_stmt->bind_param("ii", $item['quantity'], $item['product_id']);
-                    
+
                     if (!$update_stock_stmt->execute()) {
                         throw new Exception("Không thể hoàn trả tồn kho cho sản phẩm '{$item['product_name']}'");
                     }
                 }
             }
-            
+
             $conn->commit();
             $message = 'Cập nhật trạng thái đơn hàng thành công!';
         } else {
@@ -99,7 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_status'])) {
 $order_detail = null;
 if (isset($_GET['view']) && $_GET['view']) {
     $order_id = (int)$_GET['view'];
-    
+
     // Lấy thông tin đơn hàng với tổng tiền được tính lại
     $order_query = "SELECT o.*, 
                    ui.full_name as customer_name, 
@@ -112,13 +112,13 @@ if (isset($_GET['view']) && $_GET['view']) {
                  LEFT JOIN users u ON o.user_id = u.user_id
                  LEFT JOIN users_info ui ON u.user_id = ui.user_id
                  WHERE o.order_id = ?";
-    
+
     $stmt = $conn->prepare($order_query);
     if ($stmt) {
         $stmt->bind_param("i", $order_id);
         $stmt->execute();
         $order_detail = $stmt->get_result()->fetch_assoc();
-        
+
         // Lấy chi tiết sản phẩm trong đơn hàng
         if ($order_detail) {
             $items_query = "SELECT oi.*, 
@@ -129,13 +129,13 @@ if (isset($_GET['view']) && $_GET['view']) {
                            LEFT JOIN products p ON oi.product_id = p.product_id 
                            WHERE oi.order_id = ?
                            ORDER BY oi.item_id ASC";
-            
+
             $stmt = $conn->prepare($items_query);
             if ($stmt) {
                 $stmt->bind_param("i", $order_id);
                 $stmt->execute();
                 $order_items = $stmt->get_result();
-                
+
                 // Tính tổng tiền từ items
                 $total_from_items = 0;
                 $items_array = [];
@@ -144,7 +144,7 @@ if (isset($_GET['view']) && $_GET['view']) {
                     $items_array[] = $item;
                 }
                 $order_items = $items_array; // Lưu lại để sử dụng sau
-                
+
                 // Cập nhật tổng tiền trong order_detail
                 $order_detail['total'] = $total_from_items;
             }
@@ -246,6 +246,7 @@ $stats = $stats_result ? $stats_result->fetch_assoc() : [
 ?>
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -258,10 +259,10 @@ $stats = $stats_result ? $stats_result->fetch_assoc() : [
     <link href="assets/css/header.css" rel="stylesheet">
     <style>
         .product-image-placeholder {
-            background: linear-gradient(45deg, #f0f0f0 25%, transparent 25%), 
-                        linear-gradient(-45deg, #f0f0f0 25%, transparent 25%), 
-                        linear-gradient(45deg, transparent 75%, #f0f0f0 75%), 
-                        linear-gradient(-45deg, transparent 75%, #f0f0f0 75%);
+            background: linear-gradient(45deg, #f0f0f0 25%, transparent 25%),
+                linear-gradient(-45deg, #f0f0f0 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #f0f0f0 75%),
+                linear-gradient(-45deg, transparent 75%, #f0f0f0 75%);
             background-size: 10px 10px;
             background-position: 0 0, 0 5px, 5px -5px, -5px 0px;
             border: 1px solid #ddd;
@@ -272,17 +273,93 @@ $stats = $stats_result ? $stats_result->fetch_assoc() : [
             color: #666;
             font-size: 12px;
         }
-        
+
         .product-image {
             transition: all 0.3s ease;
         }
-        
+
         .product-image:hover {
             transform: scale(1.1);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .order-container {
+            display: flex !important;
+            flex-wrap: nowrap !important;
+            overflow-x: auto !important;
+            -webkit-overflow-scrolling: touch;
+            padding: 15px 5px !important;
+            /* Tạo khoảng trống cho bóng đổ không bị cắt */
+            gap: 0;
+            /* Khoảng cách do padding của col đảm nhận */
+        }
+
+        /* Ẩn thanh cuộn xấu xí trên một số trình duyệt để nhìn sạch hơn */
+        .order-container::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        .order-container::-webkit-scrollbar-thumb {
+            background: #e0e0e0;
+            border-radius: 10px;
+        }
+
+        /* 2. Định dạng lại kích thước các ô */
+        .order-container .col-md-2 {
+            flex: 0 0 170px !important;
+            /* Tăng lên 170px cho thoáng */
+            width: 170px !important;
+            max-width: 170px !important;
+            padding: 0 8px !important;
+            /* Khoảng cách giữa các card */
+        }
+
+        /* 3. Thay viền đỏ bằng Box Shadow */
+        .order-container .card {
+            border: none !important;
+            /* Bỏ viền đỏ và viền mặc định */
+            border-radius: 12px !important;
+            /* Bo góc tròn cho hiện đại */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+            /* Đổ bóng nhẹ */
+            transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+            height: 100% !important;
+            background: #fff !important;
+        }
+
+        /* Hiệu ứng bay lên khi di chuột vào (tùy chọn) */
+        .order-container .card:hover {
+            transform: translateY(-5px) !important;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
+        }
+
+        /* 4. Căn chỉnh nội dung bên trong cho đều chặn chặn */
+        .order-container .card-body {
+            padding: 1.25rem 0.75rem !important;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .order-container h5 {
+            font-weight: 700 !important;
+            color: #2d3436 !important;
+            margin-top: 5px;
+            margin-bottom: 2px;
+            font-size: 1.1rem !important;
+        }
+
+        .order-container small {
+            font-size: 0.75rem !important;
+            font-weight: 500;
+            text-transform: uppercase;
+            /* Làm chữ nhỏ nhìn chuyên nghiệp hơn */
+            letter-spacing: 0.5px;
         }
     </style>
 </head>
+
 <body>
     <?php include 'includes/headeradmin.php'; ?>
     <?php include 'includes/sidebaradmin.php'; ?>
@@ -298,9 +375,9 @@ $stats = $stats_result ? $stats_result->fetch_assoc() : [
                     <p class="mb-0 text-muted">Quản lý và theo dõi đơn hàng</p>
                 </div>
                 <?php if (isset($_GET['view'])): ?>
-                <a href="?" class="btn btn-secondary">
-                    <i class="fas fa-arrow-left me-2"></i>Quay lại danh sách
-                </a>
+                    <a href="?" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left me-2"></i>Quay lại danh sách
+                    </a>
                 <?php endif; ?>
             </div>
 
@@ -321,7 +398,7 @@ $stats = $stats_result ? $stats_result->fetch_assoc() : [
 
             <?php if (!isset($_GET['view'])): ?>
                 <!-- Statistics -->
-                <div class="row mb-4">
+                <div class="row mb-4 order-container">
                     <div class="col-md-2">
                         <div class="card text-center border-0 shadow-sm">
                             <div class="card-body">
@@ -393,8 +470,8 @@ $stats = $stats_result ? $stats_result->fetch_assoc() : [
                         <form method="GET" class="row g-3">
                             <div class="col-md-3">
                                 <label class="form-label">Tìm kiếm</label>
-                                <input type="text" name="search" class="form-control" 
-                                       placeholder="Mã đơn, tên khách hàng, SĐT..." value="<?= htmlspecialchars($search) ?>">
+                                <input type="text" name="search" class="form-control"
+                                    placeholder="Mã đơn, tên khách hàng, SĐT..." value="<?= htmlspecialchars($search) ?>">
                             </div>
                             <div class="col-md-2">
                                 <label class="form-label">Trạng thái</label>
@@ -463,15 +540,15 @@ $stats = $stats_result ? $stats_result->fetch_assoc() : [
                                                 </td>
                                                 <td class="fw-bold text-primary">
                                                     <?php
-                                                        $display_total = $order['calculated_total'] ?? $order['total'];
-                                                        echo number_format($display_total) . 'đ';
+                                                    $display_total = $order['calculated_total'] ?? $order['total'];
+                                                    echo number_format($display_total) . 'đ';
                                                     ?>
                                                 </td>
                                                 <td>
                                                     <?php
                                                     $status_class = '';
                                                     $status_text = '';
-                                                    switch($order['status']) {
+                                                    switch ($order['status']) {
                                                         case 'pending':
                                                             $status_class = 'warning';
                                                             $status_text = 'Chờ xử lý';
@@ -511,19 +588,19 @@ $stats = $stats_result ? $stats_result->fetch_assoc() : [
                                                 </td>
                                                 <td>
                                                     <div class="btn-group btn-group-sm">
-                                                        <a href="?view=<?= $order['order_id'] ?>" 
-                                                           class="btn btn-outline-primary" title="Xem chi tiết">
+                                                        <a href="?view=<?= $order['order_id'] ?>"
+                                                            class="btn btn-outline-primary" title="Xem chi tiết">
                                                             <i class="fas fa-eye"></i>
                                                         </a>
                                                         <?php if ($order['status'] !== 'completed' && $order['status'] !== 'cancelled'): ?>
-                                                            <button class="btn btn-outline-success" 
-                                                                    onclick="updateOrderStatus(<?= $order['order_id'] ?>, 'completed', '<?= $order['status'] ?>')" 
-                                                                    title="Hoàn thành">
+                                                            <button class="btn btn-outline-success"
+                                                                onclick="updateOrderStatus(<?= $order['order_id'] ?>, 'completed', '<?= $order['status'] ?>')"
+                                                                title="Hoàn thành">
                                                                 <i class="fas fa-check"></i>
                                                             </button>
-                                                            <button class="btn btn-outline-danger" 
-                                                                    onclick="updateOrderStatus(<?= $order['order_id'] ?>, 'cancelled', '<?= $order['status'] ?>')" 
-                                                                    title="Hủy đơn">
+                                                            <button class="btn btn-outline-danger"
+                                                                onclick="updateOrderStatus(<?= $order['order_id'] ?>, 'cancelled', '<?= $order['status'] ?>')"
+                                                                title="Hủy đơn">
                                                                 <i class="fas fa-times"></i>
                                                             </button>
                                                         <?php endif; ?>
@@ -574,7 +651,7 @@ $stats = $stats_result ? $stats_result->fetch_assoc() : [
                                                         <tr>
                                                             <td>
                                                                 <div class="d-flex align-items-center">
-                                                                    <?php 
+                                                                    <?php
                                                                     $image_src = $item['image'];
                                                                     if (empty($image_src)) {
                                                                         $image_src = '../assets/images/thuoc_icon.jpg';
@@ -584,12 +661,12 @@ $stats = $stats_result ? $stats_result->fetch_assoc() : [
                                                                         }
                                                                     }
                                                                     ?>
-                                                                    <img src="<?= htmlspecialchars($image_src) ?>" 
-                                                                         alt="<?= htmlspecialchars($item['product_name']) ?>" 
-                                                                         class="rounded me-3 product-image" 
-                                                                         style="width: 50px; height: 50px; object-fit: cover;"
-                                                                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-                                                                         onload="this.style.display='block'; this.nextElementSibling.style.display='none';">
+                                                                    <img src="<?= htmlspecialchars($image_src) ?>"
+                                                                        alt="<?= htmlspecialchars($item['product_name']) ?>"
+                                                                        class="rounded me-3 product-image"
+                                                                        style="width: 50px; height: 50px; object-fit: cover;"
+                                                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                                                        onload="this.style.display='block'; this.nextElementSibling.style.display='none';">
                                                                     <div class="product-image-placeholder rounded me-3" style="display: none; width: 50px; height: 50px;">
                                                                         <i class="fas fa-image"></i>
                                                                     </div>
@@ -644,7 +721,7 @@ $stats = $stats_result ? $stats_result->fetch_assoc() : [
                                         <strong>Ngày đặt:</strong> <?= date('d/m/Y H:i', strtotime($order_detail['order_date'])) ?>
                                     </div>
                                     <div class="mb-3">
-                                        <strong>Tổng tiền:</strong> 
+                                        <strong>Tổng tiền:</strong>
                                         <span class="fw-bold text-primary"><?= number_format($order_detail['total']) ?>đ</span>
                                     </div>
                                     <!-- Thêm bảng tổng kết -->
@@ -672,7 +749,7 @@ $stats = $stats_result ? $stats_result->fetch_assoc() : [
                                         <?php
                                         $status_class = '';
                                         $status_text = '';
-                                        switch($order_detail['status']) {
+                                        switch ($order_detail['status']) {
                                             case 'pending':
                                                 $status_class = 'warning';
                                                 $status_text = 'Chờ xử lý';
@@ -712,7 +789,7 @@ $stats = $stats_result ? $stats_result->fetch_assoc() : [
                                                     <option value="completed" <?= $order_detail['status'] === 'completed' ? 'selected' : '' ?>>Hoàn thành</option>
                                                     <option value="cancelled" <?= $order_detail['status'] === 'cancelled' ? 'selected' : '' ?>>Đã hủy</option>
                                                 </select>
-                                            </div>  
+                                            </div>
                                             <button type="submit" name="update_status" class="btn btn-primary w-100">
                                                 <i class="fas fa-save me-2"></i>Cập nhật trạng thái
                                             </button>
@@ -784,4 +861,5 @@ $stats = $stats_result ? $stats_result->fetch_assoc() : [
         }
     </script>
 </body>
-</html> 
+
+</html>

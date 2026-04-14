@@ -52,3 +52,21 @@
 [2026-04-07 11:24:25] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 9 | Quantity: 10 | Details: Cart ID: 1037, Cart Count: 2
 [2026-04-07 11:27:29] [CART] [User: Quản trị viên (ID: 1)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 10) | {"action":"ADD_TO_CART","product_id":15,"product_name":null,"quantity":10}
 [2026-04-07 11:27:37] [CART] [User: Quản trị viên (ID: 1)] [IP: ::1] [Page: add.php] 🛒 Added product to cart (Qty: 10) | {"action":"ADD_TO_CART","product_id":12,"product_name":null,"quantity":10}
+[2026-04-07 11:34:21] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 2 | Quantity: 1
+[2026-04-07 11:34:21] [CART] [User: 1] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 2 | Quantity: 1 | Details: Name: Pate mèo cá ngừ, Price: 207812, Stock: 9970
+[2026-04-07 11:34:21] [CART] [User: 1] [IP: ::1] CART_ACTION: CART_CREATED | Product: 2 | Quantity: 1 | Details: New Cart ID: 1039
+[2026-04-07 11:34:21] [CART] [User: 1] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 2 | Quantity: 1 | Details: Original: 207812, Discount: 0, Final: 207812
+[2026-04-07 11:34:21] [CART] [User: 1] [IP: ::1] CART_ACTION: ITEM_ADDED | Product: 2 | Quantity: 1 | Details: Cart ID: 1039, Unit Price: 207812
+[2026-04-07 11:34:21] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 2 | Quantity: 1 | Details: Cart ID: 1039, Cart Count: 1
+[2026-04-07 11:36:00] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 20 | Quantity: 1
+[2026-04-07 11:36:00] [CART] [User: 1] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 20 | Quantity: 1 | Details: Name: Bát ăn inox cho chó mèo, Price: 234612, Stock: 71
+[2026-04-07 11:36:00] [CART] [User: 1] [IP: ::1] CART_ACTION: CART_FOUND | Product: 20 | Quantity: 1 | Details: Existing Cart ID: 1039
+[2026-04-07 11:36:00] [CART] [User: 1] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 20 | Quantity: 1 | Details: Original: 234612, Discount: , Final: 234612
+[2026-04-07 11:36:00] [CART] [User: 1] [IP: ::1] CART_ACTION: ITEM_ADDED | Product: 20 | Quantity: 1 | Details: Cart ID: 1039, Unit Price: 234612
+[2026-04-07 11:36:00] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 20 | Quantity: 1 | Details: Cart ID: 1039, Cart Count: 1
+[2026-04-07 11:36:33] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_START | Product: 4 | Quantity: 1
+[2026-04-07 11:36:33] [CART] [User: 1] [IP: ::1] CART_ACTION: PRODUCT_FOUND | Product: 4 | Quantity: 1 | Details: Name: Vitamin tổng hợp cho mèo, Price: 46459, Stock: 39
+[2026-04-07 11:36:33] [CART] [User: 1] [IP: ::1] CART_ACTION: CART_FOUND | Product: 4 | Quantity: 1 | Details: Existing Cart ID: 1039
+[2026-04-07 11:36:33] [CART] [User: 1] [IP: ::1] CART_ACTION: PRICE_CALCULATED | Product: 4 | Quantity: 1 | Details: Original: 46459, Discount: , Final: 46459
+[2026-04-07 11:36:33] [CART] [User: 1] [IP: ::1] CART_ACTION: ITEM_ADDED | Product: 4 | Quantity: 1 | Details: Cart ID: 1039, Unit Price: 46459
+[2026-04-07 11:36:33] [CART] [User: 1] [IP: ::1] CART_ACTION: ADD_TO_CART_SUCCESS | Product: 4 | Quantity: 1 | Details: Cart ID: 1039, Cart Count: 2
