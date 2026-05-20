@@ -1,221 +1,175 @@
-# VetCare Store - Hệ thống Quản lý Y tế và Chăm sóc Sức khỏe
+# VetCare - Hệ thống đăng nhập và đăng ký
 
-[Previous content remains the same until the directory structure section]
+## Hướng dẫn cài đặt
 
-## 🛠 Cấu trúc chi tiết dự án
+### 1. Yêu cầu hệ thống
 
-### 📁 Admin Module (`/admin`)
+- PHP 7.4 trở lên
+- MySQL 5.7 trở lên
+- XAMPP/WAMP/LAMP server
+- Sử dụng MySQLi
 
-```
-admin/
-├── activity-log.php           # Theo dõi hoạt động hệ thống
-├── ai-chat-box-admin.php      # Quản lý chatbot AI
-├── ajax/                      # AJAX handlers
-│   ├── change_password.php
-│   ├── clear_temp.php
-│   ├── delete-off-day.php
-│   ├── get-email-details.php
-│   ├── update_appointment_status.php
-│   └── update-schedule-status.php
-├── api/
-│   └── get-notifications.php  # API thông báo
-├── appointments.php           # Quản lý lịch hẹn
-├── assets/                    # Tài nguyên admin
-│   ├── css/
-│   │   ├── admin.css
-│   │   ├── header.css
-│   │   └── sidebar.css
-│   └── js/
-│       ├── admin.js
-│       └── notifications.js
-├── blog/                      # Quản lý blog
-│   ├── categories.php
-│   ├── create_post.php
-│   ├── manage_posts.php
-│   └── posts.php
-├── dashboard.php             # Trang chủ admin
-├── email-settings.php        # Cấu hình email
-├── maintenance.php           # Bảo trì hệ thống
-├── products.php              # Quản lý sản phẩm
-├── settings.php              # Cài đặt hệ thống
-└── users.php                 # Quản lý người dùng
+### 2. Cài đặt database
+
+#### Cách 1: Sử dụng file setup.php (Khuyến nghị)
+
+1. Đảm bảo XAMPP/WAMP đã khởi động MySQL
+2. Truy cập: `http://localhost/your-project/setup.php`
+3. Làm theo hướng dẫn trên màn hình
+4. **Quan trọng**: Xóa file `setup.php` sau khi cài đặt xong
+
+#### Cách 2: Import trực tiếp SQL
+
+1. Mở phpMyAdmin (`http://localhost/phpmyadmin`)
+2. Import file `setup_database.sql`
+3. Hoặc copy nội dung file và paste vào SQL tab
+
+### 3. Cấu hình
+
+#### Kiểm tra file `includes/db.php`:
+
+```php
+$host = 'localhost';
+$db   = 'VetCare';  // Tên database
+$user = 'root';     // Username MySQL
+$pass = '';         // Password MySQL (để trống nếu dùng XAMPP)
 ```
 
-### 📁 API Module (`/api`)
+### 4. Cấu trúc Database
+
+#### Bảng chính:
+
+- `roles`: Vai trò người dùng (admin, patient, doctor)
+- `users`: Thông tin đăng nhập
+- `users_info`: Thông tin chi tiết người dùng
+- `user_addresses`: Địa chỉ người dùng
+- `guest_users`: Khách vãng lai
+- `remember_tokens`: Token "Ghi nhớ đăng nhập"
+
+#### Tài khoản mặc định:
+
+- **Username**: admin
+- **Password**: admin123
+- **Email**: admin@VetCare.com
+- **Role**: Administrator
+
+### 5. Tính năng
+
+#### Đăng ký:
+
+- ✅ Validation đầy đủ (email, phone, password)
+- ✅ Mã hóa mật khẩu bằng bcrypt
+- ✅ Kiểm tra trùng lặp username/email/phone
+- ✅ Transaction để đảm bảo dữ liệu
+- ✅ Giao diện responsive với Bootstrap 5
+
+#### Đăng nhập:
+
+- ✅ Đăng nhập bằng username hoặc email
+- ✅ Tính năng "Ghi nhớ đăng nhập" (30 ngày)
+- ✅ Redirect theo role người dùng
+- ✅ Validation client-side và server-side
+- ✅ Bảo mật chống XSS
+
+#### Bảo mật:
+
+- ✅ Password hashing với PHP password_hash()
+- ✅ Prepared statements chống SQL injection
+- ✅ XSS protection với htmlspecialchars()
+- ✅ CSRF protection (có thể thêm)
+- ✅ Session management
+
+### 6. Cấu trúc file
 
 ```
-api/
-├── book-appointment.php      # API đặt lịch
-├── cart/                     # API giỏ hàng
-│   ├── add.php
-│   ├── count.php
-│   ├── get.php
-│   └── update.php
-├── check-auth.php           # Xác thực API
-├── get-doctors.php          # API thông tin bác sĩ
-├── get-order-details.php    # Chi tiết đơn hàng
-├── get-time-slots.php       # Khung giờ khám
-├── product/                 # API sản phẩm
-│   └── view.php
-└── wishlist/                # API danh sách yêu thích
+project/
+├── includes/
+│   ├── db.php              # Kết nối database
+│   ├── header.php          # Header chung
+│   └── footer.php          # Footer chung
+├── assets/                 # CSS, JS, images
+├── login.php              # Trang đăng nhập
+├── register.php           # Trang đăng ký
+├── logout.php             # Đăng xuất
+├── setup.php              # Setup database (xóa sau khi dùng)
+├── setup_database.sql     # File SQL database
+└── README_SETUP.md        # Hướng dẫn này
 ```
 
-### 📁 Assets (`/assets`)
+### 7. Sử dụng
 
-```
-assets/
-├── css/                     # Stylesheets
-│   ├── about.css
-│   ├── blog-post.css
-│   ├── bootstrap.min.css
-│   ├── cart.css
-│   ├── layout.css
-│   └── style.css
-├── images/                  # Hình ảnh
-│   ├── about-hospital.jpg
-│   ├── blog/
-│   ├── products/
-│   └── services/
-└── js/                      # JavaScript
-    ├── about.js
-    ├── cart-new.js
-    ├── chat.js
-    ├── global-enhancements.js
-    └── shop.js
-```
+1. **Truy cập trang chủ**: `http://localhost/your-project/`
+2. **Đăng ký tài khoản mới**: `/register.php`
+3. **Đăng nhập**: `/login.php`
+4. **Đăng xuất**: `/logout.php`
 
-### 📁 Chat Module (`/Chat`)
+### 8. Customization
 
-```
-Chat/
-├── get_history.php          # Lịch sử chat
-├── health-ai-chat.css       # Styles cho chat
-├── health-ai-chat.php       # Giao diện chat
-└── update_history.php       # Cập nhật lịch sử
-```
+#### Thay đổi cấu hình database:
 
-### 📁 Chatbot Backend (`/Chatbot_BackEnd`)
+Sửa file `includes/db.php`
 
-```
-Chatbot_BackEnd/
-├── config/
-│   ├── config.py           # Cấu hình chatbot
-│   ├── intents.py         # Định nghĩa intents
-│   └── logging_config.py  # Cấu hình logging
-├── prompts/               # Prompts cho AI
-│   ├── db_schema/        # Schema database
-│   └── prompts.py        # Định nghĩa prompts
-├── routes/
-│   └── chat.py           # Routes xử lý chat
-└── utils/                # Tiện ích
-    ├── auth_utils.py
-    ├── health_advice.py
-    ├── openai_utils.py
-    └── symptom_utils.py
-```
+#### Thêm validation:
 
-### 📁 Database (`/database`)
+Sửa file `register.php` và `login.php`
 
-```
-database/
-├── add_discount_column.sql
-├── appointments.sql
-├── blog.sql
-├── create_tables.sql
-├── doctor_schedules.sql
-├── email_settings.sql
-├── medical_services.sql
-├── order.sql
-├── sample_data.sql
-└── schema.sql
-```
+#### Thay đổi giao diện:
 
-### 📁 Includes (`/includes`)
+Các file sử dụng Bootstrap 5, có thể custom CSS trong `assets/`
 
-```
-includes/
-├── ajax/
-│   └── search_suggestions.php
-├── config.php               # Cấu hình chung
-├── db.php                   # Kết nối database
-├── email_system.php         # Hệ thống email
-├── functions/
-│   ├── enhanced_logger.php
-│   ├── format_helpers.php
-│   └── product_functions.php
-├── header.php
-└── footer.php
-```
+### 9. Troubleshooting
 
-### 📁 Main Pages
+#### Lỗi kết nối database:
 
-```
-/
-├── about.php               # Giới thiệu
-├── appointments.php        # Đặt lịch
-├── blog.php               # Blog
-├── cart.php               # Giỏ hàng
-├── contact.php            # Liên hệ
-├── doctors.php            # Danh sách bác sĩ
-├── index.php              # Trang chủ
-├── login.php              # Đăng nhập
-├── profile.php            # Thông tin cá nhân
-├── register.php           # Đăng ký
-├── services.php           # Dịch vụ
-└── shop.php               # Cửa hàng
-```
+- Kiểm tra MySQL đã chạy chưa
+- Kiểm tra username/password trong `includes/db.php`
+- Kiểm tra tên database có đúng không
 
-### 📁 Documentation (`/README_FILE`)
+#### Lỗi không tạo được bảng:
 
-```
-README_FILE/
-├── CALCULATION_FUNCTIONS.md
-├── EMAIL_ADMIN_SYSTEM.md
-├── EMAIL_SETUP_GUIDE.md
-├── ENHANCED_LOGGING_SYSTEM.md
-├── FORGOT_PASSWORD_SYSTEM.md
-├── PHP_CODE_GUIDE.md
-└── README_SETUP.md
-```
+- Kiểm tra quyền user MySQL
+- Chạy lại `setup.php`
 
-### 📁 SQL Documentation (`/SQL`)
+#### Lỗi session:
 
-```
-SQL/
-├── ActivityDiagram/        # Sơ đồ hoạt động
-├── DFD/                    # Data Flow Diagrams
-├── ERD/                    # Entity Relationship Diagrams
-├── Function_NOTE.sql       # Ghi chú functions
-└── Sample_Data.sql         # Dữ liệu mẫu
-```
+- Kiểm tra PHP session có hoạt động không
+- Kiểm tra quyền ghi folder temp
 
-## 🔄 Quy trình làm việc
+### 10. Security Notes
 
-1. **Frontend Flow**
+- **Xóa `setup.php`** sau khi cài đặt
+- Đổi mật khẩu admin mặc định
+- Cập nhật PHP và MySQL thường xuyên
+- Backup database định kỳ
+- Sử dụng HTTPS trong production
 
-   - Xử lý request người dùng
-   - Validate input
-   - Gọi API xử lý
-   - Hiển thị kết quả
+### 11. License
 
-2. **Backend Flow**
+This project is open source. Feel free to modify and distribute.
 
-   - Xác thực request
-   - Xử lý business logic
-   - Tương tác database
-   - Trả về response
+---
 
-3. **Chatbot Flow**
+**Liên hệ hỗ trợ**: Tạo issue trên GitHub hoặc liên hệ developer.
 
-   - Nhận input người dùng
-   - Xử lý NLP
-   - Tương tác OpenAI
-   - Trả về response
+Từ db.php:
 
-4. **Database Flow**
-   - CRUD operations
-   - Transaction management
-   - Backup/Restore
-   - Data validation
+✅ format_currency() - Format tiền tệ VN
+Từ format_helpers.php (với safety check):
+✅ calculateDiscountPrice() - Tính giá giảm dựa trên rating
+✅ getProductImage() - Xử lý ảnh với fallback
+✅ formatRating() - Format rating 1 chữ số thập phân
+✅ generateStars() - Tạo HTML stars cho rating
+✅ calculateVAT() - Tính thuế VAT 10%
+✅ calculateShipping() - Tính phí ship (miễn phí >500k)
+✅ formatQuantity() - Format số lượng
+✅ formatOrderCode() - Tạo mã đơn hàng QM000001
+✅ formatDateVN() - Format ngày tháng VN
+✅ timeAgo() - Thời gian tương đối
 
-[Previous content remains the same from here]
+🏢 Tích hợp API Địa chỉ Việt Nam:
+Select2 integration - Sử dụng Select2 cho dropdown đẹp và có search
+Vietnam Address API - Tích hợp provinces.open-api.vn để lấy đầy đủ dữ liệu địa chỉ VN
+Cascade selection - Logic chọn địa chỉ theo cấu trúc:
+Quốc gia → Tỉnh/Thành phố → Quận/Huyện → Phường/Xã
+Smart form handling - Tự động điền lại địa chỉ cũ khi edit
+Dynamic loading - Load data theo realtime khi user chọn
